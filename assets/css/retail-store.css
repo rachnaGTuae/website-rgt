@@ -1,0 +1,154 @@
+/* ================= HERO (NO TEXT) ================= */
+.ct3-hero{ margin-top: var(--hdrH, 92px); }
+.ct3-hero__media{ width:100%; }
+.ct3-hero__img{
+  width:100%;
+  height: clamp(260px, 45vw, 520px);
+  object-fit: cover;
+  display:block;
+}
+
+/* ================= MANISH-STYLE CENTER BIG STRIP ================= */
+.ct3-strip{ padding: 26px 0 10px; }
+.ct3-strip__track{
+  --gap: 44px;
+  display:flex;
+  align-items:flex-start;
+  gap: var(--gap);
+  overflow-x:auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px 2px 18px;
+  scrollbar-width:none;
+}
+.ct3-strip__track::-webkit-scrollbar{ display:none; }
+
+.ct3-card{
+  flex: 0 0 auto;
+  width: 305px;
+  scroll-snap-align: center;
+  transition: transform .35s ease, opacity .35s ease;
+  opacity: .75;
+}
+.ct3-card.is-center{ transform: scale(1.07); opacity: 1; }
+
+.ct3-card__link{ display:block; text-decoration:none; color:inherit; }
+.ct3-card__img{
+  border-radius: 22px;
+  overflow:hidden;
+  background:#f3f4f6;
+}
+.ct3-card__img img{
+  width:100%;
+  height: 420px;
+  object-fit: cover;
+  display:block;
+}
+.ct3-card__name{
+  text-align:center;
+  font-weight:500;
+  letter-spacing:.10em;
+  margin-top:14px;
+  font-size:14px;
+  text-transform:uppercase;
+  opacity:.88;
+}
+
+/* ================= FORM (NO BOX) ================= */
+.ct3-form{ margin-top: 10px; }
+.ct3-label{
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .01em;
+  margin-bottom: 6px;
+  opacity: .9;
+}
+.ct3-input{
+  width:100%;
+  border: 1px solid rgba(0,0,0,.18);
+  border-radius: 12px;
+  padding: 11px 12px;
+  font-size: 14px;
+  background: #fff;
+  outline: none;
+}
+.ct3-input:focus{
+  border-color: rgba(0,0,0,.38);
+}
+.ct3-textarea{ resize: vertical; min-height: 140px; }
+
+.ct3-inline{
+  display:flex; flex-wrap:wrap; gap: 14px; align-items:center;
+}
+.ct3-radio{
+  display:flex; gap: 8px; align-items:center;
+  font-size: 14px;
+}
+.ct3-radio input{ transform: translateY(-1px); }
+
+.ct3-chips{
+  display:flex; flex-wrap:wrap; gap: 10px;
+}
+.ct3-chip{
+  display:inline-flex; align-items:center; gap:8px;
+  border: 1px solid rgba(0,0,0,.18);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 13px;
+  background:#fff;
+}
+.ct3-chip input{ transform: translateY(-1px); }
+
+.ct3-btn{
+  border: 1px solid rgba(0,0,0,.35);
+  background:#111;
+  color:#fff;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.ct3-note{ font-size: 12px; opacity: .7; }
+
+/* ================= HALF FRAME IMAGE (MATCH INDEX STYLE, NOT BULKY) ================= */
+.ct3-halfframe{
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin-left: auto;
+}
+.ct3-halfframe__back{
+  position:absolute;
+  inset: 0;
+  transform: translate(26px, -18px);
+  border: 1px solid rgba(0,0,0,.35);
+  border-radius: 6px;
+  background: transparent;
+}
+.ct3-halfframe__front{
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 22px rgba(0,0,0,.20);
+}
+.ct3-halfframe__front img{
+  width:100%;
+  height: 520px; /* half-frame height */
+  object-fit: cover;
+  display:block;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 991.98px){
+  .ct3-strip__track{ --gap: 28px; }
+  .ct3-card{ width: 260px; }
+  .ct3-card__img img{ height: 360px; }
+  .ct3-halfframe{ max-width: 560px; margin: 0 auto; }
+  .ct3-halfframe__front img{ height: 460px; }
+}
+@media (max-width: 575.98px){
+  .ct3-card{ width: 220px; }
+  .ct3-card__img img{ height: 320px; }
+  .ct3-halfframe__front img{ height: 380px; }
+}

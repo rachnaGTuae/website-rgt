@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rachna Retail Store — Brand Page</title>
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="../Rachna/assets/css/rachna_store.css">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <!-- Footer -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="giii-header fixed-top">
+    <nav class="navbar h-100">
+      <div class="container giii-wrap position-relative h-100">
+
+        <!-- Logo block (SVG) -->
+        <a class="giii-brand" href="../Rachna/index.html">
+          <!-- Use your svg logo path -->
+          <img src="../Rachna/assets/img/rachna_llc_logo.jpeg" alt="G-III Logo">
+        </a>
+
+        <!-- Desktop center nav -->
+        <div class="giii-nav-center d-none d-lg-block">
+          <ul class="giii-nav-row m-0 p-0 list-unstyled">
+
+            <!-- WHO WE ARE (dropdown on hover) -->
+            <li class="nav-item"><a class="giii-nav-link giii-underline" href="../Rachna/index.html">HOME</a></li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <li class="nav-item dropdown giii-hover-dd">
+              <a class="giii-nav-link giii-underline" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                WHAT WE DO
+              </a>
+              <ul class="dropdown-menu giii-dd">
+                <li><a class="dropdown-item" href="../Rachna/fo.html">FO DUBAI</a></li>
+                <li><a class="dropdown-item" href="../Rachna/monkeytroopers_final.html">MONKEY TROOPERS DUBAI</a></li>
+                <li><a class="dropdown-item" href="../Rachna/rachna_store.html">RACHNA RETAIL STORE</a></li>
+              </ul>
+            </li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <li class="nav-item"><a class="giii-nav-link giii-underline" href="../Rachna/about-our-brands.html">ABOUT US</a></li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <li class="nav-item"><a class="giii-nav-link giii-underline" href="../Rachna/testimonials.html">TESTIMONIALS</a></li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <!-- BRANDS (dropdown on hover) -->
+            <li class="nav-item dropdown giii-hover-dd">
+              <a class="giii-nav-link giii-underline" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                CONTACT US
+              </a>
+              <ul class="dropdown-menu giii-dd">
+                <li><a class="dropdown-item" href="../Rachna/UAE-Trade.html">UAE TRADE & DISTRIBUTION ENQUIRES</a></li>
+                <li><a class="dropdown-item" href="../Rachna/FO-Dubai-International-Licensing-Enquiries.html">FO DUBAI INTERNATIONAL LICENSING</a></li>
+                <li><a class="dropdown-item" href="../Rachna/rachna-retail-store.html">RETAIL STORE & CUSTOMER ENQURIES (DUBAI)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile burger -->
+        <button class="giii-burger d-lg-none ms-auto" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#giiiMobile" aria-controls="giiiMobile"
+                aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- MOBILE OFFCANVAS -->
+  <div class="offcanvas offcanvas-end giii-offcanvas" tabindex="-1" id="giiiMobile" aria-labelledby="giiiMobileLabel">
+    <div class="giii-offcanvas-body">
+
+      <!-- <div class="giii-m-top">
+        <a class="giii-m-account" href="#">ACCOUNT</a>
+        <button type="button" class="giii-m-close" data-bs-dismiss="offcanvas" aria-label="Close menu">×</button>
+      </div> -->
+
+      <!-- Accordion style dropdowns (like desktop) -->
+      <div class="giii-m-list">
+
+        <a class="giii-m-item linklike" href="../Rachna/index.html"><span>HOME</span></a>
+        <button class="giii-m-item" type="button" data-giii-acc="who">
+          <span>WHAT WE DO</span><span class="giii-chev">›</span>
+        </button>
+        <div class="giii-m-sub" id="giii-sub-who">
+          <a class="giii-m-subitem" href="../Rachna/fo.html">FO DUBAI</a>
+          <a class="giii-m-subitem" href="../Rachna/monkeytroopers_final.html">MONKEY TROOPERS DUBAI</a>
+          <a class="giii-m-subitem" href="../Rachna/rachna_store.html">RACHNA RETAIL STORE</a>
+        </div>
+
+        <a class="giii-m-item linklike" href="../Rachna/about-our-brands.html"><span>ABOUT US</span></a>
+        <a class="giii-m-item linklike" href="../Rachna/testimonials.html"><span>TESTIMONIALS</span></a>
+
+        <button class="giii-m-item" type="button" data-giii-acc="brands">
+          <span>CONTACT US</span><span class="giii-chev">›</span>
+        </button>
+        <div class="giii-m-sub" id="giii-sub-brands">
+          <a class="giii-m-subitem" href="../Rachna/UAE-Trade.html">UAE TRADE & DISTRIBUTION ENQUIRES</a>
+          <a class="giii-m-subitem" href="../Rachna/FO-Dubai-International-Licensing-Enquiries.html">FO DUBAI INTERNATIONAL LICENSING</a>
+          <a class="giii-m-subitem" href="../Rachna/rachna-retail-store.html">RETAIL STORE & CUSTOMER ENQURIES (DUBAI)</a>
+        </div>        
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- HERO / BANNER -->
+  <section class="brand-hero">
+    <!-- Two banners: desktop + mobile -->
+    <picture class="brand-hero-pic">
+      <!-- mobile -->
+      <source srcset="../Rachna/assets/img/rachna_store_brand/rachna_store_mobile_banner.png" media="(max-width: 991.98px)">
+      <!-- desktop -->
+      <img src="../Rachna/assets/img/rachna_store_brand/rachna_store_desktop_banner.png" alt="Vilebrequin Banner" class="brand-hero-img">
+    </picture>
+
+    <!-- Decorative 3 vertical lines (left bottom) -->
+    <!-- <div class="brand-hero-lines" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div> -->
+
+    <!-- White cut panel under image (like screenshot) -->
+    <!-- <div class="brand-hero-cut" aria-hidden="true"></div> -->
+  </section>
+
+
+  <!-- CONTENT -->
+  <main class="brand-main">
+    <div class="container giii-wrap">
+
+      <a class="brand-back" href="#">
+        <!-- &lt; BACK TO ALL BRANDS -->
+      </a>
+
+      <div class="row g-5 align-items-start brand-top">
+        <!-- LEFT -->
+        <div class="col-lg-6">
+          <div class="brand-logo-wrap">
+            <!-- Replace with your brand logo image -->
+            <img src="../Rachna/assets/img/rachna_retail_logo.jpeg" alt="Vilebrequin" class="brand-logo">
+          </div>
+
+          <div class="brand-copy">
+            <p>
+              Rachna Retail Store is a dedicated apparel retail destination focused exclusively on clothing collections. The store is designed to deliver a clean, organized, and customer-friendly shopping experience, with emphasis on quality merchandise, clear presentation, and guided in-store discovery.
+            </p>
+            <!-- <p class="mb-0">
+              Crafted in Dubai and built for international markets, the brand focuses on refined perfumery, strong brand ownership, and disciplined global expansion.
+            </p> -->
+          </div>
+
+          <hr class="brand-hr">
+
+          <h3 class="brand-subhead">Communications</h3>
+          <a class="brand-mail" href="mailto:info@rachnatrading.com">info@rachnatrading.com</a>
+
+          <hr class="brand-hr">
+
+          <div class="brand-cta">
+            <a class="brand-cta-link" href="https://www.google.com/maps/place/Rachna+Boutique/@25.2619798,55.2935025,1069m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3e5f4390e4018571:0x268c9812498bd31b!8m2!3d25.261975!4d55.2960774!16s%2Fg%2F11r_x1pt6z?entry=tts&g_ep=EgoyMDI1MTEzMC4wIPu8ASoASAFQAw%3D%3D&skid=ea35415d-66e8-4657-a3d3-fe303bfec378" target="_blank" rel="noopener">VIEW STORE LOCATION</a>
+            <span class="brand-cta-dot" aria-hidden="true">›</span>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="col-lg-6">
+          <h2 class="brand-h2">Brand Highlights</h2>
+
+            <div class="brand-highlights" id="brandHighlights">
+
+                <!-- Item 1 -->
+                <div class="brand-hi-item is-accordion">
+                    <button class="brand-hi-toggle" type="button" aria-expanded="false">
+                    <span class="brand-hi-text">Curated Clothing Collections for Everyday & Occasion Wear</span>
+                    <span class="brand-hi-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="brand-hi-panel" role="region">
+                    <!-- <div class="brand-hi-panel-inner">
+                        <p class="brand-hi-desc mb-2">
+                        Add your detailed history here. Explain how the acquisition happened, the reason behind it,
+                        and how it impacted the brand’s direction and growth.
+                        </p>
+                        <p class="brand-hi-desc mb-0">
+                        You can add more paragraphs, bullet points, timelines—anything. This area will stay hidden
+                        until the user clicks the title.
+                        </p>
+                    </div> -->
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="brand-hi-item is-accordion">
+                    <button class="brand-hi-toggle" type="button" aria-expanded="false">
+                    <span class="brand-hi-text">Focus on Fit, Fabric Quality, and Wearability</span>
+                    <span class="brand-hi-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="brand-hi-panel" role="region">
+                    <!-- <div class="brand-hi-panel-inner">
+                        <p class="brand-hi-desc mb-0">
+                        Add details about product category leadership, design language, positioning, target audience,
+                        and distribution footprint.
+                        </p>
+                    </div> -->
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="brand-hi-item is-accordion">
+                    <button class="brand-hi-toggle" type="button" aria-expanded="false">
+                    <span class="brand-hi-text">Clean In-Store Presentation with Easy Product Discovery</span>
+                    <span class="brand-hi-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="brand-hi-panel" role="region">
+                    <!-- <div class="brand-hi-panel-inner">
+                        <p class="brand-hi-desc mb-0">
+                        Add store expansion story, key regions, partner model, and milestones.
+                        </p>
+                    </div> -->
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="brand-hi-item is-accordion">
+                    <button class="brand-hi-toggle" type="button" aria-expanded="false">
+                    <span class="brand-hi-text">Seasonal Collections Aligned with Customer Demand</span>
+                    <span class="brand-hi-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="brand-hi-panel" role="region">
+                    <!-- <div class="brand-hi-panel-inner">
+                        <p class="brand-hi-desc mb-0">
+                        Add licensing model details, experiential strategy, partner criteria, and brand control approach.
+                        </p>
+                    </div> -->
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="brand-hi-item is-accordion">
+                    <button class="brand-hi-toggle" type="button" aria-expanded="false">
+                    <span class="brand-hi-text">Value-Driven Fashion with Consistent Quality Standards</span>
+                    <span class="brand-hi-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="brand-hi-panel" role="region">
+                    <!-- <div class="brand-hi-panel-inner">
+                        <p class="brand-hi-desc mb-0">
+                        Add opening story, location context, launch strategy, and business outcome.
+                        </p>
+                    </div> -->
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="brand-hi-item brand-hi-last is-accordion">
+                    <button class="brand-hi-toggle" type="button" aria-expanded="false">
+                    <span class="brand-hi-text">Customer-First Retail Experience with Guided Assistance</span>
+                    <span class="brand-hi-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="brand-hi-panel" role="region">
+                    <!-- <div class="brand-hi-panel-inner">
+                        <p class="brand-hi-desc mb-0">
+                        Add performance highlights, growth drivers, category mix, and channel performance.
+                        </p>
+                    </div> -->
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+      </div>
+
+
+      <!-- IN MM SLIDER SECTION -->
+        <section class="collection full__width">
+        <div class="collection__title title_bottom_margin">
+            <div class="theme_main_heading">Rachna Boutique</div>
+            <div class="theme_main_description">
+            Where fantasies flow through <br> threads of timeless design.
+            <br><br><br>
+            </div>
+        </div>
+
+        <div class="swiper inmm-swiper" id="inmmSwiper" aria-label="IN MM Carousel">
+            <div class="swiper-wrapper">
+
+            <div class="swiper-slide inmm-slide">
+                <div class="inmm-imgwrap">
+                <img src="../Rachna/assets/img/rachna_store_brand/outfit_1.png" alt="Kriti Sanon" loading="lazy">
+                </div>
+                <!-- <div class="inmm-name">Kriti Sanon</div> -->
+            </div>
+
+            <div class="swiper-slide inmm-slide">
+                <div class="inmm-imgwrap">
+                <img src="../Rachna/assets/img/rachna_store_brand/outfit_2.png" alt="Kiara Advani" loading="lazy">
+                </div>
+                <!-- <div class="inmm-name">Kiara Advani</div> -->
+            </div>
+
+            <div class="swiper-slide inmm-slide">
+                <div class="inmm-imgwrap">
+                <img src="../Rachna/assets/img/rachna_store_brand/outfit_3.png" alt="Debbie Allen" loading="lazy">
+                </div>
+                <!-- <div class="inmm-name">Debbie Allen</div> -->
+            </div>
+
+            <div class="swiper-slide inmm-slide">
+                <div class="inmm-imgwrap">
+                <img src="../Rachna/assets/img/rachna_store_brand/outfit_4.png" alt="Kareena Kapoor" loading="lazy">
+                </div>
+                <!-- <div class="inmm-name">Kareena Kapoor</div> -->
+            </div>
+
+            <div class="swiper-slide inmm-slide">
+                <div class="inmm-imgwrap">
+                <img src="../Rachna/assets/img/rachna_store_brand/outfit_5.png" alt="Kareena Kapoor" loading="lazy">
+                </div>
+                <!-- <div class="inmm-name">Kareena Kapoor</div> -->
+            </div>
+
+            <div class="swiper-slide inmm-slide">
+                <div class="inmm-imgwrap">
+                <img src="../Rachna/assets/img/rachna_store_brand/outfit_1.png" alt="Kareena Kapoor" loading="lazy">
+                </div>
+                <!-- <div class="inmm-name">Kareena Kapoor</div> -->
+            </div>
+
+            <div class="swiper-slide inmm-slide">
+                <div class="inmm-imgwrap">
+                <img src="../Rachna/assets/img/rachna_store_brand/outfit_2.png" alt="Kareena Kapoor" loading="lazy">
+                </div>
+                <!-- <div class="inmm-name">Kareena Kapoor</div> -->
+            </div>
+
+            <div class="swiper-slide inmm-slide">
+                <div class="inmm-imgwrap">
+                <img src="../Rachna/assets/img/rachna_store_brand/outfit_3.png" alt="Kareena Kapoor" loading="lazy">
+                </div>
+                <!-- <div class="inmm-name">Kareena Kapoor</div> -->
+            </div>
+
+            <div class="swiper-slide inmm-slide">
+                <div class="inmm-imgwrap">
+                <img src="../Rachna/assets/img/rachna_store_brand/outfit_4.png" alt="Kareena Kapoor" loading="lazy">
+                </div>
+                <!-- <div class="inmm-name">Kareena Kapoor</div> -->
+            </div>
+
+            <div class="swiper-slide inmm-slide">
+                <div class="inmm-imgwrap">
+                <img src="../Rachna/assets/img/rachna_store_brand/outfit_5.png" alt="Kareena Kapoor" loading="lazy">
+                </div>
+                <!-- <div class="inmm-name">Kareena Kapoor</div> -->
+            </div>
+
+            </div>
+        </div>
+        </section>
+
+
+
+      <!-- =======================================================
+           FO DUBAI EXPANSION BLUEPRINT (PDF CONTENT SECTION)
+           Clean tabs + accordions to avoid bulky layout
+      ======================================================== -->
+      <section class="fo-blueprint" id="fo-blueprint">
+        <div class="fo-head">
+          <h2 class="fo-h2">Rachna Boutique</h2>
+          <p class="fo-lead">
+            Visit our Bur Dubai retail point for walk-ins, product viewing, and customer support. This page keeps information scan-friendly—open details only when you need them.
+          </p>
+          <!-- <p class="fo-sub">
+            Replace the placeholder text inside each tab/accordion with your PDF paragraphs and images.
+          </p> -->
+        </div>
+
+        <div class="fo-pills" role="tablist" aria-label="FO Blueprint sections">
+          <button class="fo-pill is-active" type="button" data-fo-tab="vision">Overview</button>
+          <button class="fo-pill" type="button" data-fo-tab="whyfo">Store Experiance</button>
+          <button class="fo-pill" type="button" data-fo-tab="control">Visit Info</button>
+        </div>
+
+        <div class="fo-panels">
+
+          <!-- Overview -->
+            <div class="fo-panel is-active" id="tab-vision">
+            <h3 class="fo-h3">Store Overview & Visitor Information</h3>
+            <p class="fo-body">
+                A clear overview of the store’s purpose, customer experience, and in-store standards—designed for quick understanding.
+            </p>
+
+            <div class="fo-panel-grid fo-panel-grid--covers">
+                <!-- LEFT: Accordion -->
+                <div>
+                <div class="accordion fo-acc" id="accStoreCovers">
+                    <!-- Item 1 -->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="coversHead1">
+                        <button class="accordion-button" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#covers1"
+                        aria-expanded="true" aria-controls="covers1">
+                        Purpose &amp; Core Use
+                        </button>
+                    </h2>
+                    <div id="covers1" class="accordion-collapse collapse show"
+                        aria-labelledby="coversHead1" data-bs-parent="#accStoreCovers">
+                        <div class="accordion-body">
+                        Rachna Retail Store is designed as a focused apparel destination, offering a clean and organized in-store experience. The store emphasizes clarity, easy navigation, and well-structured clothing displays—allowing customers to browse comfortably without clutter or confusion.
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="coversHead2">
+                        <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#covers2"
+                        aria-expanded="false" aria-controls="covers2">
+                        What Customers Can Do Here
+                        </button>
+                    </h2>
+                    <div id="covers2" class="accordion-collapse collapse"
+                        aria-labelledby="coversHead2" data-bs-parent="#accStoreCovers">
+                        <div class="accordion-body">
+                        <ul class="fo-bullets mb-0">
+                            <li>Explore curated men’s and women’s clothing collections</li>
+                            <li>Discover new arrivals and seasonal selections in-store</li>
+                            <li>Receive guided assistance for fit, styling, and product selection</li>
+                            <li>Enjoy a calm, premium retail environment designed for easy shopping</li>
+                        </ul>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="coversHead3">
+                        <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#covers3"
+                        aria-expanded="false" aria-controls="covers3">
+                        Support Standards
+                        </button>
+                    </h2>
+                    <div id="covers3" class="accordion-collapse collapse"
+                        aria-labelledby="coversHead3" data-bs-parent="#accStoreCovers">
+                        <div class="accordion-body">
+                        <ul class="fo-bullets mb-0">
+                            <li>Clean visual merchandising with clearly organized categories</li>
+                            <li>Customer-friendly store layout for smooth movement and browsing</li>
+                            <li>Staff-assisted support focused on service, not pressure selling</li>
+                            <li>Consistent presentation to maintain a premium retail experience</li>
+                        </ul>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+                </div>
+
+                <!-- RIGHT: Visuals -->
+                <div>
+                <div class="store-visuals">
+                    <div class="store-visuals-grid">
+                    <div class="store-visual">
+                        <img src="assets/img/rachna_store_brand/shop_1.png" alt="Store visual 1">
+                    </div>
+                    <div class="store-visual">
+                        <img src="assets/img/rachna_store_brand/shop_2.png" alt="Store visual 2">
+                    </div>
+                    </div>
+                    <!-- <p class="fo-tip mb-0">Replace these images with your store photos or interior visuals.</p> -->
+                </div>
+                </div>
+            </div>
+            </div>
+
+
+          <!-- Store Experiance -->
+          <div class="fo-panel" id="tab-whyfo">
+            <h3 class="fo-h3">Store Experience</h3>
+            <div class="accordion fo-acc" id="accWhyFo">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#why1"
+                          aria-expanded="true" aria-controls="why1">
+                    Premium, Minimal, and Easy-to-Navigate
+                  </button>
+                </h2>
+
+                <div id="why1" class="accordion-collapse collapse show" data-bs-parent="#accWhyFo">
+                  <div class="accordion-body">
+
+                    <div class="accordion-content-grid">
+
+                      <!-- LEFT: TEXT -->
+                      <div class="accordion-text">
+                        <p>
+                          The store is designed with a clean and minimal layout that allows customers to browse comfortably and find products effortlessly.
+                          Clear zoning, organized racks, and uncluttered displays ensure a smooth shopping flow without confusion or visual noise.
+                        </p>
+
+                        <!-- <p class="mb-0">
+                          FO Dubai was created to respond to this demand with fragrances that remain true to authentic oud traditions
+                          while being refined for contemporary tastes. The brand bridges heritage and modernity, offering scents that feel
+                          distinctive, confident, and timeless rather than trend-driven.
+                        </p> -->
+                      </div>
+
+                      <!-- RIGHT: IMAGE -->
+                      <div class="accordion-image">
+                        <img src="assets/img/rachna_store_brand/image_1.png" alt="FO Dubai Oud Fragrance">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2nd Section -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#why2"
+                          aria-expanded="false" aria-controls="why2">
+                          Visual Consistency &amp; Brand Trust
+                  </button>
+                </h2>
+
+                <div id="why2" class="accordion-collapse collapse" data-bs-parent="#accWhyFo">
+                  <div class="accordion-body">
+
+                    <div class="accordion-content-grid reverse-desktop">
+
+                      <!-- LEFT (DESKTOP): IMAGE -->
+                      <div class="accordion-image">
+                        <img src="assets/img/rachna_store_brand/image_2.png" alt="FO Dubai Premium Positioning">
+                      </div>
+
+                      <!-- RIGHT (DESKTOP): TEXT -->
+                      <div class="accordion-text">
+                        <p>
+                          Consistent visual standards are maintained across store design, signage, and product presentation.
+                          This uniformity builds brand trust, reinforces quality perception, and ensures customers experience the same level of professionalism on every visit.
+                        </p>
+                        <!-- <p class="mb-0">
+                          Each fragrance is designed with careful balance, premium ingredients, and controlled positioning to ensure that FO Dubai stands apart as a refined luxury brand, not a commodity perfume label.
+                        </p> -->
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3rd Section -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#why3"
+                          aria-expanded="false" aria-controls="why3">
+                          Customer Support Focus
+                  </button>
+                </h2>
+
+                <div id="why3" class="accordion-collapse collapse" data-bs-parent="#accWhyFo">
+                  <div class="accordion-body">
+
+                    <div class="accordion-content-grid">
+
+                      <!-- LEFT: TEXT -->
+                      <div class="accordion-text">
+                        <p>
+                          Store staff are trained to provide helpful, respectful, and knowledgeable assistance without pressure.
+                          The focus remains on guiding customers, answering queries, and ensuring a pleasant in-store experience from entry to checkout.
+                        </p>
+                        <!-- <p class="mb-0">
+                          Being conceived and controlled from Dubai allows FO Dubai to remain authentic to Arabic perfumery traditions while delivering fragrances that resonate with international audiences seeking sophistication, exclusivity, and cultural depth.
+                        </p> -->
+                      </div>
+
+                      <!-- RIGHT: IMAGE -->
+                      <div class="accordion-image">
+                        <img src="assets/img/rachna_store_brand/image_3.png" alt="FO Dubai Origin & Luxury">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visit Info -->
+        <div class="fo-panel" id="tab-control">
+        <h3 class="fo-h3">Visit Info</h3>
+
+        <div class="accordion fo-acc" id="accVisitInfo">
+
+            <!-- 1) Location & Contact -->
+            <div class="accordion-item">
+            <h2 class="accordion-header" id="visitHead1">
+                <button class="accordion-button" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#visit1"
+                        aria-expanded="true" aria-controls="visit1">
+                Location &amp; Contact
+                </button>
+            </h2>
+
+            <div id="visit1" class="accordion-collapse collapse show"
+                aria-labelledby="visitHead1" data-bs-parent="#accVisitInfo">
+                <div class="accordion-body">
+                <div class="visit-grid">
+                    <!-- Left info -->
+                    <div class="visit-info">
+                    <div class="visit-label">ADDRESS</div>
+                    <div class="visit-value">
+                        07 08 Meena Bazar – Bur Dubai – Al Fahidi, Dubai – United Arab Emirates
+                    </div>
+
+                    <div class="visit-label mt-3">PHONE</div>
+                    <a class="visit-link" href="tel:+97145911622">+971 4591 1622</a>
+
+                    <div class="visit-label mt-3">SUGGESTED INFO TO ADD</div>
+                    <div class="visit-note">
+                        Store timings, nearest metro, parking options, wheelchair access, and peak-hour guidance.
+                    </div>
+                    </div>
+
+                    <!-- Right map placeholder -->
+                    <iframe
+                        class="visit-map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.649864964601!2d55.2935025!3d25.2619798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4390e4018571%3A0x268c9812498bd31b!2sRachna%20Boutique!5e0!3m2!1sen!2sae!4v1735560000000"
+                        width="100%"
+                        height="280"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- 2) Parking & Accessibility -->
+            <div class="accordion-item">
+            <h2 class="accordion-header" id="visitHead2">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#visit2"
+                        aria-expanded="false" aria-controls="visit2">
+                Parking &amp; Accessibility
+                </button>
+            </h2>
+
+            <div id="visit2" class="accordion-collapse collapse"
+                aria-labelledby="visitHead2" data-bs-parent="#accVisitInfo">
+                <div class="accordion-body">
+                <ul class="fo-bullets mb-0">
+                    <li>Nearest parking options and approximate walking time</li>
+                    <li>Recommended entry points for easier drop-off</li>
+                    <li>Accessibility support (ramps/lift access where applicable)</li>
+                    <li>Best time to visit to avoid heavy crowd hours</li>
+                </ul>
+                </div>
+            </div>
+            </div>
+
+            <!-- 3) Quick Support Options -->
+            <div class="accordion-item">
+            <h2 class="accordion-header" id="visitHead3">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#visit3"
+                        aria-expanded="false" aria-controls="visit3">
+                Quick Support Options
+                </button>
+            </h2>
+
+            <div id="visit3" class="accordion-collapse collapse"
+                aria-labelledby="visitHead3" data-bs-parent="#accVisitInfo">
+                <div class="accordion-body">
+                <div class="visit-actions">
+                    <a class="visit-chip" href="tel:+97145911622">Call Now</a>
+                    <a class="visit-chip" href="https://wa.me/97145911622" target="_blank" rel="noopener">WhatsApp</a>
+                    <a class="visit-chip" href="mailto:info@rachnaretailstore.com">Email</a>
+                </div>
+
+                <div class="visit-tip mt-3">
+                    Tip: Replace the WhatsApp link with your wa.me URL and update the email if needed.
+                </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+        </div>
+
+
+        </div>
+      </section>
+
+
+      <!-- OTHER BRANDS -->
+      <section class="other-brands">
+        <h2 class="other-h2">Other Brands</h2>
+
+        <div class="other-cta">
+          <!-- <a class="other-cta-link" href="#">SEE MORE BRANDS</a>
+          <span class="other-cta-dot" aria-hidden="true">›</span> -->
+        </div>
+
+        <div class="row g-4 other-grid">
+          <!-- Card 1 -->
+          <div class="col-12 col-sm-6 col-lg-6">
+            <a class="other-card" href="../Rachna/monkeytroopers_final.html">
+              <div class="other-imgwrap">
+                <picture>
+                  <!-- Mobile -->
+                  <source media="(max-width: 991.98px)" srcset="../Rachna/assets/img/rachna_store_brand/mt_toggle_mobile_banner.png">
+                  <!-- Desktop -->
+                  <img src="../Rachna/assets/img/rachna_store_brand/mt_toggle_banner.png" alt="Nautica">
+                </picture>
+              </div>
+              <div class="other-name">Monkey Troopers</div>
+              <!-- <div class="other-pill" aria-hidden="true">L</div> -->
+            </a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-12 col-sm-6 col-lg-6">
+            <a class="other-card" href="../Rachna/fo.html">
+              <div class="other-imgwrap">
+                <picture>
+                  <!-- Mobile -->
+                  <source media="(max-width: 991.98px)" srcset="../Rachna/assets/img/rachna_store_brand/fo_toggle_mobile_banner.png">
+                  <!-- Desktop -->
+                  <img src="../Rachna/assets/img/rachna_store_brand/fo_toggle_banner.png" alt="Halston">
+                </picture>
+              </div>
+              <div class="other-name">FO Dubai</div>
+              <!-- <div class="other-pill" aria-hidden="true">L</div> -->
+            </a>
+          </div>
+
+          
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <!-- <div class="giii-footer-top">
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <span class="footer-sep">|</span>
+
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <span class="footer-sep">|</span>
+
+        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <span class="footer-sep">|</span>
+
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+
+    </div> -->
+
+    <div class="giii-footer-mid">
+      07-08 Meena Bazar, Bur Dubai- Al Fahidi, Dubai, United Arab Emirates
+    </div>
+
+    <div class="giii-footer-bot">
+      © 2025 Rachna General Trading LLC. All Rights Reserved.
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Your JS -->
+  <script src="../Rachna/assets/js/rachna_store.js"></script>
+
+  <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        new Swiper("#inmmSwiper", {
+        loop: true,
+        centeredSlides: true,
+        speed: 500,
+        spaceBetween: 60,
+        grabCursor: true,
+        autoplay: { delay: 2200, disableOnInteraction: false },
+        breakpoints: {
+            0:   { slidesPerView: 1.5, spaceBetween: 22 },
+            576: { slidesPerView: 2.2, spaceBetween: 34 },
+            992: { slidesPerView: 3.5, spaceBetween: 60 }
+        }
+        });
+    });
+    </script>
+
+</body>
+</html>

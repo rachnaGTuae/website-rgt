@@ -1,0 +1,334 @@
+:root{
+  /* Fonts (your provided heading family) */
+  --font-heading: "Benton Modern Display", "Times New Roman", serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --ink:#1f1f1f;
+  --line:#e6e6e6;
+
+  --nav-h: 112px;
+  --maxw: 1180px;
+
+  --footer-gray:#3a3a3a;
+  --footer-black:#000;
+}
+
+*{ box-sizing:border-box; }
+html,body{ overflow-x:hidden; }
+body{
+  margin:0;
+  padding-top: var(--nav-h);
+  color: var(--ink);
+  background:#fff;
+  font-family: var(--font-body);
+}
+
+.giii-wrap{ max-width: var(--maxw); }
+
+/* =============== HEADER =============== */
+.giii-header{
+  height: var(--nav-h);
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  box-shadow: 0 10px 28px rgba(0,0,0,.12);
+  z-index: 1065;
+}
+.giii-header .navbar{ height:100%; }
+
+/* Logo block */
+.giii-brand{
+  width: 118px;
+  height: 118px;
+  background:#2f2f2f;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 18px 28px rgba(0,0,0,.20);
+  margin-left: -24px;
+  text-decoration:none;
+}
+.giii-brand img{
+  width: 115px !important;
+  height:auto;
+  display:block;
+}
+
+/* Remove any shadow/glow from logo image */
+.giii-brand img,
+.navbar-brand img,
+header .navbar-brand img {
+  filter: none !important;      /* removes drop-shadow() */
+  box-shadow: none !important;  /* removes box-shadow */
+  text-shadow: none !important; /* (usually not on img, but safe) */
+}
+
+/* If the shadow is applied on the wrapper (anchor/div), remove it too */
+.giii-brand,
+.navbar-brand {
+  filter: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+
+/* Center nav */
+.giii-nav-center{
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
+  top: 50%;
+  translate: 0 -50%;
+}
+.giii-nav-row{
+  display:flex;
+  align-items:center;
+}
+.giii-nav-link{
+  font-size: 12px;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  color:#2b2b2b;
+  text-decoration:none;
+  padding: 18px 34px;
+  display:inline-flex;
+  align-items:center;
+  white-space:nowrap;
+
+  /* underline animation base */
+  position:relative;
+}
+.giii-nav-link:hover,
+.giii-nav-link:focus{ color:#2b2b2b; }
+
+/* underline like your screenshot (no box) */
+.giii-underline::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom: 8px;
+  width: 0;
+  height: 2px;
+  background:#6f8f9b; /* subtle blue-grey line like screenshot */
+  transition: width .18s ease;
+}
+.giii-hover-dd:hover > .giii-underline::after,
+.giii-nav-link:hover.giii-underline::after{
+  width: 46px;
+}
+
+.giii-sep{
+  width:1px;
+  height:14px;
+  background:#cfcfcf;
+  opacity:.9;
+}
+
+/* Dropdown */
+.dropdown-toggle::after{ display:none !important; }
+.giii-dd{
+  border: 0;
+  border-radius:0;
+  padding: 18px 0;
+  min-width: 240px;
+  background:#fff;
+  box-shadow: 0 18px 44px rgba(0,0,0,.14);
+  margin-top: 6px;
+}
+.giii-dd .dropdown-item{
+  padding: 12px 24px;
+  font-size: 14px;
+  letter-spacing:.02em;
+  color:#2b2b2b;
+}
+.giii-dd .dropdown-item:hover{ background:#f6f6f6; }
+
+/* Mobile burger */
+.giii-burger{
+  width: 44px;
+  height: 44px;
+  background:transparent;
+  border:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap: 7px;
+  padding: 10px;
+}
+.giii-burger span{
+  display:block;
+  height:1.5px;
+  background:#2b2b2b;
+  width: 24px;
+  margin-left:auto;
+}
+
+/* =============== MOBILE OFFCANVAS (below header, no overlap) =============== */
+.giii-offcanvas{
+  width: 82vw;
+  max-width: 360px;
+  border-left:1px solid #ddd;
+
+  top: var(--nav-h) !important;
+  height: calc(100% - var(--nav-h)) !important;
+
+  z-index: 1060;
+}
+.offcanvas-backdrop{
+  top: var(--nav-h) !important;
+  height: calc(100% - var(--nav-h)) !important;
+}
+
+.giii-offcanvas-body{ padding: 0; }
+
+.giii-m-top{
+  position:relative;
+  padding: 18px 18px 10px 18px;
+  min-height: 64px;
+}
+.giii-m-account{
+  position:absolute;
+  top: 18px;
+  right: 64px;
+  font-size: 12px;
+  letter-spacing:.10em;
+  text-transform: uppercase;
+  text-decoration:none;
+  color:#2b2b2b;
+}
+.giii-m-close{
+  position:absolute;
+  top: 10px;
+  right: 12px;
+  width: 44px;
+  height: 44px;
+  border:0;
+  background:transparent;
+  font-size: 34px;
+  line-height: 1;
+  color:#2b2b2b;
+}
+
+.giii-m-list{ padding-bottom: 18px; }
+
+.giii-m-item{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 22px 18px;
+  color:#2b2b2b;
+  background:#fff;
+  font-size: 12px;
+  letter-spacing:.10em;
+  text-transform: uppercase;
+  border:0;
+  border-top:1px solid #efefef;
+  text-align:left;
+}
+.giii-m-item.linklike{
+  text-decoration:none;
+  display:flex;
+}
+.giii-m-item:last-child{ border-bottom:1px solid #efefef; }
+.giii-chev{ font-size: 18px; opacity:.65; transition: transform .18s ease; }
+
+.giii-m-sub{
+  display:none;
+  padding: 10px 0 14px 0;
+  border-top:1px solid #efefef;
+}
+.giii-m-sub.is-open{ display:block; }
+
+.giii-m-subitem{
+  display:block;
+  padding: 10px 22px;
+  color:#2b2b2b;
+  text-decoration:none;
+  font-size: 14px;
+}
+.giii-m-subitem:hover{ background:#f6f6f6; }
+
+
+
+
+
+/* =============== RESPONSIVE =============== */
+@media (max-width: 991.98px){
+  :root{ --nav-h: 92px; }
+  body{ padding-top: var(--nav-h); }
+
+  .giii-brand{
+    width: 92px;
+    height: 92px;
+    margin-left: -10px;
+  }
+  .giii-brand img{ width: 90px; }
+
+  .brand-logo{ max-width: 320px; margin: 0 auto; }
+  .brand-copy{ font-size: 16px; }
+  .brand-h2{ font-size: 34px; }
+
+  .brand-highlights{ padding: 18px; }
+  .brand-hi-text, .brand-hi-title{ font-size: 16px; }
+
+  .other-imgwrap img{ height: 360px; } /* matches tall mobile cards */
+  .other-pill{ bottom: 58px; }
+}
+
+@media (max-width: 420px){
+  .giii-offcanvas{ width: 86vw; }
+  .giii-m-account{ right: 62px; }
+}
+
+/* REMOVE CLICK / FOCUS BLACK BOX ON NAV LINKS */
+.giii-nav-link:focus,
+.giii-nav-link:active,
+.giii-nav-link:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* ================================
+   MOBILE: DIFFERENTIATE SUBMENU
+   (Nested look like your Image-1)
+   ================================ */
+
+/* keep submenu container tight */
+.giii-m-sub{
+  padding: 0 !important;
+  border-top: 0 !important;
+}
+
+/* submenu rows: indented, slightly lighter, with a left guide */
+.giii-m-subitem{
+  display: block;
+  padding: 18px 18px 18px 42px !important;  /* indent */
+  font-size: 12px !important;
+  letter-spacing: .10em !important;
+  text-transform: uppercase !important;
+
+  color: #3f3f3f !important;               /* slightly lighter than main */
+  background: #fcfcfc !important;          /* subtle background difference */
+
+  border-top: 1px solid #efefef !important;
+  position: relative;
+}
+
+/* left vertical guide line to show nesting */
+/* .giii-m-subitem::before{
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e9e9e9;
+} */
+
+/* hover */
+.giii-m-subitem:hover{
+  background: #f6f6f6 !important;
+}
+
+

@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Rachana-General-Trading</title>
+
+  <!-- Bootstrap 5.3.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link href="../Rachna/assets/css/main.css" rel="stylesheet">
+  <link href="../Rachna/assets/css/navigation-bar.css" rel="stylesheet"/>
+  <link href="../Rachna/assets/css/footer.css" rel="stylesheet">
+
+  <script src="../Rachna/assets/js/main.js"></script>
+  <script src="../Rachna/assets/js/navigation-bar.js"></script>
+  
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Inter font (optional, match your site) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  
+
+
+  <style>
+    :root{
+      --ink:#111827;
+      --muted:#6b7280;
+      --line:#e5e7eb;
+      --soft:#f7f7f7;
+      --btn:#111;
+      --btnH:#000;
+      --radius:16px;
+    }
+
+    body{
+      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-weight: 300;
+      color: var(--ink);
+      background:#fff;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+    .fo-topbar{
+      border-bottom: 1px solid var(--line);
+      padding: 18px 0;
+      background:#fff;
+    }
+    .fo-brand{
+      font-weight: 500;
+      letter-spacing:.02em;
+    }
+    .fo-topbar small{
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+    .fo-hero{
+      padding: 54px 0 22px;
+      background:#fff;
+    }
+    .hero-label{
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    .hero-title{
+      font-size: clamp(28px, 3vw, 42px);
+      font-weight: 400;
+      letter-spacing: .01em;
+      margin: 0 0 10px;
+    }
+    .hero-desc{
+      max-width: 68ch;
+      color: rgba(17,24,39,.72);
+      line-height: 1.85;
+      margin: 0;
+      font-size: 16px;
+    }
+   
+  /* =========================
+       FULL WIDTH HERO
+       ========================= */
+    .hero-full{
+      width:100%;
+      position:relative;
+      overflow:hidden;
+      border-radius:0;
+      min-height: 320px;
+    }
+    .hero-full img{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+      aspect-ratio: 990 / 390;
+    }
+    /* .hero-overlay{
+      position:absolute; inset:0;
+      background: linear-gradient(0deg, rgba(0,0,0,.22), rgba(0,0,0,.10));
+      pointer-events:none;
+    } */
+    @media (max-width: 575.98px){
+      .hero-full{ min-height: 242px; }
+      .hero-full img{ aspect-ratio: 4 / 2; }
+    }
+
+
+
+
+    /* =========================
+       CONTENT
+    ========================= */
+    .fo-section{
+      padding: 44px 0;
+      background:#fff;
+    }
+    .section-text{
+      color: rgba(17,24,39,.72);
+      line-height: 1.95;
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+
+    /* =========================
+       IMAGE FRAME (KEEP SAME STYLE)
+       - Outer thin border frame
+       - Inner image slightly inset + soft shadow offset
+    ========================= */
+    .fo-image-frame{
+      position: relative;
+      background:#fff;
+      border: 1px solid #cfcfcf;  /* thin outline like reference */
+      border-radius: 6px;
+      padding: 18px;              /* white margin inside frame */
+      overflow: visible;
+    }
+
+    .fo-image-frame .fo-photo{
+      display:block;
+      width: 100%;
+      height: auto;
+      border-radius: 2px;
+      /* inner photo shadow like reference */
+      box-shadow: 10px 10px 0 rgba(11,18,32,.18);
+      /* subtle lift */
+      transform: translate(6px, 6px);
+      background:#fff;
+    }
+
+    /* Make sure it stays nice on mobile */
+    @media (max-width: 575.98px){
+      .fo-image-frame{ padding: 14px; }
+      .fo-image-frame .fo-photo{
+        box-shadow: 8px 8px 0 rgba(11,18,32,.16);
+        transform: translate(4px, 4px);
+      }
+    }
+
+    /* =========================
+       FORM
+    ========================= */
+    .fo-form{
+      padding: 54px 0;
+      background: #fafafa;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .form-title{
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 18px;
+      letter-spacing:.01em;
+    }
+    .form-label{
+      font-size: 13px;
+      color: rgba(17,24,39,.78);
+      font-weight: 500;
+      letter-spacing:.01em;
+      margin-bottom: 6px;
+    }
+    .form-control,
+    .form-select,
+    textarea.form-control{
+      border-radius: 0;
+      border: 1px solid #ddd;
+      font-size: 14px;
+      padding: 10px 12px;
+      box-shadow: none !important;
+    }
+    .form-control:focus,
+    .form-select:focus,
+    textarea.form-control:focus{
+      border-color: rgba(17,24,39,.42);
+    }
+    .submit-btn{
+      background: var(--btn);
+      color:#fff;
+      border:none;
+      border-radius: 0;
+      padding: 12px 14px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing:.02em;
+    }
+    .submit-btn:hover{ background: var(--btnH); }
+
+    .fo-note{
+      color: rgba(17,24,39,.60);
+      font-size: 12px;
+      line-height: 1.7;
+      margin-top: 10px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+    .fo-footer{
+      padding: 18px 0;
+      background:#fff;
+    }
+    .footer-text{
+      max-width: 72ch;
+      margin: 0 auto;
+      color: rgba(17,24,39,.55);
+      font-size: 13px;
+      line-height: 1.7;
+      text-align:center;
+    }
+  </style>
+</head>
+
+<body> 
+
+
+
+  <!-- HEADER -->
+  <header class="giii-header fixed-top">
+    <nav class="navbar h-100">
+      <div class="container giii-wrap position-relative h-100">
+
+        <!-- Logo block (SVG) -->
+        <a class="giii-brand" href="../Rachna/index.html">
+          <!-- Use your svg logo path -->
+          <img src="../Rachna/assets/img/rachna_llc_logo.jpeg" alt="G-III Logo">
+        </a>
+
+        <!-- Desktop center nav -->
+        <div class="giii-nav-center d-none d-lg-block">
+          <ul class="giii-nav-row m-0 p-0 list-unstyled">
+
+            <!-- WHO WE ARE (dropdown on hover) -->
+            <li class="nav-item"><a class="giii-nav-link giii-underline" href="../Rachna/index.html">HOME</a></li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <li class="nav-item dropdown giii-hover-dd">
+              <a class="giii-nav-link giii-underline" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                WHAT WE DO
+              </a>
+              <ul class="dropdown-menu giii-dd">
+                <li><a class="dropdown-item" href="../Rachna/fo.html">FO DUBAI</a></li>
+                <li><a class="dropdown-item" href="../Rachna/monkeytroopers_final.html">MONKEY TROOPERS DUBAI</a></li>
+                <li><a class="dropdown-item" href="../Rachna/rachna_store.html">RACHNA RETAIL STORE</a></li>
+              </ul>
+            </li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <li class="nav-item"><a class="giii-nav-link giii-underline" href="../Rachna/about-our-brands.html">ABOUT US</a></li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <li class="nav-item"><a class="giii-nav-link giii-underline" href="../Rachna/testimonials.html">TESTIMONIALS</a></li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <!-- BRANDS (dropdown on hover) -->
+            <li class="nav-item dropdown giii-hover-dd">
+              <a class="giii-nav-link giii-underline" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                CONTACT US
+              </a>
+              <ul class="dropdown-menu giii-dd">
+                <li><a class="dropdown-item" href="../Rachna/UAE-Trade.html">UAE TRADE & DISTRIBUTION ENQUIRES</a></li>
+                <li><a class="dropdown-item" href="../Rachna/FO-Dubai-International-Licensing-Enquiries.html">FO DUBAI INTERNATIONAL LICENSING</a></li>
+                <li><a class="dropdown-item" href="../Rachna/rachna-retail-store.html">RETAIL STORE & CUSTOMER ENQURIES (DUBAI)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile burger -->
+        <button class="giii-burger d-lg-none ms-auto" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#giiiMobile" aria-controls="giiiMobile"
+                aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- MOBILE OFFCANVAS -->
+  <div class="offcanvas offcanvas-end giii-offcanvas" tabindex="-1" id="giiiMobile" aria-labelledby="giiiMobileLabel">
+    <div class="giii-offcanvas-body">
+
+      <!-- <div class="giii-m-top">
+        <a class="giii-m-account" href="#">ACCOUNT</a>
+        <button type="button" class="giii-m-close" data-bs-dismiss="offcanvas" aria-label="Close menu">×</button>
+      </div> -->
+
+      <!-- Accordion style dropdowns (like desktop) -->
+      <div class="giii-m-list">
+
+        <a class="giii-m-item linklike" href="../Rachna/index.html"><span>HOME</span></a>
+        <button class="giii-m-item" type="button" data-giii-acc="who">
+          <span>WHAT WE DO</span><span class="giii-chev">›</span>
+        </button>
+        <div class="giii-m-sub" id="giii-sub-who">
+          <a class="giii-m-subitem" href="../Rachna/fo.html">FO DUBAI</a>
+          <a class="giii-m-subitem" href="../Rachna/monkeytroopers_final.html">MONKEY TROOPERS DUBAI</a>
+          <a class="giii-m-subitem" href="../Rachna/rachna_store.html">RACHNA RETAIL STORE</a>
+        </div>
+
+        <a class="giii-m-item linklike" href="../Rachna/about-our-brands.html"><span>ABOUT US</span></a>
+        <a class="giii-m-item linklike" href="../Rachna/testimonials.html"><span>TESTIMONIALS</span></a>
+
+        <button class="giii-m-item" type="button" data-giii-acc="brands">
+          <span>CONTACT US</span><span class="giii-chev">›</span>
+        </button>
+        <div class="giii-m-sub" id="giii-sub-brands">
+          <a class="giii-m-subitem" href="../Rachna/UAE-Trade.html">UAE TRADE & DISTRIBUTION ENQUIRES</a>
+          <a class="giii-m-subitem" href="../Rachna/FO-Dubai-International-Licensing-Enquiries.html">FO DUBAI INTERNATIONAL LICENSING</a>
+          <a class="giii-m-subitem" href="../Rachna/rachna-retail-store.html">RETAIL STORE & CUSTOMER ENQURIES (DUBAI)</a>
+        </div>        
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- =========================
+       HERO
+       ========================= -->
+  <section>
+    <div class="container-fluid px-0">
+      <div class="hero-full">
+        <img src="../Rachna/assets/img/FO-Dubai-Licensing/pure_exotic_2917x1460_00b6322a-cb68-4af9-b8d1-270805bf1e1f (2).png" alt="Testimonials hero banner" />
+        <div class="hero-overlay"></div>
+      </div>
+    </div>
+  </section>
+
+
+ 
+  <!-- HERO -->
+  <section class="fo-hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <div class="hero-label">International Opportunity</div>
+          <h1 class="hero-title">FO Dubai International Licensing Enquiries</h1>
+          <p class="hero-desc">
+            We invite established international partners to explore exclusive country or regional licensing
+            opportunities for the FO Dubai fragrance brand.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="fo-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <!-- IMAGE (FRAME STYLE PRESERVED) -->
+        <div class="col-lg-6">
+          <div class="fo-image-frame">
+            <img
+              src="../Rachna/assets/img/FO-Dubai-Licensing/Image.png"
+              class="fo-photo"
+              alt="FO Dubai Licensing"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- TEXT -->
+        <div class="col-lg-6">
+          <p class="section-text">
+            FO Dubai is a premium Arabic fragrance brand rooted in authenticity, craftsmanship, and global appeal.
+          </p>
+          <p class="section-text">
+            This licensing pathway is designed for partners seeking long-term, territory-based brand representation —
+            not simple resale.
+          </p>
+          <p class="section-text">
+            We carefully evaluate distribution capability, market knowledge, and commitment to brand development
+            before assigning licensing rights.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<!-- FORM -->
+<section class="fo-form">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <h2 class="form-title">Licensing Enquiry Form</h2>
+
+        <!-- ✅ SUCCESS / ERROR MESSAGES (SAME PAGE) -->
+        <div id="licenseSuccessMsg"
+             style="display:none; margin:12px 0; padding:14px 16px; border-radius:10px; background:#e9f7ef; color:#0f5132; font-weight:600;">
+          Thank you for your licensing enquiry. Our team will review your submission and contact you if there is a fit.
+        </div>
+
+        <div id="licenseErrorMsg"
+             style="display:none; margin:12px 0; padding:14px 16px; border-radius:10px; background:#fdecea; color:#842029; font-weight:600;">
+          Something went wrong. Please try submitting the form again.
+        </div>
+
+        <!-- ✅ UPDATED FORM (FormSubmit – No PHP) -->
+        <form
+          id="licensingEnquiryForm"
+          action="https://formsubmit.co/ecom.co@suvidretail.in"
+          method="POST"
+          novalidate>
+
+          <!-- FormSubmit settings -->
+          <input type="hidden" name="_subject" value="New Licensing Enquiry">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+
+          <!-- Anti-spam -->
+          <input type="text" name="_honey" style="display:none">
+
+          <!-- Redirect back to SAME page -->
+          <input type="hidden" name="_next" value="https://YOUR-DOMAIN.com/licensing.html?sent=1">
+
+          <div class="row g-4">
+
+            <div class="col-md-6">
+              <label class="form-label">Company Name</label>
+              <input type="text" class="form-control" name="Company Name" placeholder="Your company name" required>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Country / Region of Interest</label>
+              <select class="form-select" name="Region of Interest" required>
+                <option value="" selected disabled>Select</option>
+                <option>Europe</option>
+                <option>Asia</option>
+                <option>Middle East</option>
+                <option>Americas</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Years in Operation</label>
+              <input type="number" class="form-control" name="Years in Operation" placeholder="e.g., 5" required>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Industry Experience</label>
+              <select class="form-select" name="Industry Experience" required>
+                <option selected disabled value="">Select</option>
+                <option>Perfumes</option>
+                <option>Luxury Goods</option>
+                <option>Beauty & Personal Care</option>
+                <option>FMCG</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Distribution Capability</label>
+              <input type="text" class="form-control" name="Distribution Capability"
+                     placeholder="Retail points, warehouse, logistics, etc." required>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Market Entry Plan</label>
+              <textarea class="form-control"
+                        name="Market Entry Plan"
+                        rows="5"
+                        minlength="200"
+                        required
+                        placeholder="Brief description of your proposed market strategy (min 200 characters)"></textarea>
+              <div class="fo-note">
+                All licensing enquiries are reviewed internally. Submitting this form does not guarantee territory allocation.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <button class="submit-btn w-100" type="submit">
+                Submit Licensing Enquiry
+              </button>
+            </div>
+
+          </div>
+        </form>
+
+        <!-- ✅ SAME-PAGE MESSAGE HANDLER -->
+        <script>
+          (function () {
+            const params = new URLSearchParams(window.location.search);
+            if (params.get("sent") === "1") {
+              const msg = document.getElementById("licenseSuccessMsg");
+              if (msg) msg.style.display = "block";
+
+              // Clean URL
+              const url = new URL(window.location.href);
+              url.searchParams.delete("sent");
+              window.history.replaceState({}, document.title, url.toString());
+            }
+          })();
+        </script>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- FOOTER -->
+  <footer class="giii-footer">
+
+    <!-- TOP: Social icons centered -->
+    <!-- <div class="giii-footer-top">
+      <div class="giii-container">
+        <ul class="giii-social" aria-label="Social links">
+          <li>
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="giii-sep"></li>
+          <li>
+            <a href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+          <li class="giii-sep"></li>
+          <li>
+            <a href="#" aria-label="Twitter (X)">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </li>
+          <li class="giii-sep"></li>
+          <li>
+            <a href="https://wa.me/97145911622" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div> -->
+
+    <!-- MID: Address -->
+    <div class="giii-footer-mid">
+      07–08 Meena Bazar, Bur Dubai – Al Fahidi, Dubai, United Arab Emirates
+    </div>
+
+    <!-- BOT: Copyright -->
+    <div class="giii-footer-bot">
+      © 2025 Rachna General Trading LLC. All Rights Reserved.
+    </div>
+
+  </footer>
+
+  <!-- ================= MOBILE OFFCANVAS ================= -->
+  <div class="offcanvas offcanvas-end giii-off" tabindex="-1" id="mMenu" aria-labelledby="mMenuLabel">
+    <div class="off-hdr">
+      <div></div>
+      <h2 class="off-title" id="mMenuLabel">ACCOUNT</h2>
+      <div class="off-strip">
+        <button type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button type="button" data-bs-dismiss="offcanvas" aria-label="Close menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 7h14M5 12h14M5 17h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="offcanvas-body off-body">
+      <ul class="m-list">
+        <li class="m-item">
+          <button class="m-row" type="button" data-bs-toggle="collapse" data-bs-target="#mWho" aria-expanded="false" aria-controls="mWho">
+            <span>WHO WE ARE</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="collapse" id="mWho">
+            <div class="m-sub">
+              <a href="#">Overview</a>
+              <a href="#">Leadership</a>
+              <a href="#">Global Reach</a>
+              <a href="#">History</a>
+              <a href="#">Philanthropy</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="m-item">
+          <button class="m-row" type="button" data-bs-toggle="collapse" data-bs-target="#mBrands" aria-expanded="false" aria-controls="mBrands">
+            <span>BRANDS</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="collapse" id="mBrands">
+            <div class="m-sub">
+              <a href="#">All Brands</a>
+              <a href="#">Owned Brands</a>
+              <a href="#">Licensed Brands</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="m-item"><a class="m-a" href="#"><span>INVESTORS</span></a></li>
+        <li class="m-item"><a class="m-a" href="#"><span>NEWS</span></a></li>
+        <li class="m-item"><a class="m-a" href="#"><span>WORK WITH US</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

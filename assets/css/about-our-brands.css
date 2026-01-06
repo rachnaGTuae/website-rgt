@@ -1,0 +1,872 @@
+:root{
+  --font-heading: "Libre Baskerville", "Times New Roman", serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --ink:#1f1f1f;
+  --line:#e6e6e6;
+
+  --nav-h: 112px;
+  --maxw: 1180px;
+
+  --footer-gray:#3a3a3a;
+  --footer-black:#000;
+}
+
+*{ box-sizing:border-box; }
+html,body{ overflow-x:hidden; }
+body{
+  margin:0;
+  padding-top: var(--nav-h);
+  color: var(--ink);
+  background:#fff;
+  font-family: var(--font-body);
+}
+
+.giii-wrap{ max-width: var(--maxw); }
+
+/* =============== HEADER =============== */
+.giii-header{
+  height: var(--nav-h);
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  box-shadow: 0 10px 28px rgba(0,0,0,.12);
+  z-index: 1065;
+}
+.giii-header .navbar{ height:100%; }
+
+/* Logo block */
+.giii-brand{
+  width: 118px;
+  height: 118px;
+  background:#2f2f2f;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 18px 28px rgba(0,0,0,.20);
+  margin-left: -24px;
+  text-decoration:none;
+}
+.giii-brand img{
+  width: 115px;
+  height:auto;
+  display:block;
+}
+
+/* Center nav */
+.giii-nav-center{
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
+  top: 50%;
+  translate: 0 -50%;
+}
+.giii-nav-row{
+  display:flex;
+  align-items:center;
+}
+.giii-nav-link{
+  font-size: 12px;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  color:#2b2b2b;
+  text-decoration:none;
+  padding: 18px 34px;
+  display:inline-flex;
+  align-items:center;
+  white-space:nowrap;
+
+  /* underline animation base */
+  position:relative;
+}
+.giii-nav-link:hover,
+.giii-nav-link:focus{ color:#2b2b2b; }
+
+/* underline like your screenshot (no box) */
+.giii-underline::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom: 8px;
+  width: 0;
+  height: 2px;
+  background:#6f8f9b; /* subtle blue-grey line like screenshot */
+  transition: width .18s ease;
+}
+.giii-hover-dd:hover > .giii-underline::after,
+.giii-nav-link:hover.giii-underline::after{
+  width: 46px;
+}
+
+.giii-sep{
+  width:1px;
+  height:14px;
+  background:#cfcfcf;
+  opacity:.9;
+}
+
+/* Dropdown */
+.dropdown-toggle::after{ display:none !important; }
+.giii-dd{
+  border: 0;
+  border-radius:0;
+  padding: 18px 0;
+  min-width: 240px;
+  background:#fff;
+  box-shadow: 0 18px 44px rgba(0,0,0,.14);
+  margin-top: 6px;
+}
+.giii-dd .dropdown-item{
+  padding: 12px 24px;
+  font-size: 14px;
+  letter-spacing:.02em;
+  color:#2b2b2b;
+}
+.giii-dd .dropdown-item:hover{ background:#f6f6f6; }
+
+/* Mobile burger */
+.giii-burger{
+  width: 44px;
+  height: 44px;
+  background:transparent;
+  border:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap: 7px;
+  padding: 10px;
+}
+.giii-burger span{
+  display:block;
+  height:1.5px;
+  background:#2b2b2b;
+  width: 24px;
+  margin-left:auto;
+}
+
+/* =============== MOBILE OFFCANVAS (below header, no overlap) =============== */
+.giii-offcanvas{
+  width: 82vw;
+  max-width: 360px;
+  border-left:1px solid #ddd;
+
+  top: var(--nav-h) !important;
+  height: calc(100% - var(--nav-h)) !important;
+
+  z-index: 1060;
+}
+.offcanvas-backdrop{
+  top: var(--nav-h) !important;
+  height: calc(100% - var(--nav-h)) !important;
+}
+
+.giii-offcanvas-body{ padding: 0; }
+
+.giii-m-top{
+  position:relative;
+  padding: 18px 18px 10px 18px;
+  min-height: 64px;
+}
+.giii-m-account{
+  position:absolute;
+  top: 18px;
+  right: 64px;
+  font-size: 12px;
+  letter-spacing:.10em;
+  text-transform: uppercase;
+  text-decoration:none;
+  color:#2b2b2b;
+}
+.giii-m-close{
+  position:absolute;
+  top: 10px;
+  right: 12px;
+  width: 44px;
+  height: 44px;
+  border:0;
+  background:transparent;
+  font-size: 34px;
+  line-height: 1;
+  color:#2b2b2b;
+}
+
+.giii-m-list{ padding-bottom: 18px; }
+
+.giii-m-item{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 22px 18px;
+  color:#2b2b2b;
+  background:#fff;
+  font-size: 12px;
+  letter-spacing:.10em;
+  text-transform: uppercase;
+  border:0;
+  border-top:1px solid #efefef;
+  text-align:left;
+}
+.giii-m-item.linklike{
+  text-decoration:none;
+  display:flex;
+}
+.giii-m-item:last-child{ border-bottom:1px solid #efefef; }
+.giii-chev{ font-size: 18px; opacity:.65; transition: transform .18s ease; }
+
+.giii-m-sub{
+  display:none;
+  padding: 10px 0 14px 0;
+  border-top:1px solid #efefef;
+}
+.giii-m-sub.is-open{ display:block; }
+
+.giii-m-subitem{
+  display:block;
+  padding: 10px 22px;
+  color:#2b2b2b;
+  text-decoration:none;
+  font-size: 14px;
+}
+.giii-m-subitem:hover{ background:#f6f6f6; }
+
+
+/* =============== HERO =============== */
+.giii-hero{
+  padding: 22px 0 34px;
+}
+.giii-lines{
+  display:flex;
+  justify-content:center;
+  gap: 26px;
+  margin-bottom: 34px;
+  opacity:.55;
+}
+.giii-lines span{
+  width:3px;
+  height:72px;
+  background:#b6c4cf;
+  display:block;
+}
+.giii-h1{
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(40px, 5.2vw, 74px);
+  letter-spacing: -0.02em;
+  text-align:center;
+  margin: 0 0 16px 0;
+  color:#2a2a2a;
+}
+.giii-para{
+  color:#2f2f2f;
+  font-size: 16px;
+  line-height: 2.05;
+  margin: 0 0 14px 0;
+}
+.giii-para-center{
+  max-width: 760px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+.giii-para-gap{ margin-top: 28px; }
+
+/* =============== SECTIONS =============== */
+.giii-band{
+  padding: 56px 0 72px;
+}
+.giii-band-gray{
+  background:#f3f3f3; /* like reference */
+}
+.giii-h2{
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(42px, 4.8vw, 74px);
+  letter-spacing: -0.02em;
+  margin: 0 0 12px 0;
+  color:#2a2a2a;
+}
+.giii-h2-break{ line-height: .95; }
+
+.giii-block-gap{ margin-top: 34px; }
+
+.giii-cta{
+  margin-top: 18px;
+  display:flex;
+  align-items:center;
+  gap: 12px;
+}
+.giii-cta-link{
+  font-size: 12px;
+  letter-spacing:.12em;
+  text-transform: uppercase;
+  color:#2b2b2b;
+  text-decoration:none;
+  border-bottom: 1px solid #9c9c9c;
+  padding-bottom: 3px;
+}
+.giii-cta-dot{
+  width:26px;
+  height:26px;
+  border:1px solid #bdbdbd;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#6a6a6a;
+  font-size: 14px;
+}
+
+/* Image frame */
+.giii-frame{
+  position:relative;
+  width:100%;
+  max-width: 520px;
+  margin-left:auto;
+}
+.giii-frame-left{
+  margin-left:0;
+  margin-right:auto;
+}
+.giii-frame-border{
+  position:absolute;
+  width: 97%;
+  height: 97%;
+  border: 1px solid #7b7b7b;
+  border-radius: 4px;
+  top: -18px;
+  right: -18px;
+  z-index:0;
+}
+.giii-frame-left .giii-frame-border{
+  left:-18px;
+  right:auto;
+}
+.giii-img{
+  position:relative;
+  z-index:1;
+  width:100%;
+  display:block;
+  border-radius: 6px;
+  box-shadow: 0 18px 28px rgba(0,0,0,.18);
+  background:#eee;
+}
+
+/* Brands band image is smaller (ONE image only) */
+/* Desktop: large image like real site */
+.giii-frame-small{
+  max-width: 540px;
+}
+
+
+/* =============== FOOTER =============== */
+.giii-footer-top{
+  background: var(--footer-gray);
+  padding: 28px 0;
+}
+.giii-footer-links{
+  margin:0;
+  padding:0;
+  list-style:none;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:0;
+}
+.giii-footer-links li{ display:flex; align-items:center; }
+.giii-footer-links li + li::before{
+  content:"|";
+  color: rgba(255,255,255,.75);
+}
+.giii-footer-links a{
+  color:#fff;
+  text-decoration:none;
+  font-size: 12px;
+  letter-spacing:.06em;
+  padding: 0 16px;
+  white-space:nowrap;
+}
+.giii-footer-mid{
+  background: var(--footer-black);
+  color:#fff;
+  text-align:center;
+  padding: 18px 0;
+  font-size: 12px;
+  letter-spacing:.04em;
+}
+.giii-footer-bot{
+  background: var(--footer-gray);
+  color:#fff;
+  text-align:center;
+  padding: 22px 0;
+  font-size: 12px;
+  letter-spacing:.04em;
+}
+
+/* =============== RESPONSIVE =============== */
+@media (max-width: 991.98px){
+  :root{ --nav-h: 92px; }
+  body{ padding-top: var(--nav-h); }
+
+  .giii-brand{
+    width: 92px;
+    height: 92px;
+    margin-left: -10px;
+  }
+  .giii-brand img{ width: 90px; }
+
+  .giii-hero{ padding: 44px 0 22px; }
+  .giii-lines{ margin-bottom: 22px; }
+  .giii-lines span{ height: 62px; }
+
+  .giii-para{ font-size: 15.5px; }
+
+  /* Keep brands image centered on mobile */
+  .giii-frame,
+  .giii-frame-small{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  /* Slightly smaller border offset on mobile */
+  .giii-frame-border{
+    top: -14px;
+    right: -14px;
+  }
+  .giii-frame-left .giii-frame-border{
+    left:-14px;
+    right:auto;
+  }
+
+  .giii-frame-small{ max-width: 320px; }
+}
+
+@media (max-width: 420px){
+  .giii-offcanvas{ width: 86vw; }
+  .giii-account{ right: 82px; }
+}
+
+/* =====================================================
+   MOBILE OFFCANVAS DROPDOWN (COLLAPSE STYLE)
+   ===================================================== */
+
+/* Make toggle buttons look like normal links */
+.giii-m-toggle{
+  width: 100%;
+  background: transparent;
+  border: 0;
+  text-align: left;
+  padding: 0;
+}
+
+/* Top-level mobile items (links + buttons unified) */
+.giii-m-item{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 18px;
+  background: transparent;
+  border: 0;
+  text-decoration: none;
+  color: #2b2b2b;
+  font-size: 12px;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  border-top: 1px solid #efefef;
+}
+
+/* Remove focus styles from buttons */
+.giii-m-item:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+/* Chevron animation */
+.giii-chev{
+  font-size: 18px;
+  opacity: .65;
+  transition: transform .25s ease;
+}
+
+/* Rotate chevron when submenu is open */
+.giii-m-toggle[aria-expanded="true"] .giii-chev{
+  transform: rotate(90deg);
+}
+
+/* Submenu container */
+.giii-sub{
+  background: #ffffff;
+  border-top: 1px solid #efefef;
+}
+
+/* Submenu links */
+.giii-sub-link{
+  display: block;
+  padding: 16px 18px 16px 34px;
+  text-decoration: none;
+  color: #2b2b2b;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  border-top: 1px solid #f3f3f3;
+}
+
+/* Hover state */
+.giii-sub-link:hover{
+  background: #f7f7f7;
+}
+
+/* Prevent double border at bottom */
+.giii-offcanvas-body > .giii-m-item:last-of-type{
+  border-bottom: 1px solid #efefef;
+}
+
+/* ===============================
+   DESKTOP DROPDOWN – GIII STYLE
+   =============================== */
+
+/* Remove bootstrap arrow */
+.navbar .dropdown-toggle::after{ display:none !important; }
+
+/* Dropdown container look */
+.navbar .dropdown-menu.giii-dd{
+  min-width: 320px;
+  padding: 22px 0;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: 0 26px 55px rgba(0,0,0,.14);
+  margin-top: 14px;                 /* gap from nav */
+}
+
+/* Add small top spacing so it feels detached */
+.navbar .dropdown-menu.giii-dd::before{
+  content:"";
+  position:absolute;
+  top:-14px;
+  left:0;
+  right:0;
+  height:14px;
+}
+
+/* Menu items */
+.navbar .dropdown-menu.giii-dd .dropdown-item{
+  padding: 12px 34px;
+  font-size: 15px;
+  letter-spacing: .02em;
+  color:#333;
+  background: transparent;
+}
+
+/* Hover feel – no background block, subtle */
+.navbar .dropdown-menu.giii-dd .dropdown-item:hover{
+  background: transparent;
+  color:#111;
+}
+
+/* Active underline indicator under the parent link (WHO WE ARE) */
+.navbar .dropdown.giii-hover > .dropdown-toggle{
+  position: relative;
+  padding-bottom: 14px;
+}
+
+/* underline like the screenshot (only when open/hovered) */
+.navbar .dropdown.giii-hover.show > .dropdown-toggle::before{
+  content:"";
+  position:absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 6px;
+  width: 58px;
+  height: 2px;
+  background:#5f6f7a; /* muted blue-grey underline */
+  opacity:.9;
+}
+
+/* Make dropdown appear directly under link, not offset weirdly */
+.navbar .dropdown-menu{
+  top: 100%;
+}
+
+/* Ensure dropdown appears above page content */
+.navbar{ position: relative; z-index: 1065; }
+
+/* ================================
+   NAV LINK UNDERLINE ONLY (NO BOX)
+   ================================ */
+
+/* Reset any box / background effects */
+.giii-nav-link{
+  background: transparent !important;
+  border: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  position: relative;
+}
+
+/* Remove Bootstrap focus styles */
+.giii-nav-link:focus,
+.giii-nav-link:active{
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Underline (hidden by default) */
+.giii-nav-link::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 6px;
+  width: 56px;                 /* underline length */
+  height: 2px;
+  background: #5f6f7a;         /* same muted blue-grey */
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+/* Show underline on hover */
+.dropdown.giii-hover:hover > .giii-nav-link::after{
+  opacity: 1;
+}
+
+/* Keep underline visible when dropdown is open */
+.dropdown.giii-hover.show > .giii-nav-link::after{
+  opacity: 1;
+}
+
+/* Ensure NO border / box ever appears */
+.dropdown.giii-hover > .giii-nav-link{
+  border: 0 !important;
+}
+
+/* FORCE underline to show when dropdown is hovered/open */
+.dropdown.giii-hover > .dropdown-toggle{
+  position: relative;
+}
+
+/* Underline base */
+.dropdown.giii-hover > .dropdown-toggle::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:6px;
+  width:56px;
+  height:2px;
+  background:#5f6f7a;
+  opacity:0;
+  pointer-events:none;
+  z-index: 20;
+}
+
+/* Show underline on hover OR when Bootstrap adds .show */
+.dropdown.giii-hover:hover > .dropdown-toggle::after,
+.dropdown.giii-hover.show > .dropdown-toggle::after,
+.dropdown.giii-hover > .dropdown-toggle.show::after{
+  opacity:1 !important;
+}
+
+.giii-header,
+.navbar,
+.giii-nav-center,
+.giii-nav-row{
+  overflow: visible !important;
+}
+
+/* ================================
+   UNDERLINE (USE ::before, because ::after is hidden)
+   ================================ */
+
+/* Keep Bootstrap arrow hidden */
+.dropdown-toggle::after{ display:none !important; }
+
+/* Ensure the link can host underline */
+.dropdown.giii-hover > .dropdown-toggle{
+  position: relative;
+  padding-bottom: 14px;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Underline */
+.dropdown.giii-hover > .dropdown-toggle::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:6px;
+  width:58px;
+  height:2px;
+  background:#5f6f7a;
+  opacity:0;
+  transition: opacity .2s ease;
+  pointer-events:none;
+}
+
+/* Show underline on hover + when open */
+.dropdown.giii-hover:hover > .dropdown-toggle::before,
+.dropdown.giii-hover.show > .dropdown-toggle::before,
+.dropdown.giii-hover > .dropdown-toggle.show::before{
+  opacity:1;
+}
+
+/* Footer Icon Css */
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.footer-social a {
+  color: #ffffff;
+  font-size: 15px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer-social a:hover {
+  opacity: 0.7;
+}
+
+.footer-sep {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+}
+
+/* =====================================================
+   ABOUT PAGE FIXES
+   1) Desktop hover dropdown class mismatch
+   2) Mobile submenu (.giii-m-sub) was not styled
+   ===================================================== */
+
+/* --- Desktop: support your HTML class .giii-hover-dd --- */
+.dropdown.giii-hover-dd > .dropdown-toggle{
+  position: relative;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* underline on hover/open (same as FO behavior) */
+.dropdown.giii-hover-dd > .dropdown-toggle::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:6px;
+  width:58px;
+  height:2px;
+  background:#5f6f7a;
+  opacity:0;
+  transition: opacity .2s ease;
+  pointer-events:none;
+}
+.dropdown.giii-hover-dd:hover > .dropdown-toggle::before,
+.dropdown.giii-hover-dd.show > .dropdown-toggle::before{
+  opacity:1;
+}
+
+/* Ensure dropdown is not clipped */
+.giii-header,
+.navbar,
+.giii-nav-center,
+.giii-nav-row{
+  overflow: visible !important;
+}
+
+/* --- Mobile: style YOUR submenu class .giii-m-sub --- */
+.giii-m-sub{
+  display: none;                 /* hidden by default */
+  background: #ffffff;
+  border-top: 1px solid #efefef;
+}
+.giii-m-sub.is-open{
+  display: block;                /* shown when JS toggles */
+}
+
+/* Submenu links inside mobile offcanvas */
+.giii-m-sub-link{
+  display: block;
+  padding: 16px 18px 16px 34px;
+  text-decoration: none;
+  color: #2b2b2b;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  border-top: 1px solid #f3f3f3;
+}
+.giii-m-sub-link:hover{
+  background: #f7f7f7;
+}
+
+/* =========================================
+   NAV UNDERLINE — FOR ALL LINKS (FIX)
+   Matches FO navbar behavior exactly
+   ========================================= */
+
+/* Base nav link */
+.giii-nav-link{
+  position: relative;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Underline (hidden by default) */
+.giii-nav-link::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 6px;
+  width: 48px;                 /* underline length */
+  height: 2px;
+  background: #5f6f7a;         /* same muted blue-grey */
+  opacity: 0;
+  transition: opacity .2s ease;
+  pointer-events: none;
+}
+
+/* Show underline on hover */
+.giii-nav-link:hover::after{
+  opacity: 1;
+}
+
+/* Keep underline visible on active page */
+.giii-nav-link.active::after{
+  opacity: 1;
+}
+
+/* =========================================
+   DESKTOP HOVER DROPDOWN (NO CLICK REQUIRED)
+   ========================================= */
+
+@media (min-width: 992px){
+
+  /* Enable hover dropdown */
+  .dropdown.giii-hover-dd:hover > .dropdown-menu{
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    margin-top: 14px;
+  }
+
+  /* Prevent click-only behavior */
+  .dropdown.giii-hover-dd > .dropdown-toggle{
+    pointer-events: auto;
+  }
+
+  /* Smooth appearance */
+  .dropdown-menu{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s ease;
+  }
+}

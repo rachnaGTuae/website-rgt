@@ -1,0 +1,156 @@
+    :root{
+      --ink:#0b1220;
+      --muted:#6b7280;
+      --border: rgba(15, 23, 42, .12);
+      --shadow: 0 18px 55px rgba(2, 6, 23, .10);
+      --shadow-soft: 0 14px 40px rgba(2, 6, 23, .08);
+      --radius: 18px;
+    }
+
+    body{ color:var(--ink); background:#fff; }
+
+    /* =========================
+       FULL WIDTH HERO (NO CONTAINER)
+       ========================= */
+    .hero-full{
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      border-radius: 0;            /* full width edge-to-edge */
+      min-height: 320px;
+    }
+
+    .hero-full img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      aspect-ratio: 1584 / 396;    /* desktop banner ratio */
+    }
+
+    
+
+   
+    .hero-max{ max-width: 860px; }
+
+    .hero-kicker{
+      color: rgba(255,255,255,.78);
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-size: .78rem;
+    }
+
+    .hero-title{
+      color:#fff;
+      font-weight: 800;
+      letter-spacing: .2px;
+      line-height: 1.05;
+      font-size: clamp(1.65rem, 3vw, 2.75rem);
+      margin: 10px 0 10px;
+    }
+
+    .hero-sub{
+      color: rgba(255,255,255,.85);
+      margin: 0 0 16px;
+      font-size: 1rem;
+      line-height: 1.55;
+      max-width: 720px;
+    }
+
+    .hero-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.20);
+      background: rgba(255,255,255,.08);
+      backdrop-filter: blur(6px);
+      color:#fff;
+      font-size:.95rem;
+    }
+
+    .hero-pill .dot{
+      width:10px;height:10px;border-radius:50%;
+      background: rgba(255,255,255,.85);
+      box-shadow: 0 0 0 6px rgba(255,255,255,.10);
+    }
+
+    /* MOBILE HERO */
+    @media (max-width: 575.98px){
+      .hero-full{ min-height: 440px; }
+      .hero-content{ align-items: flex-end; }
+      .hero-full img{ aspect-ratio: 3 / 2; }
+    }
+
+    /* =========================
+       TESTIMONIALS
+       ========================= */
+    .t-wrap{ padding: 52px 0; }
+    .t-headline{ font-weight: 650; letter-spacing: .2px; }
+    .t-sub{ color: var(--muted); }
+
+   
+
+    .t-card{
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-soft);
+      background: #fff;
+      overflow: hidden;
+      position: relative;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .t-card:hover{ transform: translateY(-4px); box-shadow: var(--shadow); }
+
+    .t-avatar{
+      width: 56px; height: 56px; border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      background: #f3f4f6;
+    }
+
+    .stars{ display:inline-flex; gap:2px; line-height:1; transform: translateY(1px); }
+    .star{
+      width: 18px; height: 18px;
+      display:inline-block;
+      background: currentColor;
+      -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>') center/contain no-repeat;
+              mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>') center/contain no-repeat;
+      color: rgba(11,18,32,.18);
+    }
+    .star.on{ color: rgba(11,18,32,.85); }
+
+    .t-quote{ color: rgba(11,18,32,.88); font-size: .98rem; line-height: 1.55; }
+
+    .t-social{
+      position:absolute;
+      inset:auto 14px 14px 14px;
+      display:flex;
+      gap:10px;
+      justify-content:flex-end;
+      opacity:0;
+      transform: translateY(8px);
+      transition: opacity .2s ease, transform .2s ease;
+      pointer-events:none;
+    }
+    .t-card:hover .t-social{ opacity:1; transform: translateY(0); pointer-events:auto; }
+
+    .t-ic{
+      width: 38px; height: 38px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background:#fff;
+      display:grid;
+      place-items:center;
+      transition: transform .2s ease, background .2s ease;
+      text-decoration:none;
+      color: rgba(11,18,32,.9);
+    }
+    .t-ic:hover{ transform: translateY(-2px); background:#f8fafc; }
+    .t-ic svg{ width:18px; height:18px; }
+
+    @media (max-width: 575.98px){
+      .t-wrap{ padding: 42px 0; }
+      .t-quote{ font-size: .95rem; }
+    }

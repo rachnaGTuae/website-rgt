@@ -1,0 +1,876 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monkey Troopers — Brand Page</title>
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="../Rachna/assets/css/monkeytroopers_final.css">
+
+  <!-- Footer -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="giii-header fixed-top">
+    <nav class="navbar h-100">
+      <div class="container giii-wrap position-relative h-100">
+
+        <!-- Logo block (SVG) -->
+        <a class="giii-brand" href="../Rachna/index.html">
+          <!-- Use your svg logo path -->
+          <img src="../Rachna/assets/img/rachna_llc_logo.jpeg" alt="G-III Logo">
+        </a>
+
+        <!-- Desktop center nav -->
+        <div class="giii-nav-center d-none d-lg-block">
+          <ul class="giii-nav-row m-0 p-0 list-unstyled">
+
+            <!-- WHO WE ARE (dropdown on hover) -->
+            <li class="nav-item"><a class="giii-nav-link giii-underline" href="../Rachna/index.html">HOME</a></li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <li class="nav-item dropdown giii-hover-dd">
+              <a class="giii-nav-link giii-underline" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                WHAT WE DO
+              </a>
+              <ul class="dropdown-menu giii-dd">
+                <li><a class="dropdown-item" href="../Rachna/fo.html">FO DUBAI</a></li>
+                <li><a class="dropdown-item" href="../Rachna/monkeytroopers_final.html">MONKEY TROOPERS DUBAI</a></li>
+                <li><a class="dropdown-item" href="../Rachna/rachna_store.html">RACHNA RETAIL STORE</a></li>
+              </ul>
+            </li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <li class="nav-item"><a class="giii-nav-link giii-underline" href="../Rachna/about-our-brands.html">ABOUT US</a></li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <li class="nav-item"><a class="giii-nav-link giii-underline" href="../Rachna/testimonials.html">TESTIMONIALS</a></li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <!-- BRANDS (dropdown on hover) -->
+            <li class="nav-item dropdown giii-hover-dd">
+              <a class="giii-nav-link giii-underline" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                CONTACT US
+              </a>
+              <ul class="dropdown-menu giii-dd">
+                <li><a class="dropdown-item" href="../Rachna/UAE-Trade.html">UAE TRADE & DISTRIBUTION ENQUIRES</a></li>
+                <li><a class="dropdown-item" href="../Rachna/FO-Dubai-International-Licensing-Enquiries.html">FO DUBAI INTERNATIONAL LICENSING</a></li>
+                <li><a class="dropdown-item" href="../Rachna/rachna-retail-store.html">RETAIL STORE & CUSTOMER ENQURIES (DUBAI)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile burger -->
+        <button class="giii-burger d-lg-none ms-auto" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#giiiMobile" aria-controls="giiiMobile"
+                aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- MOBILE OFFCANVAS -->
+  <div class="offcanvas offcanvas-end giii-offcanvas" tabindex="-1" id="giiiMobile" aria-labelledby="giiiMobileLabel">
+    <div class="giii-offcanvas-body">
+
+      <!-- <div class="giii-m-top">
+        <a class="giii-m-account" href="#">ACCOUNT</a>
+        <button type="button" class="giii-m-close" data-bs-dismiss="offcanvas" aria-label="Close menu">×</button>
+      </div> -->
+
+      <!-- Accordion style dropdowns (like desktop) -->
+      <div class="giii-m-list">
+
+        <a class="giii-m-item linklike" href="../Rachna/index.html"><span>HOME</span></a>
+        <button class="giii-m-item" type="button" data-giii-acc="who">
+          <span>WHAT WE DO</span><span class="giii-chev">›</span>
+        </button>
+        <div class="giii-m-sub" id="giii-sub-who">
+          <a class="giii-m-subitem" href="../Rachna/fo.html">FO DUBAI</a>
+          <a class="giii-m-subitem" href="../Rachna/monkeytroopers_final.html">MONKEY TROOPERS DUBAI</a>
+          <a class="giii-m-subitem" href="../Rachna/rachna_store.html">RACHNA RETAIL STORE</a>
+        </div>
+
+        <a class="giii-m-item linklike" href="../Rachna/about-our-brands.html"><span>ABOUT US</span></a>
+        <a class="giii-m-item linklike" href="../Rachna/testimonials.html"><span>TESTIMONIALS</span></a>
+
+        <button class="giii-m-item" type="button" data-giii-acc="brands">
+          <span>CONTACT US</span><span class="giii-chev">›</span>
+        </button>
+        <div class="giii-m-sub" id="giii-sub-brands">
+          <a class="giii-m-subitem" href="../Rachna/UAE-Trade.html">UAE TRADE & DISTRIBUTION ENQUIRES</a>
+          <a class="giii-m-subitem" href="../Rachna/FO-Dubai-International-Licensing-Enquiries.html">FO DUBAI INTERNATIONAL LICENSING</a>
+          <a class="giii-m-subitem" href="../Rachna/rachna-retail-store.html">RETAIL STORE & CUSTOMER ENQURIES (DUBAI)</a>
+        </div>        
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- HERO / BANNER -->
+  <section class="brand-hero">
+    <!-- Two banners: desktop + mobile -->
+    <picture class="brand-hero-pic">
+      <!-- mobile -->
+      <source srcset="../Rachna/assets/img/mt_brand/mt_mobile_banner.png" media="(max-width: 991.98px)">
+      <!-- desktop -->
+      <img src="../Rachna/assets/img/mt_brand/mt_desktop_banner.png" alt="Vilebrequin Banner" class="brand-hero-img">
+    </picture>
+
+    <!-- Decorative 3 vertical lines (left bottom) -->
+    <!-- <div class="brand-hero-lines" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div> -->
+
+    <!-- White cut panel under image (like screenshot) -->
+    <!-- <div class="brand-hero-cut" aria-hidden="true"></div> -->
+  </section>
+
+
+  <!-- CONTENT -->
+  <main class="brand-main">
+    <div class="container giii-wrap">
+
+      <a class="brand-back" href="#">
+        <!-- &lt; BACK TO ALL BRANDS -->
+      </a>
+
+      <div class="row g-5 align-items-start brand-top">
+        <!-- LEFT -->
+        <div class="col-lg-6">
+          <div class="brand-logo-wrap">
+            <!-- Replace with your brand logo image -->
+            <img src="../Rachna/assets/img/mt logo web.jpg" alt="Vilebrequin" class="brand-logo">
+          </div>
+
+          <div class="brand-copy">
+            <p>
+              Monkey Troopers is a Gen‑Z, street‑style carry brand built for urban commuters—designed to look bold, move smart, and perform daily.
+              Under Rachna General Trading LLC (Dubai), we manage the brand’s UAE presence with a focus on product authenticity, premium presentation, and consistent customer experience.
+            </p>
+            <p class="mb-0">
+              From online marketplaces to curated retail, we operate with disciplined control over assortment, pricing, merchandising, and content—so the brand stays sharp, recognizable, and scalable across touchpoints.
+            </p>
+          </div>
+
+          <hr class="brand-hr">
+
+          <h3 class="brand-subhead">Communications</h3>
+          <a class="brand-mail" href="mailto:support@monkeytroopers.ae">support@monkeytroopers.ae</a>
+
+          <hr class="brand-hr">
+
+          <div class="brand-cta">
+            <a class="brand-cta-link" href="https://monkeytroopers.ae/" target="_blank" rel="noopener">VIEW BRAND WEBSITE</a>
+            <span class="brand-cta-dot" aria-hidden="true">›</span>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="col-lg-6">
+          <h2 class="brand-h2">Brand Highlights</h2>
+
+            <div class="brand-highlights" id="brandHighlights">
+
+                <!-- Item 1 -->
+                <div class="brand-hi-item is-accordion">
+                    <button class="brand-hi-toggle" type="button" aria-expanded="false">
+                    <span class="brand-hi-text">Sole Authorized UAE Brand Operations Partner</span>
+                    <span class="brand-hi-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="brand-hi-panel" role="region">
+                    <!-- <div class="brand-hi-panel-inner">
+                        <p class="brand-hi-desc mb-2">
+                        Add your detailed history here. Explain how the acquisition happened, the reason behind it,
+                        and how it impacted the brand’s direction and growth.
+                        </p>
+                        <p class="brand-hi-desc mb-0">
+                        You can add more paragraphs, bullet points, timelines—anything. This area will stay hidden
+                        until the user clicks the title.
+                        </p>
+                    </div> -->
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="brand-hi-item is-accordion">
+                    <button class="brand-hi-toggle" type="button" aria-expanded="false">
+                    <span class="brand-hi-text">Online Marketplace Launch + Catalogue Discipline</span>
+                    <span class="brand-hi-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="brand-hi-panel" role="region">
+                    <!-- <div class="brand-hi-panel-inner">
+                        <p class="brand-hi-desc mb-0">
+                        Add details about product category leadership, design language, positioning, target audience,
+                        and distribution footprint.
+                        </p>
+                    </div> -->
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="brand-hi-item is-accordion">
+                    <button class="brand-hi-toggle" type="button" aria-expanded="false">
+                    <span class="brand-hi-text">Retail & Distribution Support for Curated Store Networks</span>
+                    <span class="brand-hi-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="brand-hi-panel" role="region">
+                    <!-- <div class="brand-hi-panel-inner">
+                        <p class="brand-hi-desc mb-0">
+                        Add store expansion story, key regions, partner model, and milestones.
+                        </p>
+                    </div> -->
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="brand-hi-item is-accordion">
+                    <button class="brand-hi-toggle" type="button" aria-expanded="false">
+                    <span class="brand-hi-text">Localized Market Execution with Global Brand Standards</span>
+                    <span class="brand-hi-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="brand-hi-panel" role="region">
+                    <!-- <div class="brand-hi-panel-inner">
+                        <p class="brand-hi-desc mb-0">
+                        Add licensing model details, experiential strategy, partner criteria, and brand control approach.
+                        </p>
+                    </div> -->
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="brand-hi-item is-accordion">
+                    <button class="brand-hi-toggle" type="button" aria-expanded="false">
+                    <span class="brand-hi-text">Operational Control: Inventory, Pricing, Returns, CX</span>
+                    <span class="brand-hi-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="brand-hi-panel" role="region">
+                    <!-- <div class="brand-hi-panel-inner">
+                        <p class="brand-hi-desc mb-0">
+                        Add opening story, location context, launch strategy, and business outcome.
+                        </p>
+                    </div> -->
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="brand-hi-item brand-hi-last is-accordion">
+                    <button class="brand-hi-toggle" type="button" aria-expanded="false">
+                    <span class="brand-hi-text">End-to-End Control from Import to Consumer Experience</span>
+                    <span class="brand-hi-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="brand-hi-panel" role="region">
+                    <!-- <div class="brand-hi-panel-inner">
+                        <p class="brand-hi-desc mb-0">
+                        Add performance highlights, growth drivers, category mix, and channel performance.
+                        </p>
+                    </div> -->
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+      </div>
+
+
+      <!-- =======================================================
+           Monkey Troopers UAE Operating Blueprint (PDF CONTENT SECTION)
+           Clean tabs + accordions to avoid bulky layout
+      ======================================================== -->
+      <section class="fo-blueprint" id="fo-blueprint">
+        <div class="fo-head">
+          <h2 class="fo-h2">Monkey Troopers UAE Operating Blueprint</h2>
+          <p class="fo-lead">
+            Monkey Troopers’ UAE Operating Blueprint defines how the brand is exclusively managed, distributed, and scaled across the Emirates by Rachna General Trading LLC.
+            The framework aligns marketplaces, retail, logistics, compliance, and brand communication into one consistent UAE operating system.
+          </p>
+          <!-- <p class="fo-sub">
+            Replace the placeholder text inside each tab/accordion with your PDF paragraphs and images.
+          </p> -->
+        </div>
+
+        <div class="fo-pills" role="tablist" aria-label="FO Blueprint sections">
+          <button class="fo-pill is-active" type="button" data-fo-tab="vision">OVERVIEW</button>
+          <button class="fo-pill" type="button" data-fo-tab="whyfo">PRODUCT &amp; DNA</button>
+          <button class="fo-pill" type="button" data-fo-tab="control">ONLINE OPERATIONS</button>
+          <button class="fo-pill" type="button" data-fo-tab="distribution">RETAIL &amp; DISTRIBUTION</button>
+          <button class="fo-pill" type="button" data-fo-tab="expansion">MARKETING &amp; CONTENT</button>
+          <button class="fo-pill" type="button" data-fo-tab="nonnegotiables">CONTROLS</button>
+          <!-- <button class="fo-pill" type="button" data-fo-tab="digital">DIGITAL ENGINE</button> -->
+        </div>
+
+        <div class="fo-panels">
+
+          <!-- OVERVIEW -->
+          <div class="fo-panel is-active" id="tab-vision">
+            <div class="fo-panel-grid">
+              <div>
+                <h3 class="fo-h3">Built for Gen‑Z. Engineered for Daily Carry.</h3>
+                <p class="fo-body">
+                  Monkey Troopers is a Gen-Z street-style carry brand designed for everyday urban movement. The product ecosystem—backpacks, crossbodies, duffles, and compact carry—is built to balance bold design, smart organization, and daily durability.
+                </p>
+                <p class="fo-body">
+                  The brand’s DNA combines street culture, functionality, and accessibility, making Monkey Troopers relevant for college, work, travel, and lifestyle use without compromising attitude or performance.
+                </p>
+                <p class="fo-body">
+                  In the UAE, Monkey Troopers is executed with disciplined control across assortment, pricing, presentation, and distribution—ensuring the brand remains consistent, scalable, and recognizable across both online marketplaces and curated retail environments.
+                </p>
+                <!-- <p class="fo-tip mb-0">Tip: split long PDF paragraphs into 2–3 smaller ones to match your page rhythm.</p> -->
+              </div>
+
+              <div>
+                <div class="brand-visual-box">
+                  <img 
+                    src="assets/img/mt_brand/1.jpg" 
+                    alt="FO Dubai Luxury Fragrance"
+                    class="brand-visual-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT & DNA -->
+          <div class="fo-panel" id="tab-whyfo">
+            <h3 class="fo-h3">Product Pillars</h3>
+            <div class="accordion fo-acc" id="accWhyFo">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#why1"
+                          aria-expanded="true" aria-controls="why1">
+                          Street‑First Aesthetics, Built to Last
+                  </button>
+                </h2>
+
+                <div id="why1" class="accordion-collapse collapse show" data-bs-parent="#accWhyFo">
+                  <div class="accordion-body">
+
+                    <div class="accordion-content-grid">
+
+                      <!-- LEFT: TEXT -->
+                      <div class="accordion-text">
+                        <p>
+                          Monkey Troopers products are designed with a street-first design language—clean silhouettes, bold proportions, and premium visual details that stand out without being loud.
+                          Every piece is built to complement Gen-Z style while remaining versatile for everyday use.
+                        </p>
+
+                        <p class="mb-0">
+                          Materials, stitching, and hardware are selected for durability and long-term performance, ensuring the product holds up to daily urban movement, travel, and routine wear without compromising look or structure.
+                        </p>
+                      </div>
+
+                      <!-- RIGHT: IMAGE -->
+                      <div class="accordion-image">
+                        <img src="assets/img/mt_brand/2.jpg" alt="FO Dubai Oud Fragrance">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2nd Section -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#why2"
+                          aria-expanded="false" aria-controls="why2">
+                          Smart Organization for Tech + Essentials
+                  </button>
+                </h2>
+
+                <div id="why2" class="accordion-collapse collapse" data-bs-parent="#accWhyFo">
+                  <div class="accordion-body">
+
+                    <div class="accordion-content-grid reverse-desktop">
+
+                      <!-- LEFT (DESKTOP): IMAGE -->
+                      <div class="accordion-image">
+                        <img src="assets/img/mt_brand/3.jpg" alt="FO Dubai Premium Positioning">
+                      </div>
+
+                      <!-- RIGHT (DESKTOP): TEXT -->
+                      <div class="accordion-text">
+                        <p>
+                          Each product is engineered with intentional internal organization to support modern daily carry.
+                          Dedicated compartments for laptops, tablets, chargers, and accessories ensure that essentials stay secure, accessible, and protected.
+                        </p>
+                        <p class="mb-0">
+                          This balance of smart storage and clean design allows Monkey Troopers bags to transition seamlessly between college, work, commute, and travel—without clutter or over-engineering.
+                        </p>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3rd Section -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#why3"
+                          aria-expanded="false" aria-controls="why3">
+                          Lightweight Comfort for All-Day Carry
+                  </button>
+                </h2>
+
+                <div id="why3" class="accordion-collapse collapse" data-bs-parent="#accWhyFo">
+                  <div class="accordion-body">
+
+                    <div class="accordion-content-grid">
+
+                      <!-- LEFT: TEXT -->
+                      <div class="accordion-text">
+                        <p>
+                          Comfort is treated as a core design requirement, not an add-on.
+                          Products feature ergonomic straps, balanced weight distribution, and breathable contact surfaces to support extended daily use.
+                        </p>
+                        <p class="mb-0">
+                          This focus ensures Monkey Troopers bags feel easy to carry throughout long days—whether worn on bikes, public transport, or while moving across the city.
+                        </p>
+                      </div>
+
+                      <!-- RIGHT: IMAGE -->
+                      <div class="accordion-image">
+                        <img src="assets/img/mt_brand/4.jpg" alt="FO Dubai Origin & Luxury">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ONLINE OPERATIONS -->
+          <div class="fo-panel" id="tab-control">
+            <h3 class="fo-h3">Online Operations</h3>
+
+            <div class="accordion fo-acc" id="accOnlineOps">
+              <!-- Item 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#online1"
+                          aria-expanded="true" aria-controls="online1">
+                    Listings, Variations, and Catalog Hygiene
+                  </button>
+                </h2>
+
+                <div id="online1" class="accordion-collapse collapse show" data-bs-parent="#accOnlineOps">
+                  <div class="accordion-body">
+                    <div class="accordion-content-grid">
+                      <div class="accordion-text">
+                        <p>
+                          Monkey Troopers maintains a structured and disciplined product catalog across all online platforms. Every SKU follows consistent naming
+                          conventions, standardized imagery, and clear variation logic to ensure clarity, premium presentation, and ease of discovery.
+                        </p>
+                        <p class="mb-0">
+                          This approach reduces listing errors, improves search visibility, and ensures customers experience the brand in a clean, reliable, and
+                          conversion-focused manner across marketplaces.
+                        </p>
+                      </div>
+
+                      <div class="accordion-image">
+                        <img src="assets/img/mt_brand/5.jpg" alt="Monkey Troopers Online Operations">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#online2"
+                          aria-expanded="false" aria-controls="online2">
+                    Marketplace Execution (Amazon / Noon / Others)
+                  </button>
+                </h2>
+
+                <div id="online2" class="accordion-collapse collapse" data-bs-parent="#accOnlineOps">
+                  <div class="accordion-body">
+                    <div class="accordion-content-grid reverse-desktop">
+                      <div class="accordion-image">
+                        <img src="assets/img/mt_brand/6.jpg" alt="Marketplace Execution">
+                      </div>
+
+                      <div class="accordion-text">
+                        <p>
+                          Marketplace operations are executed with platform-specific optimization while maintaining a unified brand identity. Listings are tailored
+                          to each platform’s algorithm, content guidelines, and consumer behavior without diluting Monkey Troopers’ core visual and messaging standards.
+                        </p>
+                        <p class="mb-0">
+                          This includes A+ content, optimized PDP structures, controlled pricing, and performance tracking—allowing the brand to scale efficiently
+                          while protecting margin, trust, and long-term brand value.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+
+          <!-- RETAIL & DISTRIBUTION -->
+          <div class="fo-panel" id="tab-distribution">
+            <h3 class="fo-h3">Retail &amp; Distribution</h3>
+
+            <div class="accordion fo-acc" id="accRetail">
+              <!-- Item 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#retail1"
+                          aria-expanded="true" aria-controls="retail1">
+                    Curated Store Placement &amp; Visual Standards
+                  </button>
+                </h2>
+
+                <div id="retail1" class="accordion-collapse collapse show" data-bs-parent="#accRetail">
+                  <div class="accordion-body">
+                    <div class="accordion-content-grid reverse-desktop">
+                      <div class="accordion-image">
+                        <img src="assets/img/mt_brand/7.jpg" alt="Curated Retail Placement">
+                      </div>
+
+                      <div class="accordion-text">
+                        <p>
+                          Monkey Troopers partners only with curated retail environments that align with the brand’s street-first, urban aesthetic and Gen-Z customer base.
+                        </p>
+                        <p class="mb-0">
+                          Store selection is guided by location relevance, customer profile, and brand fit—not volume expansion. Visual standards, display guidelines,
+                          and merchandising assets are provided to ensure consistent presentation across all physical touchpoints.
+                          <br><br>
+                          Seasonal drops and limited assortments are introduced selectively to maintain freshness, demand, and brand desirability while avoiding overexposure.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#retail2"
+                          aria-expanded="false" aria-controls="retail2">
+                    Sell-Through Support &amp; Replenishment
+                  </button>
+                </h2>
+
+                <div id="retail2" class="accordion-collapse collapse" data-bs-parent="#accRetail">
+                  <div class="accordion-body">
+                    <div class="accordion-content-grid">
+                      <div class="accordion-text">
+                        <p>
+                          Retail performance is actively monitored to support healthy sell-through and inventory efficiency. Product mix, sizing depth, and replenishment cycles are optimized
+                          based on real-time demand and store-level performance.
+                        </p>
+                        <p class="mb-0">
+                          Replenishment is controlled to prevent overstocking and discount pressure, while enabling high-performing styles to scale naturally. This disciplined approach protects margins,
+                          supports retail partners, and ensures Monkey Troopers remains a fast-moving, in-demand brand on the shelf.
+                        </p>
+                      </div>
+
+                      <div class="accordion-image">
+                        <img src="assets/img/mt_brand/8.jpg" alt="Retail Replenishment">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- MARKETING & CONTENT -->
+          <div class="fo-panel" id="tab-expansion">
+            <h3 class="fo-h3">Marketing &amp; Content System</h3>
+
+            <div class="accordion fo-acc" id="accMarketing">
+              <!-- Item 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#mkt1"
+                          aria-expanded="true" aria-controls="mkt1">
+                    Always-On Creative Engine (UGC + Studio + Lifestyle)
+                  </button>
+                </h2>
+
+                <div id="mkt1" class="accordion-collapse collapse show" data-bs-parent="#accMarketing">
+                  <div class="accordion-body">
+                    <div class="accordion-content-grid reverse-desktop">
+                      <div class="accordion-image">
+                        <img src="assets/img/mt_brand/9.jpg" alt="Always-On Content Engine">
+                      </div>
+
+                      <div class="accordion-text">
+                        <p>
+                          Monkey Troopers operates an always-on content engine that blends studio-grade product photography, urban lifestyle shoots, and creator-led UGC.
+                          This system ensures a continuous flow of fresh, platform-ready content without compromising brand consistency.
+                        </p>
+                        <p class="mb-0">
+                          Content is designed to showcase real-world usage, functionality, and street credibility—making products feel authentic, relatable, and built for daily movement.
+                          Assets are created with reuse in mind across ads, marketplaces, social platforms, and retail touchpoints.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#mkt2"
+                          aria-expanded="false" aria-controls="mkt2">
+                    Performance Marketing with Brand Guardrails
+                  </button>
+                </h2>
+
+                <div id="mkt2" class="accordion-collapse collapse" data-bs-parent="#accMarketing">
+                  <div class="accordion-body">
+                    <div class="accordion-content-grid">
+                      <div class="accordion-text">
+                        <p>
+                          Performance marketing is executed with strict creative and messaging guardrails to protect brand perception while driving results. Campaigns prioritize clarity,
+                          functionality, and lifestyle relevance over short-term gimmicks.
+                        </p>
+                        <p class="mb-0">
+                          Creative testing, audience insights, and conversion data are used to optimize spend without diluting Monkey Troopers’ identity. This approach balances growth with discipline—
+                          ensuring performance marketing supports long-term brand value, not just immediate sales.
+                        </p>
+                      </div>
+
+                      <div class="accordion-image">
+                        <img src="assets/img/mt_brand/10.jpg" alt="Performance Marketing">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+
+          <!-- CONTROLS -->
+          <div class="fo-panel" id="tab-nonnegotiables">
+            <h3 class="fo-h3">Non‑Negotiables & Controls</h3>
+
+            <div class="accordion fo-acc" id="accControlsMT">
+
+              <!-- Item 1 (Text Left, Image Right) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#ctl1"
+                          aria-expanded="true" aria-controls="ctl1">
+                          Central Brand & Pricing Control
+                  </button>
+                </h2>
+
+                <div id="ctl1" class="accordion-collapse collapse show" data-bs-parent="#accControlsMT">
+                  <div class="accordion-body">
+                    <div class="accordion-content-grid">
+                      <div class="accordion-text">
+                        <p>
+                          Monkey Troopers operates under centralized brand governance to protect its street-premium positioning across the UAE. All decisions related to product presentation, pricing, and promotions are controlled to ensure consistency and long-term brand value.
+                        </p>
+                        <ul class="fo-bullets mb-0">
+                          <li>Authorized channels only (D2C, marketplaces, curated retail)</li>
+                          <li>Uniform pricing discipline across platforms</li>
+                          <li>No uncontrolled resellers or discount dilution</li>
+                          <li>Promotion and markdown approvals aligned with brand standards</li>
+                        </ul>
+                      </div>
+
+                      <div class="accordion-image">
+                        <img src="assets/img/mt_brand/11.jpg" alt="Monkey Troopers Controls - Brand">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2 (Image Left, Text Right) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#ctl2"
+                          aria-expanded="false" aria-controls="ctl2">
+                          Operational Discipline (Inventory, Returns, CX)
+                  </button>
+                </h2>
+
+                <div id="ctl2" class="accordion-collapse collapse" data-bs-parent="#accControlsMT">
+                  <div class="accordion-body">
+                    <div class="accordion-content-grid reverse-desktop">
+                      <div class="accordion-image">
+                        <img src="assets/img/mt_brand/12.jpg" alt="Monkey Troopers Controls - Guardrails">
+                      </div>
+
+                      <div class="accordion-text">
+                        <p>
+                          Daily operations are governed by structured SOPs to maintain efficiency, reliability, and customer trust across all touchpoints.
+                        </p>
+                        <ul class="fo-bullets mb-0">
+                          <li>Inventory planning and replenishment control</li>
+                          <li>Returns and exchanges managed under brand-safe policies</li>
+                          <li>Marketplace health, reviews, and compliance monitoring</li>
+                          <li>Consistent customer experience across online and offline channels</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3 (Text Left, Image Right) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#ctl3"
+                          aria-expanded="false" aria-controls="ctl3">
+                          Content & Communication Guardrails
+                  </button>
+                </h2>
+
+                <div id="ctl3" class="accordion-collapse collapse" data-bs-parent="#accControlsMT">
+                  <div class="accordion-body">
+                    <div class="accordion-content-grid">
+                      <div class="accordion-text">
+                        <p>
+                          All external communication follows defined brand guardrails to ensure Monkey Troopers looks, sounds, and feels consistent everywhere it appears.
+                        </p>
+                        <ul class="fo-bullets mb-0">
+                          <li>Approved visual language and tone of voice</li>
+                          <li>Centralized content templates (PDPs, ads, social)</li>
+                          <li>Controlled influencer and creator collaborations</li>
+                          <li>Brand-safe execution across campaigns and launches</li>
+                        </ul>
+                      </div>
+
+                      <div class="accordion-image">
+                        <img src="assets/img/mt_brand/13.jpg" alt="Monkey Troopers Controls - Operations">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+            <!-- OTHER BRANDS -->
+      <section class="other-brands">
+        <h2 class="other-h2">Other Brands</h2>
+
+        <div class="other-cta">
+          <!-- <a class="other-cta-link" href="#">SEE MORE BRANDS</a>
+          <span class="other-cta-dot" aria-hidden="true">›</span> -->
+        </div>
+
+        <div class="row g-4 other-grid">
+          <!-- Card 1 -->
+          <div class="col-12 col-sm-6 col-lg-6">
+            <a class="other-card" href="../Rachna/fo.html">
+              <div class="other-imgwrap">
+                <picture>
+                  <!-- Mobile -->
+                  <source media="(max-width: 991.98px)" srcset="../Rachna/assets/img/mt_brand/fo_toggle_mobile_banner.png">
+                  <!-- Desktop -->
+                  <img src="../Rachna/assets/img/mt_brand/fo_toggle_banner.png" alt="Nautica">
+                </picture>
+              </div>
+              <div class="other-name">FO Dubai</div>
+              <!-- <div class="other-pill" aria-hidden="true">L</div> -->
+            </a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-12 col-sm-6 col-lg-6">
+            <a class="other-card" href="../Rachna/rachna_store.html">
+              <div class="other-imgwrap">
+                <picture>
+                  <!-- Mobile -->
+                  <source media="(max-width: 991.98px)" srcset="../Rachna/assets/img/mt_brand/rachna_toggle_mobile_banner.png">
+                  <!-- Desktop -->
+                  <img src="../Rachna/assets/img/mt_brand/rachna_toggle_banner.png" alt="Halston">
+                </picture>
+              </div>
+              <div class="other-name">Rachna Retail Store</div>
+              <!-- <div class="other-pill" aria-hidden="true">L</div> -->
+            </a>
+          </div>
+
+          
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <!-- <div class="giii-footer-top">
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <span class="footer-sep">|</span>
+
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <span class="footer-sep">|</span>
+
+        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <span class="footer-sep">|</span>
+
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+
+    </div> -->
+
+    <div class="giii-footer-mid">
+      07-08 Meena Bazar, Bur Dubai- Al Fahidi, Dubai, United Arab Emirates
+    </div>
+
+    <div class="giii-footer-bot">
+      © 2025 Rachna General Trading LLC. All Rights Reserved.
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Your JS -->
+  <script src="../Rachna/assets/js/monkeytroopers_final.js"></script>
+</body>
+</html>

@@ -1,0 +1,898 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Rachana-General-Trading</title>
+
+  <!-- Bootstrap 5.3.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link href="../Rachna/assets/css/main.css" rel="stylesheet">
+  <link href="../Rachna/assets/css/navigation-bar.css" rel="stylesheet"/>
+  <link href="../Rachna/assets/css/footer.css" rel="stylesheet">
+
+  <script src="../Rachna/assets/js/main.js"></script>
+  <script src="../Rachna/assets/js/navigation-bar.js"></script>
+  
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Inter font (optional, match your site) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="giii-header fixed-top">
+    <nav class="navbar h-100">
+      <div class="container giii-wrap position-relative h-100">
+
+        <!-- Logo block (SVG) -->
+        <a class="giii-brand" href="../Rachna/index.html">
+          <!-- Use your svg logo path -->
+          <img src="../Rachna/assets/img/rachna_llc_logo.jpeg" alt="G-III Logo">
+        </a>
+
+        <!-- Desktop center nav -->
+        <div class="giii-nav-center d-none d-lg-block">
+          <ul class="giii-nav-row m-0 p-0 list-unstyled">
+
+            <!-- WHO WE ARE (dropdown on hover) -->
+            <li class="nav-item"><a class="giii-nav-link giii-underline" href="../Rachna/index.html">HOME</a></li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <li class="nav-item dropdown giii-hover-dd">
+              <a class="giii-nav-link giii-underline" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                WHAT WE DO
+              </a>
+              <ul class="dropdown-menu giii-dd">
+                <li><a class="dropdown-item" href="../Rachna/fo.html">FO DUBAI</a></li>
+                <li><a class="dropdown-item" href="../Rachna/monkeytroopers_final.html">MONKEY TROOPERS DUBAI</a></li>
+                <li><a class="dropdown-item" href="../Rachna/rachna_store.html">RACHNA RETAIL STORE</a></li>
+              </ul>
+            </li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <li class="nav-item"><a class="giii-nav-link giii-underline" href="../Rachna/about-our-brands.html">ABOUT US</a></li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <li class="nav-item"><a class="giii-nav-link giii-underline" href="../Rachna/testimonials.html">TESTIMONIALS</a></li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <!-- BRANDS (dropdown on hover) -->
+            <li class="nav-item dropdown giii-hover-dd">
+              <a class="giii-nav-link giii-underline" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                CONTACT US
+              </a>
+              <ul class="dropdown-menu giii-dd">
+                <li><a class="dropdown-item" href="../Rachna/UAE-Trade.html">UAE TRADE & DISTRIBUTION ENQUIRES</a></li>
+                <li><a class="dropdown-item" href="../Rachna/FO-Dubai-International-Licensing-Enquiries.html">FO DUBAI INTERNATIONAL LICENSING</a></li>
+                <li><a class="dropdown-item" href="../Rachna/rachna-retail-store.html">RETAIL STORE & CUSTOMER ENQURIES (DUBAI)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile burger -->
+        <button class="giii-burger d-lg-none ms-auto" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#giiiMobile" aria-controls="giiiMobile"
+                aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- MOBILE OFFCANVAS -->
+  <div class="offcanvas offcanvas-end giii-offcanvas" tabindex="-1" id="giiiMobile" aria-labelledby="giiiMobileLabel">
+    <div class="giii-offcanvas-body">
+
+      <!-- <div class="giii-m-top">
+        <a class="giii-m-account" href="#">ACCOUNT</a>
+        <button type="button" class="giii-m-close" data-bs-dismiss="offcanvas" aria-label="Close menu">×</button>
+      </div> -->
+
+      <!-- Accordion style dropdowns (like desktop) -->
+      <div class="giii-m-list">
+
+        <a class="giii-m-item linklike" href="../Rachna/index.html"><span>HOME</span></a>
+        <button class="giii-m-item" type="button" data-giii-acc="who">
+          <span>WHAT WE DO</span><span class="giii-chev">›</span>
+        </button>
+        <div class="giii-m-sub" id="giii-sub-who">
+          <a class="giii-m-subitem" href="../Rachna/fo.html">FO DUBAI</a>
+          <a class="giii-m-subitem" href="../Rachna/monkeytroopers_final.html">MONKEY TROOPERS DUBAI</a>
+          <a class="giii-m-subitem" href="../Rachna/rachna_store.html">RACHNA RETAIL STORE</a>
+        </div>
+
+        <a class="giii-m-item linklike" href="../Rachna/about-our-brands.html"><span>ABOUT US</span></a>
+        <a class="giii-m-item linklike" href="../Rachna/testimonials.html"><span>TESTIMONIALS</span></a>
+
+        <button class="giii-m-item" type="button" data-giii-acc="brands">
+          <span>CONTACT US</span><span class="giii-chev">›</span>
+        </button>
+        <div class="giii-m-sub" id="giii-sub-brands">
+          <a class="giii-m-subitem" href="../Rachna/UAE-Trade.html">UAE TRADE & DISTRIBUTION ENQUIRES</a>
+          <a class="giii-m-subitem" href="../Rachna/FO-Dubai-International-Licensing-Enquiries.html">FO DUBAI INTERNATIONAL LICENSING</a>
+          <a class="giii-m-subitem" href="../Rachna/rachna-retail-store.html">RETAIL STORE & CUSTOMER ENQURIES (DUBAI)</a>
+        </div>        
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- ================= HERO CAROUSEL ================= -->
+ <header class="wc-hero wc-hero--carousel">
+  <div id="wcHeroCarousel" class="carousel slide carousel-fade wc-carousel" data-bs-ride="carousel" data-bs-interval="5200" data-bs-pause="false">
+    <!-- Indicators -->
+    <div class="carousel-indicators wc-carousel-indicators">
+      <button type="button" data-bs-target="#wcHeroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#wcHeroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#wcHeroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <picture>
+          <!-- Mobile image -->
+          <source media="(max-width: 767.98px)" srcset="assets/img/New_Image/main_banner_1.jpg">
+          <!-- Desktop image -->
+          <img src="../Rachna/assets/img/New_Image/main_banner_1.jpg" class="d-block w-100 wc-carousel-img" alt="UAE Trade & Distribution">
+        </picture>
+
+        
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <picture>
+          <source media="(max-width: 767.98px)" srcset="assets/img/New_Image/main_banner_2.png">
+          <img src="../Rachna/assets/img/New_Image/main_banner_2.png" class="d-block w-100 wc-carousel-img" alt="FO Dubai International Licensing">
+        </picture>
+
+        
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <picture>
+          <source media="(max-width: 767.98px)" srcset="assets/img/New_Image/main_banner_3.jpg">
+          <img src="../Rachna/assets/img/New_Image/main_banner_3.jpg" class="d-block w-100 wc-carousel-img" alt="Retail Store & Customer Enquiry Dubai">
+        </picture>
+
+        
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev wc-carousel-control" type="button" data-bs-target="#wcHeroCarousel" data-bs-slide="prev" aria-label="Previous">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next wc-carousel-control" type="button" data-bs-target="#wcHeroCarousel" data-bs-slide="next" aria-label="Next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <!-- ================= QUOTE ================= -->
+  <section class="quote-sec">
+    <div class="quote-top-lines" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+
+    <div class="container">
+      <div class="quote-wrap">
+        <span class="qmark left" aria-hidden="true">“</span>
+
+        <p class="quote-text">
+        At Rachna General Trading LLC, we go beyond trading by building, owning, and scaling brands with disciplined 
+        execution, strategic control, and a long-term global vision.
+        <span class="qmark right" aria-hidden="true">”</span>
+
+        <div class="quote-name">Rachna General Trading LLC</div>
+        <div class="quote-role"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHO WE ARE (FIXED PROPER ROW/COLS) ================= 
+  <section class="it-sec">
+    <div class="container" style="max-width: var(--maxw);">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="giii-frame">
+            <div class="giii-photo">
+              <img src="../Rachna/assets/img/HP_BuildingNightImage_FINAL (1).jpg" alt="Building">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <h2 class="it-title">Who We Are</h2>
+          <p class="it-text">
+            We are global experts in design, sourcing, distribution and
+            marketing, bringing excitement and confidence to
+            customers through the fashion we create.
+          </p>
+          <a class="linkline" href="#">
+            <span class="txt">LEARN MORE</span>
+            <span class="dot" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M10 7l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+<!-- ================= MISSION (SAME LAYOUT AS it-sec) ================= -->
+ 
+
+
+<!-- ================= MISSION (SAME LAYOUT AS it-sec) ================= -->
+<section class="it-sec mv-block">
+  <div class="container" style="max-width: var(--maxw);">
+    <div class="row align-items-center g-5">
+
+      <!-- LEFT CONTENT -->
+      <div class="col-lg-6 order-2 order-lg-1">
+        <div class="mv-iconrow">
+          
+          <h2 class="it-title mv-title">Mission</h2>
+        </div>
+
+        <p class="it-text mv-text">
+          Deliver reliable, value-driven global trading solutions by leveraging strong sourcing networks,
+          professional procurement expertise, and seamless import–export operations.
+        </p>
+
+        <div class="mv-subhead">Our mission is built on two strategic pillars:</div>
+
+        <div class="mv-points">
+          <div class="mv-point">
+            <div class="mv-point-h">1. Textile Sourcing & Procurement Excellence</div>
+            <div class="mv-point-p">
+              Driven by an experienced sales specialist with a demonstrated history in the textiles industry—skilled in negotiation,
+              strategic planning, marketing strategy, textiles, and business strategy, and recognized as a strong purchasing professional.
+              This expertise strengthens our ability to make informed sourcing decisions, secure competitive pricing, and maintain quality across global supply chains.
+            </div>
+          </div>
+
+          <div class="mv-point">
+            <div class="mv-point-h">2. Brand & Retail Management Support (Online + Offline)</div>
+            <div class="mv-point-p">
+              Empowering brands to expand across global online marketplaces and offline retail networks through strategic product positioning,
+              category planning, and distribution support. We help brands establish presence, scale efficiently, and build long-term retail value.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT IMAGE (DOUBLE FRAME LIKE YOUR REF) -->
+      <div class="col-lg-6 order-1 order-lg-2">
+        <div class="rg-frame rg-frame--h500">
+          <div class="rg-frame__back" aria-hidden="true"></div>
+          <div class="rg-frame__front">
+            <img src="../Rachna/assets/img/logo/mission-img.png" alt="Mission">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= VISION (SAME LAYOUT AS it-sec, IMAGE LEFT) ================= -->
+<section class="it-sec mv-block">
+  <div class="container" style="max-width: var(--maxw);">
+    <div class="row align-items-center g-5">
+
+      <!-- LEFT IMAGE (DOUBLE FRAME LIKE YOUR REF) -->
+      <div class="col-lg-6">
+        <div class="rg-frame rg-frame--h500">
+          <div class="rg-frame__back" aria-hidden="true"></div>
+          <div class="rg-frame__front">
+            <img src="../Rachna/assets/img/logo/vission.png" alt="Vision">
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div class="col-lg-6">
+        <div class="mv-iconrow">
+          
+          <h2 class="it-title mv-title">Vision</h2>
+        </div>
+
+        <p class="it-text mv-text">
+          To become a globally recognized multi-category trading company, respected for sourcing excellence, transparent operations,
+          market intelligence, and sustainable long-term partnerships across international markets.
+        </p>
+
+        <div class="mv-subhead">Our vision is guided by two core ambitions:</div>
+
+        <div class="mv-points">
+          <div class="mv-point">
+            <div class="mv-point-h">1. Global Leadership in Textile Procurement</div>
+            <div class="mv-point-p">
+              Setting high standards in textile sourcing worldwide through strong negotiation capabilities, industry expertise,
+              and trusted supplier relationships.
+            </div>
+          </div>
+
+          <div class="mv-point">
+            <div class="mv-point-h">2. Worldwide Brand Development & Market Expansion</div>
+            <div class="mv-point-p">
+              Helping brands grow across international e-commerce platforms, offline retail chains, and emerging global markets,
+              ensuring they remain competitive and future-ready.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    
+
+ 
+
+
+ <!-- ================= TESTIMONIAL CAROUSEL ================= -->
+<section class="testimonial-sec">
+  <div class="container" style="max-width: var(--maxw);">
+
+    <div class="text-center mb-4">
+      <div class="ct3-kicker" style=" color: #fff !important;">TESTIMONIALS</div>
+      <h2 class="ct3-h1" style="font-size:clamp(22px,2.2vw,32px); color:#fff !important;">
+        What Our Customers Say
+      </h2>
+    </div>
+
+    <div id="testimonialCarousel"
+         class="carousel slide"
+         data-bs-ride="carousel"
+         data-bs-interval="3800"
+         data-bs-pause="false">
+
+      <div class="carousel-inner text-center">
+
+        <!-- Item 1 -->
+        <div class="carousel-item active">
+          <p class="testimonial-text">
+            “Good place and product.”
+          </p>
+          <div class="testimonial-name">— Taufik Rahman, Dubai</div>
+
+          <!-- <div class="testimonial-social">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span>|</span>
+            <i class="fa-brands fa-instagram"></i>
+            <span>|</span>
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>|</span>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div> -->
+        </div>
+
+        <!-- Item 2 -->
+        <div class="carousel-item">
+          <p class="testimonial-text">
+            “a good product pakistani suit.”
+          </p>
+          <div class="testimonial-name">— Rashid Awan., UAE</div>
+
+          <!-- <div class="testimonial-social">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span>|</span>
+            <i class="fa-brands fa-instagram"></i>
+            <span>|</span>
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>|</span>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div> -->
+        </div>
+
+        <!-- Item 3 -->
+        <div class="carousel-item">
+          <p class="testimonial-text">
+            “Excellent price with good product.”
+          </p>
+          <div class="testimonial-name">— Rewachand Jaswani., India</div>
+
+          <!-- <div class="testimonial-social">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span>|</span>
+            <i class="fa-brands fa-instagram"></i>
+            <span>|</span>
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>|</span>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div> -->
+        </div>
+
+      </div>
+
+      <!-- Indicators -->
+      
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- ================= INVESTORS ================= 
+  <section class="investors">
+    <div class="container" style="max-width: var(--maxw);">
+      <div class="section-head">
+        <h2>Investors</h2>
+        <a class="mini" href="#">
+          <span>VISIT INVESTORS SITE</span>
+          <span class="dot" aria-hidden="true" style="width:28px;height:28px;border:1px solid rgba(0,0,0,.22);border-radius:999px;display:grid;place-items:center;">
+            <svg viewBox="0 0 24 24" fill="none" style="width:16px;height:16px;">
+              <path d="M10 7l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <div class="row inv-cards g-5">
+        <div class="col-lg-6">
+          <div class="title">G-III Apparel Group Third Quarter Fiscal 2026 Earnings</div>
+          <div class="inv-actions">
+            <a href="#">
+              <span>LISTEN TO WEBCAST</span>
+              <span class="pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" width="16" height="16">
+                  <path d="M10 7l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="title">G-III Apparel Group Fiscal 2025 Media Kit</div>
+          <div class="inv-actions">
+            <a href="#">
+              <span>DOWNLOAD PDF</span>
+              <span class="pill" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" width="16" height="16">
+                  <path d="M10 7l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section> -->
+
+  <!-- ================= BRANDS ================= -->
+  <section class="brands-section">
+  <div class="container brands-container">
+    <div class="row align-items-center">
+
+      <!-- LEFT CONTENT -->
+      <div class="col-lg-5">
+        <div class="brands-content">
+
+          <div class="brands-header">
+            <h2>Brands</h2>
+            <!--<a href="#" class="see-all">SEE ALL BRANDS <span>›</span></a>-->
+          </div>
+
+          <p class="brands-intro">
+            Through strategic sourcing, licensing, and retail execution, Rachna General Trading LLC empowers brands to expand into new markets, strengthen consumer reach, and achieve sustainable growth.
+          </p>
+
+          <!-- BRAND SLIDER TEXT -->
+          <div id="brandTextCarousel" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner">
+
+              <!-- BRAND 1 -->
+              <div class="carousel-item active">
+                <img src="../Rachna/assets/img/logo/fodubai.png" class="brand-logo "alt="FO Dubai">
+
+                <p class="brand-desc">
+                  FO Dubai is a luxury Arabic fragrance house rooted in authentic
+                  oud perfumery, blending Middle Eastern depth with modern
+                  global sophistication.
+                </p>
+
+                <a href="../Rachna/fo.html" class="brand-link">
+                  VIEW BRAND PAGE <span>›</span>
+                </a>
+              </div>
+
+              <!-- BRAND 2 -->
+              <div class="carousel-item">
+                <img src="../Rachna/assets/img/logo/monkey-troopers-logo.png" class="brand-logo" alt="Monkey Troopers">
+
+                <p class="brand-desc">
+                  Monkey Troopers is a street-style lifestyle brand creating
+                  urban backpacks and accessories designed for Gen-Z and
+                  modern commuters.
+                </p>
+
+                <a href="../Rachna/monkeytroopers_final.html" class="brand-link">
+                  VIEW BRAND PAGE <span>›</span>
+                </a>
+              </div>
+
+              <!-- BRAND 3 -->
+              <div class="carousel-item">
+                <img src="../Rachna/assets/img/rachna_retail_logo.jpeg" class="brand-logo"filter id="shadow" alt="Rachna" style="background-color: black;">
+
+                <p class="brand-desc">
+                  Rachna represents curated fashion and retail experiences
+                  focused on craftsmanship, elegance, and contemporary
+                  relevance.
+                </p>
+
+                <a href="../Rachna/rachna_store.html" class="brand-link">
+                  VIEW BRAND PAGE <span>›</span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- CONTROLS -->
+          <div class="brands-controls">
+            <span id="brandCounter">1 of 3</span>
+
+            <button class="circle-btn" id="brandPrev">‹</button>
+            <button class="circle-btn" id="brandNext">›</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="col-lg-7">
+        <div id="brandImageCarousel" class="carousel slide" data-bs-ride="false">
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <div class="brand-image-frame">
+                <img src="../Rachna/assets/img/New_Image/fo_sub_image.jpg" alt="FO Dubai">
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="brand-image-frame">
+                <img src="../Rachna/assets/img/New_Image/mt_sub_image.jpg" alt="Monkey Troopers">
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="brand-image-frame">
+                <img src="../Rachna/assets/img/New_Image/rachna_retail_sub_image.png" alt="Rachna">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ================= INVESTOR NEWS ================= 
+  <section class="news">
+    <div class="container" style="max-width: var(--maxw);">
+
+      <div class="section-head">
+        <h2>Investor News</h2>
+        <a class="mini" href="#">
+          <span>SEE MORE</span>
+          <span class="dot" aria-hidden="true" style="width:28px;height:28px;border:1px solid rgba(0,0,0,.22);border-radius:999px;display:grid;place-items:center;">
+            <svg viewBox="0 0 24 24" fill="none" style="width:16px;height:16px;">
+              <path d="M10 7l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <div class="news-card">
+        <div class="news-row">
+          <div class="news-date">Dec 09, 2025</div>
+          <div class="news-title">G-III Apparel Group, Ltd. Reports Third Quarter Fiscal 2026 Results and Updates Fiscal 2026 Outlook; Initiates First Ever Quarterly Dividend Program</div>
+          <a class="news-more" href="#">Read More
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16">
+              <path d="M10 7l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="news-row">
+          <div class="news-date">Dec 02, 2025</div>
+          <div class="news-title">G-III Apparel Group Announces Date for Third Quarter Fiscal 2026 Results</div>
+          <a class="news-more" href="#">Read More
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16">
+              <path d="M10 7l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="news-row">
+          <div class="news-date">Sep 04, 2025</div>
+          <div class="news-title">G-III Apparel Group, Ltd. Reports Second Quarter Fiscal 2026 Results; Provides Updated Fiscal 2026 Outlook</div>
+          <a class="news-more" href="#">Read More
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16">
+              <path d="M10 7l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="news-row">
+          <div class="news-date">Aug 28, 2025</div>
+          <div class="news-title">G-III Apparel Group Announces Date for Second Quarter Fiscal 2026 Results</div>
+          <a class="news-more" href="#">Read More
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16">
+              <path d="M10 7l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="news-row">
+          <div class="news-date">Jun 06, 2025</div>
+          <div class="news-title">G-III Apparel Group, Ltd. Reports First Quarter Fiscal 2026 Results</div>
+          <a class="news-more" href="#">Read More
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16">
+              <path d="M10 7l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section> -->
+
+  <!-- ================= WORK WITH US (USE SAME FRAME STYLE) ================= -->
+  <section class="it-sec">
+    <div class="container" style="max-width: var(--maxw);">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="giii-frame">
+            <div class="giii-photo">
+              <img src="../Rachna/assets/img/contact_us.jpg" alt="Work With Us">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h2 class="it-title" style="font-size:60px; text-transform: capitalize;">Contact Us</h2>
+          <p class="it-text">
+            We work closely with partners who value transparency, reliability, and long-term brand building.
+From trade distribution and licensing to retail and strategic collaborations, our team ensures every discussion is purposeful and professionally evaluated.
+
+Reach out to connect with us.
+          </p>
+          <a class="linkline" href="#">
+            <!-- <span class="txt">Contact Our Team </span>
+            <span class="dot" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M10 7l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span> -->
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- ================= FOOTER ================= -->
+ <!-- ===== FOOTER ===== -->
+  <footer class="giii-footer">
+
+    <!-- TOP: Social icons centered -->
+    <!-- <div class="giii-footer-top">
+      <div class="giii-container">
+        <ul class="giii-social" aria-label="Social links">
+          <li>
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="giii-sep"></li>
+          <li>
+            <a href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+          <li class="giii-sep"></li>
+          <li>
+            <a href="#" aria-label="Twitter (X)">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </li>
+          <li class="giii-sep"></li>
+          <li>
+            <a href="https://wa.me/97145911622" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div> -->
+
+    <!-- MID: Address -->
+    <div class="giii-footer-mid">
+      07–08 Meena Bazar, Bur Dubai – Al Fahidi, Dubai, United Arab Emirates
+    </div>
+
+    <!-- BOT: Copyright -->
+    <div class="giii-footer-bot">
+      © 2025 Rachna General Trading LLC. All Rights Reserved.
+    </div>
+
+  </footer>
+
+  <!-- ================= MOBILE OFFCANVAS ================= -->
+  <div class="offcanvas offcanvas-end giii-off" tabindex="-1" id="mMenu" aria-labelledby="mMenuLabel">
+    <div class="off-hdr">
+      <div></div>
+      <h2 class="off-title" id="mMenuLabel">ACCOUNT</h2>
+      <div class="off-strip">
+        <button type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button type="button" data-bs-dismiss="offcanvas" aria-label="Close menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 7h14M5 12h14M5 17h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="offcanvas-body off-body">
+      <ul class="m-list">
+        <li class="m-item">
+          <button class="m-row" type="button" data-bs-toggle="collapse" data-bs-target="#mWho" aria-expanded="false" aria-controls="mWho">
+            <span>WHO WE ARE</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="collapse" id="mWho">
+            <div class="m-sub">
+              <a href="#">Overview</a>
+              <a href="#">Leadership</a>
+              <a href="#">Global Reach</a>
+              <a href="#">History</a>
+              <a href="#">Philanthropy</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="m-item">
+          <button class="m-row" type="button" data-bs-toggle="collapse" data-bs-target="#mBrands" aria-expanded="false" aria-controls="mBrands">
+            <span>BRANDS</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="collapse" id="mBrands">
+            <div class="m-sub">
+              <a href="#">All Brands</a>
+              <a href="#">Owned Brands</a>
+              <a href="#">Licensed Brands</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="m-item"><a class="m-a" href="#"><span>INVESTORS</span></a></li>
+        <li class="m-item"><a class="m-a" href="#"><span>NEWS</span></a></li>
+        <li class="m-item"><a class="m-a" href="#"><span>WORK WITH US</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Desktop underline on open/close + close other dropdowns
+    (function(){
+      const toggles = document.querySelectorAll(".navbtn.dropdown-toggle");
+
+      toggles.forEach((btn) => {
+        btn.addEventListener("show.bs.dropdown", () => btn.classList.add("is-open"));
+        btn.addEventListener("hide.bs.dropdown", () => btn.classList.remove("is-open"));
+      });
+
+      document.querySelectorAll(".navline .dropdown").forEach((dd) => {
+        dd.addEventListener("show.bs.dropdown", () => {
+          document.querySelectorAll(".navline .dropdown").forEach((other) => {
+            if (other !== dd) {
+              const t = other.querySelector(".dropdown-toggle");
+              const inst = bootstrap.Dropdown.getInstance(t);
+              if (inst) inst.hide();
+            }
+          });
+        });
+      });
+
+      // Mobile: only one submenu open at a time
+      const m = document.getElementById("mMenu");
+      if(m){
+        const cols = m.querySelectorAll(".collapse");
+        cols.forEach((c) => {
+          c.addEventListener("show.bs.collapse", () => {
+            cols.forEach((o) => {
+              if (o !== c) bootstrap.Collapse.getOrCreateInstance(o, {toggle:false}).hide();
+            });
+          });
+        });
+      }
+    })();
+
+   
+   // Brands: wire custom prev/next buttons to carousel + update "1 of 5"
+
+
+  const textCarousel = new bootstrap.Carousel('#brandTextCarousel', { interval: false });
+  const imageCarousel = new bootstrap.Carousel('#brandImageCarousel', { interval: false });
+
+  const total = document.querySelectorAll('#brandTextCarousel .carousel-item').length;
+  const counter = document.getElementById('brandCounter');
+  let index = 0;
+
+  function updateCounter() {
+    counter.textContent = `${index + 1} of ${total}`;
+  }
+
+  document.getElementById('brandNext').addEventListener('click', () => {
+    textCarousel.next();
+    imageCarousel.next();
+    index = (index + 1) % total;
+    updateCounter();
+  });
+
+  document.getElementById('brandPrev').addEventListener('click', () => {
+    textCarousel.prev();
+    imageCarousel.prev();
+    index = (index - 1 + total) % total;
+    updateCounter();
+  });
+
+  updateCounter();
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

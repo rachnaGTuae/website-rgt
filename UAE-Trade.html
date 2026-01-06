@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Rachana-General-Trading</title>
+
+  <!-- Bootstrap 5.3.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link href="../Rachna/assets/css/main.css" rel="stylesheet">
+  <link href="../Rachna/assets/css/navigation-bar.css" rel="stylesheet"/>
+  <link href="../Rachna/assets/css/footer.css" rel="stylesheet">
+
+  <!-- <script src="../Rachna/assets/js/main.js"></script>
+  <script src="../Rachna/assets/js/navigation-bar.js"></script> -->
+  
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Inter font (optional, match your site) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+  <style>
+    :root{
+      --ink:#111;
+      --muted:#5f5f5f;
+      --line:#e6e6e6;
+      --maxw: 1160px;
+    }
+
+    body{
+      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-weight: 300;
+      color: var(--ink);
+      background:#fff;
+    }
+
+    /* Layout */
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Hero */
+    .hero{
+      padding: 64px 0 26px;
+    }
+    .eyebrow{
+      font-size: 12px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    h1{
+      font-size: clamp(32px, 3.2vw, 46px);
+      line-height: 1.08;
+      font-weight: 600;
+      margin: 0 0 10px;
+    }
+    .subhead{
+      font-size: 18px;
+      color: var(--ink);
+      font-weight: 400;
+      margin: 0 0 14px;
+    }
+    .leadcopy{
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+      margin: 0 0 18px;
+      max-width: 55ch;
+    }
+    .divider{
+      height: 1px;
+      background: var(--line);
+      margin: 18px 0 0;
+    }
+
+    /* Framed image (GIII-like) */
+    .frame{
+      border: 1px solid #dcdcdc;
+      padding: 12px;
+      background: #fff;
+    }
+    .frame img{
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display:block;
+    }
+
+    /* Info strip */
+    .strip{
+      padding: 22px 0 10px;
+    }
+    .info-card{
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+      height: 100%;
+    }
+    .info-title{
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .info-text{
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Form */
+    .form-sec{
+      padding: 26px 0 70px;
+    }
+    .sec-title{
+      font-size: 22px;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+    .sec-desc{
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+      margin: 0 0 18px;
+      max-width: 75ch;
+    }
+
+    label.form-label{
+      font-weight: 400;
+      font-size: 13px;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .form-control, .form-select{
+      border: 1px solid var(--line);
+      border-radius: 0;
+      padding: 12px 12px;
+      font-size: 14px;
+      background:#fff;
+    }
+    .form-control:focus, .form-select:focus{
+      border-color: #111;
+      box-shadow: none;
+    }
+
+    .checkgrid{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 14px 18px;
+      padding: 10px 0 4px;
+    }
+    .form-check-label{
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 400;
+    }
+    .form-check-input{
+      border-radius: 0;
+      border-color: #cfcfcf;
+    }
+    .form-check-input:focus{
+      box-shadow: none;
+      border-color: #111;
+    }
+    .form-check-input:checked{
+      background-color: #111;
+      border-color: #111;
+    }
+
+    .btn-outline-ink{
+      border: 1px solid #111;
+      color: #111;
+      border-radius: 0;
+      padding: 12px 18px;
+      font-weight: 400;
+      transition: .2s ease;
+    }
+    .btn-outline-ink:hover{
+      background:#111;
+      color:#fff;
+    }
+
+    .note{
+      border-top: 1px solid var(--line);
+      margin-top: 18px;
+      padding-top: 14px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    /* Responsive */
+    @media (max-width: 991.98px){
+      .frame img{ height: 340px; }
+      .hero{ padding-top: 44px; }
+      .leadcopy{ max-width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="giii-header fixed-top">
+    <nav class="navbar h-100">
+      <div class="container giii-wrap position-relative h-100">
+
+        <!-- Logo block (SVG) -->
+        <a class="giii-brand" href="../Rachna/index.html">
+          <!-- Use your svg logo path -->
+          <img src="../Rachna/assets/img/rachna_llc_logo.jpeg" alt="G-III Logo">
+        </a>
+
+        <!-- Desktop center nav -->
+        <div class="giii-nav-center d-none d-lg-block">
+          <ul class="giii-nav-row m-0 p-0 list-unstyled">
+
+            <!-- WHO WE ARE (dropdown on hover) -->
+            <li class="nav-item"><a class="giii-nav-link giii-underline" href="../Rachna/index.html">HOME</a></li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <li class="nav-item dropdown giii-hover-dd">
+              <a class="giii-nav-link giii-underline" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                WHAT WE DO
+              </a>
+              <ul class="dropdown-menu giii-dd">
+                <li><a class="dropdown-item" href="../Rachna/fo.html">FO DUBAI</a></li>
+                <li><a class="dropdown-item" href="../Rachna/monkeytroopers_final.html">MONKEY TROOPERS DUBAI</a></li>
+                <li><a class="dropdown-item" href="../Rachna/rachna_store.html">RACHNA RETAIL STORE</a></li>
+              </ul>
+            </li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <li class="nav-item"><a class="giii-nav-link giii-underline" href="../Rachna/about-our-brands.html">ABOUT US</a></li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <li class="nav-item"><a class="giii-nav-link giii-underline" href="../Rachna/testimonials.html">TESTIMONIALS</a></li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <!-- BRANDS (dropdown on hover) -->
+            <li class="nav-item dropdown giii-hover-dd">
+              <a class="giii-nav-link giii-underline" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                CONTACT US
+              </a>
+              <ul class="dropdown-menu giii-dd">
+                <li><a class="dropdown-item" href="../Rachna/UAE-Trade.html">UAE TRADE & DISTRIBUTION ENQUIRES</a></li>
+                <li><a class="dropdown-item" href="../Rachna/FO-Dubai-International-Licensing-Enquiries.html">FO DUBAI INTERNATIONAL LICENSING</a></li>
+                <li><a class="dropdown-item" href="../Rachna/rachna-retail-store.html">RETAIL STORE & CUSTOMER ENQURIES (DUBAI)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile burger -->
+        <button class="giii-burger d-lg-none ms-auto" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#giiiMobile" aria-controls="giiiMobile"
+                aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- MOBILE OFFCANVAS -->
+  <div class="offcanvas offcanvas-end giii-offcanvas" tabindex="-1" id="giiiMobile" aria-labelledby="giiiMobileLabel">
+    <div class="giii-offcanvas-body">
+
+      <!-- <div class="giii-m-top">
+        <a class="giii-m-account" href="#">ACCOUNT</a>
+        <button type="button" class="giii-m-close" data-bs-dismiss="offcanvas" aria-label="Close menu">×</button>
+      </div> -->
+
+      <!-- Accordion style dropdowns (like desktop) -->
+      <div class="giii-m-list">
+
+        <a class="giii-m-item linklike" href="../Rachna/index.html"><span>HOME</span></a>
+        <button class="giii-m-item" type="button" data-giii-acc="who">
+          <span>WHAT WE DO</span><span class="giii-chev">›</span>
+        </button>
+        <div class="giii-m-sub" id="giii-sub-who">
+          <a class="giii-m-subitem" href="../Rachna/fo.html">FO DUBAI</a>
+          <a class="giii-m-subitem" href="../Rachna/monkeytroopers_final.html">MONKEY TROOPERS DUBAI</a>
+          <a class="giii-m-subitem" href="../Rachna/rachna_store.html">RACHNA RETAIL STORE</a>
+        </div>
+
+        <a class="giii-m-item linklike" href="../Rachna/about-our-brands.html"><span>ABOUT US</span></a>
+        <a class="giii-m-item linklike" href="../Rachna/testimonials.html"><span>TESTIMONIALS</span></a>
+
+        <button class="giii-m-item" type="button" data-giii-acc="brands">
+          <span>CONTACT US</span><span class="giii-chev">›</span>
+        </button>
+        <div class="giii-m-sub" id="giii-sub-brands">
+          <a class="giii-m-subitem" href="../Rachna/UAE-Trade.html">UAE TRADE & DISTRIBUTION ENQUIRES</a>
+          <a class="giii-m-subitem" href="../Rachna/FO-Dubai-International-Licensing-Enquiries.html">FO DUBAI INTERNATIONAL LICENSING</a>
+          <a class="giii-m-subitem" href="../Rachna/rachna-retail-store.html">RETAIL STORE & CUSTOMER ENQURIES (DUBAI)</a>
+        </div>        
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- ================= HERO CAROUSEL ================= -->
+ <header class="wc-hero wc-hero--carousel">
+  <div id="wcHeroCarousel" class="carousel slide carousel-fade wc-carousel" data-bs-ride="carousel" data-bs-interval="5200" data-bs-pause="false">
+    <!-- Indicators -->
+    <div class="carousel-indicators wc-carousel-indicators">
+      <button type="button" data-bs-target="#wcHeroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#wcHeroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#wcHeroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <picture>
+          <!-- Mobile image -->
+          <source media="(max-width: 767.98px)" srcset="../Rachna/assets/img/uae_trades/1.png">
+          <!-- Desktop image -->
+          <img src="../Rachna/assets/img/uae_trades/1.png" class="d-block w-100 wc-carousel-img" alt="UAE Trade & Distribution">
+        </picture>
+
+        
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <picture>
+          <source media="(max-width: 767.98px)" srcset="../Rachna/assets/img/uae_trades/2.jpg">
+          <img src="../Rachna/assets/img/uae_trades/2.jpg" class="d-block w-100 wc-carousel-img" alt="FO Dubai International Licensing">
+        </picture>
+
+        
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <picture>
+          <source media="(max-width: 767.98px)" srcset="../Rachna/assets/img/uae_trades/2.png">
+          <img src="../Rachna/assets/img/uae_trades/3.png" class="d-block w-100 wc-carousel-img" alt="Retail Store & Customer Enquiry Dubai">
+        </picture>
+
+        
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev wc-carousel-control" type="button" data-bs-target="#wcHeroCarousel" data-bs-slide="prev" aria-label="Previous">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next wc-carousel-control" type="button" data-bs-target="#wcHeroCarousel" data-bs-slide="next" aria-label="Next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <div class="eyebrow">UAE Trade</div>
+          <h1>UAE Traders &amp; Distributors</h1>
+          <div class="subhead">Selling Our Brands in the UAE</div>
+          <p class="leadcopy">
+            Rachna General Trading LLC is actively seeking UAE-based traders, distributors, wholesalers, and retailers
+            interested in establishing long-term business partnerships for brand placement and sales across the United Arab Emirates.
+          </p>
+          <div class="divider"></div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="frame">
+            <!-- Replace with your own image path -->
+            <img src="../Rachna/assets/img/FO-Dubai-Licensing/6_f225ddcf-759f-4a9f-bcb5-208a3c3ab4e4 (1).png" alt="UAE Trade & Distribution">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- INFO STRIP -->
+  <section class="strip">
+    <div class="wrap">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="info-card">
+            <div class="info-title">Target Audience</div>
+            <p class="info-text">
+              UAE-based traders, distributors, wholesalers, and retailers interested in establishing business partnerships for
+              brand placement and sales within United Arab Emirates markets.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="info-card">
+            <div class="info-title">Brands Covered</div>
+            <p class="info-text">
+              <strong style="color:#111;font-weight:600;">Monkey Troopers</strong> — Premium bags and lifestyle accessories designed for modern consumers.<br><br>
+              <strong style="color:#111;font-weight:600;">FO Dubai</strong> — Authentic Arabic oud-based perfumes celebrating traditional fragrance craftsmanship.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="info-card">
+            <div class="info-title">Business Intent</div>
+            <p class="info-text">
+              We are focused on building responsible, long-term retail distribution and wholesale partnerships that align with
+              our brand positioning, pricing discipline, and market standards.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- FORM -->
+<section class="form-sec">
+  <div class="wrap">
+    <h2 class="sec-title">UAE Trade &amp; Distribution Enquiry</h2>
+    <p class="sec-desc">
+      Please share your business details below. This information helps us evaluate partnership alignment and respond efficiently.
+    </p>
+
+    <!-- ✅ SUCCESS / ERROR MESSAGES (SAME PAGE) -->
+    <div id="tradeSuccessMsg"
+         style="display:none; margin:12px 0; padding:14px 16px; border-radius:10px; background:#e9f7ef; color:#0f5132; font-weight:600;">
+      Thank you for your submission. Our UAE Sales &amp; Distribution team will review your enquiry and contact you within 24–48 business hours.
+    </div>
+
+    <div id="tradeErrorMsg"
+         style="display:none; margin:12px 0; padding:14px 16px; border-radius:10px; background:#fdecea; color:#842029; font-weight:600;">
+      Something went wrong. Please try submitting the form again.
+    </div>
+
+    <!-- ✅ UPDATED FORM (FormSubmit – No PHP) -->
+    <form class="row g-3"
+          id="uaeTradeForm"
+          action="https://formsubmit.co/ecom.co@suvidretail.in"
+          method="POST"
+          novalidate>
+
+      <!-- FormSubmit settings -->
+      <input type="hidden" name="_subject" value="UAE Trade & Distribution Enquiry">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+
+      <!-- Anti-spam -->
+      <input type="text" name="_honey" style="display:none">
+
+      <!-- Redirect back to SAME page -->
+      <input type="hidden" name="_next" value="https://YOUR-DOMAIN.com/uae-trade.html?sent=1">
+
+      <div class="col-md-6">
+        <label class="form-label">Company Name <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" name="Company Name" required>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Contact Person (Name &amp; Title) <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" name="Contact Person" required>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">UAE Location (Emirate / City) <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" name="UAE Location" required>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Type of Business <span class="text-danger">*</span></label>
+        <select class="form-select" name="Business Type" required>
+          <option value="" selected disabled>Select</option>
+          <option>Retail</option>
+          <option>Wholesale</option>
+          <option>Distributor</option>
+        </select>
+      </div>
+
+      <div class="col-12">
+        <label class="form-label">Existing Store or Distribution Network Details <span class="text-danger">*</span></label>
+        <textarea class="form-control"
+                  name="Network Details"
+                  rows="4"
+                  minlength="40"
+                  required
+                  placeholder="Briefly describe your stores, wholesale network, distribution reach, or categories handled."></textarea>
+        <div class="form-text" style="color:var(--muted);">
+          Minimum 40 characters to encourage meaningful details.
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Estimated Monthly Order Volume <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" name="Monthly Volume" required placeholder="Example: 200 units / month">
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Message / Additional Information</label>
+        <input type="text" class="form-control" name="Additional Info" placeholder="Optional">
+      </div>
+
+      <div class="col-12 pt-2">
+        <button type="submit" class="btn btn-outline-ink">Submit Trade Enquiry</button>
+      </div>
+
+      <div class="col-12">
+        <div class="note">
+          All enquiries are reviewed by our UAE Sales &amp; Distribution team. Qualified submissions typically receive a response within 24–48 business hours.
+        </div>
+      </div>
+    </form>
+
+    <!-- ✅ SAME-PAGE MESSAGE HANDLER -->
+    <script>
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("sent") === "1") {
+          const msg = document.getElementById("tradeSuccessMsg");
+          if (msg) msg.style.display = "block";
+
+          // Clean URL
+          const url = new URL(window.location.href);
+          url.searchParams.delete("sent");
+          window.history.replaceState({}, document.title, url.toString());
+        }
+      })();
+    </script>
+
+  </div>
+</section>
+
+
+   <!-- ================= FOOTER ================= -->
+ <!-- ===== FOOTER ===== -->
+  <footer class="giii-footer">
+
+    <!-- TOP: Social icons centered -->
+    <!-- <div class="giii-footer-top">
+      <div class="giii-container">
+        <ul class="giii-social" aria-label="Social links">
+          <li>
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="giii-sep"></li>
+          <li>
+            <a href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+          <li class="giii-sep"></li>
+          <li>
+            <a href="#" aria-label="Twitter (X)">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </li>
+          <li class="giii-sep"></li>
+          <li>
+            <a href="https://wa.me/97145911622" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div> -->
+
+    <!-- MID: Address -->
+    <div class="giii-footer-mid">
+      07–08 Meena Bazar, Bur Dubai – Al Fahidi, Dubai, United Arab Emirates
+    </div>
+
+    <!-- BOT: Copyright -->
+    <div class="giii-footer-bot">
+      © 2025 Rachna General Trading LLC. All Rights Reserved.
+    </div>
+
+  </footer>
+
+  <!-- ================= MOBILE OFFCANVAS ================= -->
+  <div class="offcanvas offcanvas-end giii-off" tabindex="-1" id="mMenu" aria-labelledby="mMenuLabel">
+    <div class="off-hdr">
+      <div></div>
+      <h2 class="off-title" id="mMenuLabel">ACCOUNT</h2>
+      <div class="off-strip">
+        <button type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button type="button" data-bs-dismiss="offcanvas" aria-label="Close menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 7h14M5 12h14M5 17h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="offcanvas-body off-body">
+      <ul class="m-list">
+        <li class="m-item">
+          <button class="m-row" type="button" data-bs-toggle="collapse" data-bs-target="#mWho" aria-expanded="false" aria-controls="mWho">
+            <span>WHO WE ARE</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="collapse" id="mWho">
+            <div class="m-sub">
+              <a href="#">Overview</a>
+              <a href="#">Leadership</a>
+              <a href="#">Global Reach</a>
+              <a href="#">History</a>
+              <a href="#">Philanthropy</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="m-item">
+          <button class="m-row" type="button" data-bs-toggle="collapse" data-bs-target="#mBrands" aria-expanded="false" aria-controls="mBrands">
+            <span>BRANDS</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="collapse" id="mBrands">
+            <div class="m-sub">
+              <a href="#">All Brands</a>
+              <a href="#">Owned Brands</a>
+              <a href="#">Licensed Brands</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="m-item"><a class="m-a" href="#"><span>INVESTORS</span></a></li>
+        <li class="m-item"><a class="m-a" href="#"><span>NEWS</span></a></li>
+        <li class="m-item"><a class="m-a" href="#"><span>WORK WITH US</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // Minimal validation (keeps design clean, not bulky)
+    (function () {
+      const form = document.getElementById("uaeTradeForm");
+      const brandChecks = Array.from(document.querySelectorAll('input[name="brands[]"]'));
+      const brandError = document.getElementById("brandError");
+
+      function validateBrands(){
+        const anyChecked = brandChecks.some(cb => cb.checked);
+        brandError.classList.toggle("d-none", anyChecked);
+        return anyChecked;
+      }
+
+      // If user checks "Both", auto-uncheck others for clarity
+      const both = document.getElementById("brandBoth");
+      both.addEventListener("change", () => {
+        if(both.checked){
+          brandChecks.forEach(cb => { if(cb !== both) cb.checked = false; });
+        }
+        validateBrands();
+      });
+      brandChecks.forEach(cb => {
+        if(cb.id !== "brandBoth"){
+          cb.addEventListener("change", () => {
+            if(cb.checked) both.checked = false;
+            validateBrands();
+          });
+        }
+      });
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const brandsOk = validateBrands();
+        if (!form.checkValidity() || !brandsOk) {
+          form.classList.add("was-validated");
+          return;
+        }
+
+        // Replace this with your actual submit (AJAX / backend POST)
+        alert("Enquiry submitted successfully (demo). Connect this form to your backend routing.");
+        form.reset();
+        form.classList.remove("was-validated");
+        brandError.classList.add("d-none");
+      }, false);
+    })();
+  </script>
+
+<!-- Bootstrap Bundle JS (REQUIRED for dropdown/offcanvas) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Your JS (after Bootstrap) -->
+<script src="../Rachna/assets/js/main.js"></script>
+<script src="../Rachna/assets/js/navigation-bar.js"></script>
+
+</body>
+</html>

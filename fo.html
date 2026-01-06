@@ -1,0 +1,830 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FO Dubai — Brand Page</title>
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="../Rachna/assets/css/fo.css">
+
+  <!-- Footer -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="giii-header fixed-top">
+    <nav class="navbar h-100">
+      <div class="container giii-wrap position-relative h-100">
+
+        <!-- Logo block (SVG) -->
+        <a class="giii-brand" href="../Rachna/index.html">
+          <!-- Use your svg logo path -->
+          <img src="../Rachna/assets/img/rachna_llc_logo.jpeg" alt="G-III Logo">
+        </a>
+
+        <!-- Desktop center nav -->
+        <div class="giii-nav-center d-none d-lg-block">
+          <ul class="giii-nav-row m-0 p-0 list-unstyled">
+
+            <!-- WHO WE ARE (dropdown on hover) -->
+            <li class="nav-item"><a class="giii-nav-link giii-underline" href="../Rachna/index.html">HOME</a></li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <li class="nav-item dropdown giii-hover-dd">
+              <a class="giii-nav-link giii-underline" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                WHAT WE DO
+              </a>
+              <ul class="dropdown-menu giii-dd">
+                <li><a class="dropdown-item" href="../Rachna/fo.html">FO DUBAI</a></li>
+                <li><a class="dropdown-item" href="../Rachna/monkeytroopers_final.html">MONKEY TROOPERS DUBAI</a></li>
+                <li><a class="dropdown-item" href="../Rachna/rachna_store.html">RACHNA RETAIL STORE</a></li>
+              </ul>
+            </li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <li class="nav-item"><a class="giii-nav-link giii-underline" href="../Rachna/about-our-brands.html">ABOUT US</a></li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <li class="nav-item"><a class="giii-nav-link giii-underline" href="../Rachna/testimonials.html">TESTIMONIALS</a></li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <!-- BRANDS (dropdown on hover) -->
+            <li class="nav-item dropdown giii-hover-dd">
+              <a class="giii-nav-link giii-underline" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                CONTACT US
+              </a>
+              <ul class="dropdown-menu giii-dd">
+                <li><a class="dropdown-item" href="../Rachna/UAE-Trade.html">UAE TRADE & DISTRIBUTION ENQUIRES</a></li>
+                <li><a class="dropdown-item" href="../Rachna/FO-Dubai-International-Licensing-Enquiries.html">FO DUBAI INTERNATIONAL LICENSING</a></li>
+                <li><a class="dropdown-item" href="../Rachna/rachna-retail-store.html">RETAIL STORE & CUSTOMER ENQURIES (DUBAI)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile burger -->
+        <button class="giii-burger d-lg-none ms-auto" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#giiiMobile" aria-controls="giiiMobile"
+                aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- MOBILE OFFCANVAS -->
+  <div class="offcanvas offcanvas-end giii-offcanvas" tabindex="-1" id="giiiMobile" aria-labelledby="giiiMobileLabel">
+    <div class="giii-offcanvas-body">
+
+      <!-- <div class="giii-m-top">
+        <a class="giii-m-account" href="#">ACCOUNT</a>
+        <button type="button" class="giii-m-close" data-bs-dismiss="offcanvas" aria-label="Close menu">×</button>
+      </div> -->
+
+      <!-- Accordion style dropdowns (like desktop) -->
+      <div class="giii-m-list">
+
+        <a class="giii-m-item linklike" href="../Rachna/index.html"><span>HOME</span></a>
+        <button class="giii-m-item" type="button" data-giii-acc="who">
+          <span>WHAT WE DO</span><span class="giii-chev">›</span>
+        </button>
+        <div class="giii-m-sub" id="giii-sub-who">
+          <a class="giii-m-subitem" href="../Rachna/fo.html">FO DUBAI</a>
+          <a class="giii-m-subitem" href="../Rachna/monkeytroopers_final.html">MONKEY TROOPERS DUBAI</a>
+          <a class="giii-m-subitem" href="../Rachna/rachna_store.html">RACHNA RETAIL STORE</a>
+        </div>
+
+        <a class="giii-m-item linklike" href="../Rachna/about-our-brands.html"><span>ABOUT US</span></a>
+        <a class="giii-m-item linklike" href="../Rachna/testimonials.html"><span>TESTIMONIALS</span></a>
+
+        <button class="giii-m-item" type="button" data-giii-acc="brands">
+          <span>CONTACT US</span><span class="giii-chev">›</span>
+        </button>
+        <div class="giii-m-sub" id="giii-sub-brands">
+          <a class="giii-m-subitem" href="../Rachna/UAE-Trade.html">UAE TRADE & DISTRIBUTION ENQUIRES</a>
+          <a class="giii-m-subitem" href="../Rachna/FO-Dubai-International-Licensing-Enquiries.html">FO DUBAI INTERNATIONAL LICENSING</a>
+          <a class="giii-m-subitem" href="../Rachna/rachna-retail-store.html">RETAIL STORE & CUSTOMER ENQURIES (DUBAI)</a>
+        </div>        
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- HERO / BANNER -->
+  <section class="brand-hero">
+    <!-- Two banners: desktop + mobile -->
+    <picture class="brand-hero-pic">
+      <!-- mobile -->
+      <source srcset="../Rachna/assets/img/fo_brand/fo_mobile_banner.png" media="(max-width: 991.98px)">
+      <!-- desktop -->
+      <img src="../Rachna/assets/img/fo_brand/fo_desktop_banner.png" alt="Vilebrequin Banner" class="brand-hero-img">
+    </picture>
+
+    <!-- Decorative 3 vertical lines (left bottom) -->
+    <!-- <div class="brand-hero-lines" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div> -->
+
+    <!-- White cut panel under image (like screenshot) -->
+    <!-- <div class="brand-hero-cut" aria-hidden="true"></div> -->
+  </section>
+
+
+  <!-- CONTENT -->
+  <main class="brand-main">
+    <div class="container giii-wrap">
+
+      <a class="brand-back" href="#">
+        <!-- &lt; BACK TO ALL BRANDS -->
+      </a>
+
+      <div class="row g-5 align-items-start brand-top">
+        <!-- LEFT -->
+        <div class="col-lg-6">
+          <div class="brand-logo-wrap">
+            <!-- Replace with your brand logo image -->
+            <img src="../Rachna/assets/img/fo_logo.png" alt="Vilebrequin" class="brand-logo">
+          </div>
+
+          <div class="brand-copy">
+            <p>
+              FO Dubai is a luxury Arabic fragrance brand owned by Rachna General Trading LLC, Dubai, blending authentic oud-based heritage with modern global luxury
+            </p>
+            <p class="mb-0">
+              Crafted in Dubai and built for international markets, the brand focuses on refined perfumery, strong brand ownership, and disciplined global expansion.
+            </p>
+          </div>
+
+          <hr class="brand-hr">
+
+          <h3 class="brand-subhead">Communications</h3>
+          <a class="brand-mail" href="mailto:support@fodubai.com">support@fodubai.com</a>
+
+          <hr class="brand-hr">
+
+          <div class="brand-cta">
+            <a class="brand-cta-link" href="https://fodubai.com/" target="_blank" rel="noopener">VIEW BRAND WEBSITE</a>
+            <span class="brand-cta-dot" aria-hidden="true">›</span>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="col-lg-6">
+          <h2 class="brand-h2">Brand Highlights</h2>
+
+            <div class="brand-highlights" id="brandHighlights">
+
+                <!-- Item 1 -->
+                <div class="brand-hi-item is-accordion">
+                    <button class="brand-hi-toggle" type="button" aria-expanded="false">
+                    <span class="brand-hi-text">Fragrances Inspired by the Depth and Richness of Arabic Perfumery</span>
+                    <span class="brand-hi-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="brand-hi-panel" role="region">
+                    <!-- <div class="brand-hi-panel-inner">
+                        <p class="brand-hi-desc mb-2">
+                        Add your detailed history here. Explain how the acquisition happened, the reason behind it,
+                        and how it impacted the brand’s direction and growth.
+                        </p>
+                        <p class="brand-hi-desc mb-0">
+                        You can add more paragraphs, bullet points, timelines—anything. This area will stay hidden
+                        until the user clicks the title.
+                        </p>
+                    </div> -->
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="brand-hi-item is-accordion">
+                    <button class="brand-hi-toggle" type="button" aria-expanded="false">
+                    <span class="brand-hi-text">Crafted with Passion for Fine Fragrance</span>
+                    <span class="brand-hi-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="brand-hi-panel" role="region">
+                    <!-- <div class="brand-hi-panel-inner">
+                        <p class="brand-hi-desc mb-0">
+                        Add details about product category leadership, design language, positioning, target audience,
+                        and distribution footprint.
+                        </p>
+                    </div> -->
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="brand-hi-item is-accordion">
+                    <button class="brand-hi-toggle" type="button" aria-expanded="false">
+                    <span class="brand-hi-text">Fragrances that Tell a Story</span>
+                    <span class="brand-hi-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="brand-hi-panel" role="region">
+                    <!-- <div class="brand-hi-panel-inner">
+                        <p class="brand-hi-desc mb-0">
+                        Add store expansion story, key regions, partner model, and milestones.
+                        </p>
+                    </div> -->
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="brand-hi-item is-accordion">
+                    <button class="brand-hi-toggle" type="button" aria-expanded="false">
+                    <span class="brand-hi-text">Elegance, Confidence, and Identity in Every Bottle</span>
+                    <span class="brand-hi-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="brand-hi-panel" role="region">
+                    <!-- <div class="brand-hi-panel-inner">
+                        <p class="brand-hi-desc mb-0">
+                        Add licensing model details, experiential strategy, partner criteria, and brand control approach.
+                        </p>
+                    </div> -->
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="brand-hi-item is-accordion">
+                    <button class="brand-hi-toggle" type="button" aria-expanded="false">
+                    <span class="brand-hi-text">Crafted for Scent Lovers, Not Mass Appeal</span>
+                    <span class="brand-hi-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="brand-hi-panel" role="region">
+                    <!-- <div class="brand-hi-panel-inner">
+                        <p class="brand-hi-desc mb-0">
+                        Add opening story, location context, launch strategy, and business outcome.
+                        </p>
+                    </div> -->
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="brand-hi-item brand-hi-last is-accordion">
+                    <button class="brand-hi-toggle" type="button" aria-expanded="false">
+                    <span class="brand-hi-text">Scents That Evoke Emotion, Memory, and Individual Expressions</span>
+                    <span class="brand-hi-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="brand-hi-panel" role="region">
+                    <!-- <div class="brand-hi-panel-inner">
+                        <p class="brand-hi-desc mb-0">
+                        Add performance highlights, growth drivers, category mix, and channel performance.
+                        </p>
+                    </div> -->
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+      </div>
+
+
+      <!-- =======================================================
+           FO DUBAI EXPANSION BLUEPRINT (PDF CONTENT SECTION)
+           Clean tabs + accordions to avoid bulky layout
+      ======================================================== -->
+      <section class="fo-blueprint" id="fo-blueprint">
+        <div class="fo-head">
+          <h2 class="fo-h2">FO Dubai Expansion Blueprint</h2>
+          <p class="fo-lead">
+            A structured overview of FO Dubai’s brand philosophy, ownership model, and growth principles. 
+            This section breaks down the core elements that guide the brand’s development—allowing readers to explore each dimension with clarity and focus.
+          </p>
+          <!-- <p class="fo-sub">
+            Replace the placeholder text inside each tab/accordion with your PDF paragraphs and images.
+          </p> -->
+        </div>
+
+        <div class="fo-pills" role="tablist" aria-label="FO Blueprint sections">
+          <button class="fo-pill is-active" type="button" data-fo-tab="vision">VISION</button>
+          <button class="fo-pill" type="button" data-fo-tab="whyfo">WHY FO DUBAI</button>
+          <button class="fo-pill" type="button" data-fo-tab="control">OWNERSHIP &amp; CONTROL</button>
+          <button class="fo-pill" type="button" data-fo-tab="distribution">CONTROLLED SALES</button>
+          <button class="fo-pill" type="button" data-fo-tab="expansion">EXPANSION PHASES</button>
+          <button class="fo-pill" type="button" data-fo-tab="nonnegotiables">NON‑NEGOTIABLES</button>
+          <button class="fo-pill" type="button" data-fo-tab="digital">DIGITAL ENGINE</button>
+        </div>
+
+        <div class="fo-panels">
+
+          <!-- VISION -->
+          <div class="fo-panel is-active" id="tab-vision">
+            <div class="fo-panel-grid">
+              <div>
+                <h3 class="fo-h3">Thinking Beyond Trading. Building Global Brands.</h3>
+                <p class="fo-body">
+                  FO Dubai reflects Rachna General Trading LLC’s vision of building owned, globally respected fragrance brands, not transactional trading labels. Conceived and controlled from Dubai, the brand is guided by a long-term focus on authenticity, quality, and lasting brand equity.
+                </p>
+                <p class="fo-body">
+                  Rooted in traditional Arabic perfumery, FO Dubai places oud at the heart of its creations, blending cultural depth with contemporary luxury. Each fragrance is crafted for longevity, refinement, and strong presence—true to Middle Eastern perfumery while remaining globally relevant.
+                </p>
+                <p class="fo-body">
+                  Built with discipline and intent, FO Dubai maintains consistency across fragrance creation, storytelling, distribution, and consumer experience, ensuring a premium and uncompromising brand identity at every touchpoint.
+                </p>
+                <!-- <p class="fo-tip mb-0">Tip: split long PDF paragraphs into 2–3 smaller ones to match your page rhythm.</p> -->
+              </div>
+
+              <div>
+                <div class="brand-visual-box">
+                  <img 
+                    src="assets/img/fo_vision.png" 
+                    alt="FO Dubai Luxury Fragrance"
+                    class="brand-visual-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WHY FO -->
+          <div class="fo-panel" id="tab-whyfo">
+            <h3 class="fo-h3">Why We Created FO Dubai</h3>
+            <div class="accordion fo-acc" id="accWhyFo">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#why1"
+                          aria-expanded="true" aria-controls="why1">
+                    Rising Demand for Arabic Oud-Based Perfumes
+                  </button>
+                </h2>
+
+                <div id="why1" class="accordion-collapse collapse show" data-bs-parent="#accWhyFo">
+                  <div class="accordion-body">
+
+                    <div class="accordion-content-grid">
+
+                      <!-- LEFT: TEXT -->
+                      <div class="accordion-text">
+                        <p>
+                          Global fragrance preferences are evolving toward richer, deeper, and longer-lasting scent profiles.
+                          Arabic oud-based perfumes have emerged as a category that represents intensity, character, and cultural depth—
+                          qualities increasingly valued by modern luxury consumers.
+                        </p>
+
+                        <p class="mb-0">
+                          FO Dubai was created to respond to this demand with fragrances that remain true to authentic oud traditions
+                          while being refined for contemporary tastes. The brand bridges heritage and modernity, offering scents that feel
+                          distinctive, confident, and timeless rather than trend-driven.
+                        </p>
+                      </div>
+
+                      <!-- RIGHT: IMAGE -->
+                      <div class="accordion-image">
+                        <img src="assets/img/fo_brand/1.png" alt="FO Dubai Oud Fragrance">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2nd Section -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#why2"
+                          aria-expanded="false" aria-controls="why2">
+                          Market Gap &amp; Premium Positioning
+                  </button>
+                </h2>
+
+                <div id="why2" class="accordion-collapse collapse" data-bs-parent="#accWhyFo">
+                  <div class="accordion-body">
+
+                    <div class="accordion-content-grid reverse-desktop">
+
+                      <!-- LEFT (DESKTOP): IMAGE -->
+                      <div class="accordion-image">
+                        <img src="assets/img/fo_brand/2.png" alt="FO Dubai Premium Positioning">
+                      </div>
+
+                      <!-- RIGHT (DESKTOP): TEXT -->
+                      <div class="accordion-text">
+                        <p>
+                          While oud fragrances are widely available, much of the market is polarized between mass-produced interpretations and ultra-niche offerings that lack consistency or storytelling.
+                          FO Dubai was conceived to occupy a clear premium space—accessible yet uncompromising in quality and presentation.
+                        </p>
+                        <p class="mb-0">
+                          Each fragrance is designed with careful balance, premium ingredients, and controlled positioning to ensure that FO Dubai stands apart as a refined luxury brand, not a commodity perfume label.
+                        </p>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3rd Section -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#why3"
+                          aria-expanded="false" aria-controls="why3">
+                          Dubai Origin Story &amp; Luxury Credibility
+                  </button>
+                </h2>
+
+                <div id="why3" class="accordion-collapse collapse" data-bs-parent="#accWhyFo">
+                  <div class="accordion-body">
+
+                    <div class="accordion-content-grid">
+
+                      <!-- LEFT: TEXT -->
+                      <div class="accordion-text">
+                        <p>
+                          Dubai is globally recognized as a center of luxury, craftsmanship, and refined taste—particularly in the world of perfumery.
+                          FO Dubai draws credibility from its origin, embracing the city’s deep connection to fragrance culture and its role as a modern luxury capital.
+                        </p>
+                        <p class="mb-0">
+                          Being conceived and controlled from Dubai allows FO Dubai to remain authentic to Arabic perfumery traditions while delivering fragrances that resonate with international audiences seeking sophistication, exclusivity, and cultural depth.
+                        </p>
+                      </div>
+
+                      <!-- RIGHT: IMAGE -->
+                      <div class="accordion-image">
+                        <img src="assets/img/fo_brand/3.png" alt="FO Dubai Origin & Luxury">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- OWNERSHIP -->
+          <div class="fo-panel" id="tab-control">
+            <h3 class="fo-h3">A Brand We Own, Control, and Scale</h3>
+            <div class="fo-split">
+              <div class="fo-card">
+                <div class="fo-card-title">WHAT WE CONTROL</div>
+                <ul class="fo-list">
+                  <li>Brand narrative &amp; positioning</li>
+                  <li>Product direction &amp; quality</li>
+                  <li>Market entry pace</li>
+                  <li>Distribution and pricing discipline</li>
+                </ul>
+              </div>
+              <div class="fo-card">
+                <div class="fo-card-title">BRAND PHILOSOPHY</div>
+                <ul class="fo-list">
+                  <li>Oud-centered identity</li>
+                  <li>Long-lasting performance</li>
+                  <li>Premium experience across markets</li>
+                  <li>Arabic heritage preserved</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- DISTRIBUTION -->
+          <div class="fo-panel" id="tab-distribution">
+            <h3 class="fo-h3">Why We Chose a Controlled Sales Model</h3>
+            <div class="accordion fo-acc" id="accDist">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#dist1">
+                    Distribution Approach
+                  </button>
+                </h2>
+                <div id="dist1" class="accordion-collapse collapse show" data-bs-parent="#accDist">
+                  <div class="accordion-body">
+                    <ul class="fo-list">
+                      <li>Official D2C website as flagship</li>
+                      <li>Authorized marketplaces with oversight</li>
+                      <li>No uncontrolled resellers</li>
+                      <li>Select retail aligned with luxury</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dist2">
+                    Central Controls
+                  </button>
+                </h2>
+                <div id="dist2" class="accordion-collapse collapse" data-bs-parent="#accDist">
+                  <div class="accordion-body">
+                    <ul class="fo-list">
+                      <li>Authenticity</li>
+                      <li>Pricing</li>
+                      <li>Listings/content standards</li>
+                      <li>Fulfillment experience</li>
+                      <li>Compliance</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PHASES -->
+          <div class="fo-panel" id="tab-expansion">
+            <h3 class="fo-h3">Global Expansion Phases</h3>
+
+            <div class="accordion fo-acc" id="accPhases">
+
+              <!-- PHASE 1 (Text Left, Image Right) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#phase1">
+                    Phase 1 — India
+                  </button>
+                </h2>
+                <div id="phase1" class="accordion-collapse collapse show" data-bs-parent="#accPhases">
+                  <div class="accordion-body">
+                    <div class="accordion-content-grid">
+
+                      <div class="accordion-text">
+                        <h5 class="mb-2">Foundation Market &amp; Volume Validation</h5>
+
+                        <p>
+                          India represents the first structured expansion market for FO Dubai, driven by
+                          strong cultural alignment with oud-based perfumery and a rapidly growing premium
+                          fragrance consumer base.
+                        </p>
+
+                        <p class="mb-3">This phase focuses on:</p>
+
+                        <ul class="fo-bullets">
+                          <li>Establishing FO Dubai as a premium Arabic fragrance brand in metro and tier-1 cities</li>
+                          <li>Selective placement across online luxury platforms and curated retail partners</li>
+                          <li>Testing hero SKUs, pricing acceptance, and repeat purchase behavior</li>
+                          <li>Building brand awareness through controlled marketing and influencer-led storytelling</li>
+                        </ul>
+
+                        <p class="mt-3 mb-0">
+                          India acts as the validation ground for scale, operational efficiency, and consumer
+                          response before wider global rollout.
+                        </p>
+                      </div>
+
+
+                      <div class="accordion-image">
+                        <img src="assets/img/fo_brand/4.png" alt="FO Dubai India Expansion">
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PHASE 2 (Image Left, Text Right) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#phase2">
+                    Phase 2 — Europe
+                  </button>
+                </h2>
+                <div id="phase2" class="accordion-collapse collapse" data-bs-parent="#accPhases">
+                  <div class="accordion-body">
+                    <div class="accordion-content-grid reverse-desktop">
+
+                      <div class="accordion-image">
+                        <img src="assets/img/fo_brand/5.png" alt="FO Dubai Europe Expansion">
+                      </div>
+
+                      <div class="accordion-text">
+                        <h5 class="mb-2">Brand Elevation &amp; Global Luxury Positioning</h5>
+
+                        <p>
+                          Europe is approached as a brand-building market, not a volume-led expansion. 
+                          he focus is on positioning FO Dubai as an exotic, high-quality Middle Eastern fragrance house.
+                        </p>
+
+                        <p class="mb-3">Key objectives include:</p>
+
+                        <ul class="fo-bullets">
+                          <li>Entry into select European luxury retailers and niche perfumery stores</li>
+                          <li>Emphasis on craftsmanship, ingredients, and oud heritage</li>
+                          <li>Compliance with EU regulations while maintaining fragrance integrity</li>
+                          <li>Story-led positioning over mass distribution</li>
+                        </ul>
+
+                        <p class="mt-3 mb-0">
+                          This phase strengthens FO Dubai’s international credibility and luxury perception.
+                        </p>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PHASE 3 (Text Left, Image Right) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#phase3">
+                    Phase 3 — South Asia
+                  </button>
+                </h2>
+                <div id="phase3" class="accordion-collapse collapse" data-bs-parent="#accPhases">
+                  <div class="accordion-body">
+                    <div class="accordion-content-grid">
+
+                      <div class="accordion-text">
+                        <h5 class="mb-2">Cultural Resonance &amp; Regional Expansion</h5>
+
+                        <p>
+                          South Asia offers strong cultural familiarity with rich, intense fragrance profiles and long-lasting scents, making it a natural extension after India.
+                        </p>
+
+                        <p class="mb-3">This phase focuses on:</p>
+
+                        <ul class="fo-bullets">
+                          <li>Expansion into key urban centers with high fragrance consumption</li>
+                          <li>Leveraging cultural similarity to oud appreciation</li>
+                          <li>Strengthening distributor partnerships with strict brand control</li>
+                          <li>Consistent pricing and packaging aligned with global standards</li>
+                        </ul>
+
+                        <p class="mt-3 mb-0">
+                          The goal is regional dominance without dilution of brand identity.
+                        </p>
+                      </div>
+
+                      <div class="accordion-image">
+                        <img src="assets/img/fo_brand/6.png" alt="FO Dubai South Asia Expansion">
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PHASE 4 (Image Left, Text Right) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#phase4">
+                    Phase 4 — Latin America
+                  </button>
+                </h2>
+                <div id="phase4" class="accordion-collapse collapse" data-bs-parent="#accPhases">
+                  <div class="accordion-body">
+                    <div class="accordion-content-grid reverse-desktop">
+
+                      <div class="accordion-image">
+                        <img src="assets/img/fo_brand/7.png" alt="FO Dubai Latin America Expansion">
+                      </div>
+
+                      <div class="accordion-text">
+                        <h5 class="mb-2">Emerging Luxury Opportunity &amp; Long-Term Growth</h5>
+
+                        <p>
+                          Latin America is approached as a long-term strategic market with growing appetite for bold, expressive, and premium fragrances.
+                        </p>
+
+                        <p class="mb-3">Key focus areas:</p>
+
+                        <ul class="fo-bullets">
+                          <li>Educating consumers on Arabic perfumery and oud craftsmanship</li>
+                          <li>Limited, phased entry through select distributors and premium channels</li>
+                          <li>Focus on signature fragrances rather than full-range launch</li>
+                          <li>Brand storytelling centered on intensity, longevity, and distinction</li>
+                        </ul>
+
+                        <p class="mt-3 mb-0">
+                          This phase completes FO Dubai’s transition into a truly global fragrance house.
+                        </p>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- NON-NEGOTIABLES -->
+          <div class="fo-panel" id="tab-nonnegotiables">
+            <h3 class="fo-h3">Non‑Negotiables</h3>
+            <div class="fo-card">
+              <ul class="fo-list mb-0">
+                <li>Ownership remains centralized</li>
+                <li>Arabic fragrance DNA preserved</li>
+                <li>Controlled distribution</li>
+                <li>Pricing and positioning discipline</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- DIGITAL -->
+          <div class="fo-panel" id="tab-digital">
+            <h3 class="fo-h3">Digital as Our Global Growth Engine</h3>
+            <div class="fo-split">
+              <div class="fo-card">
+                <div class="fo-card-title">CHANNELS</div>
+                <ul class="fo-list">
+                  <li>D2C storytelling + data</li>
+                  <li>Marketplaces for reach</li>
+                  <li>Performance marketing</li>
+                  <li>Influencers + UGC</li>
+                </ul>
+              </div>
+              <div class="fo-card">
+                <div class="fo-card-title">WHY IT WORKS</div>
+                <p class="fo-body mb-0">FO Dubai’s digital strategy is designed to build long-term brand equity, not short-term sales. Direct-to-consumer channels allow the brand to control discovery, storytelling, and consumer experience across markets.</p>
+                <p class="fo-body mb-0">A digital-first approach enables precise market entry—testing demand and positioning before physical expansion—while performance marketing and influencers drive awareness, trust, and consistent premium perception globally.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- OTHER BRANDS -->
+      <section class="other-brands">
+        <h2 class="other-h2">Other Brands</h2>
+
+        <div class="other-cta">
+          <!-- <a class="other-cta-link" href="#">SEE MORE BRANDS</a>
+          <span class="other-cta-dot" aria-hidden="true">›</span> -->
+        </div>
+
+        <div class="row g-4 other-grid">
+          <!-- Card 1 -->
+          <div class="col-12 col-sm-6 col-lg-6">
+            <a class="other-card" href="../Rachna/monkeytroopers_final.html">
+              <div class="other-imgwrap">
+                <picture>
+                  <!-- Mobile -->
+                  <source media="(max-width: 991.98px)" srcset="../Rachna/assets/img/fo_brand/mt_toggle_mobile_banner.png">
+                  <!-- Desktop -->
+                  <img src="../Rachna/assets/img/fo_brand/mt_toggle_banner.png" alt="Nautica">
+                </picture>
+              </div>
+              <div class="other-name">Monkey Troopers</div>
+              <!-- <div class="other-pill" aria-hidden="true">L</div> -->
+            </a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-12 col-sm-6 col-lg-6">
+            <a class="other-card" href="#">
+              <div class="other-imgwrap">
+                <picture>
+                  <!-- Mobile -->
+                  <source media="(max-width: 991.98px)" srcset="../Rachna/assets/img/fo_brand/rachna_toggle_mobile_banner.png">
+                  <!-- Desktop -->
+                  <img src="../Rachna/assets/img/fo_brand/rachna_toggle_banner.png" alt="Halston">
+                </picture>
+              </div>
+              <div class="other-name">Rachna Retail Store</div>
+              <!-- <div class="other-pill" aria-hidden="true">L</div> -->
+            </a>
+          </div>
+
+          
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <!-- <div class="giii-footer-top">
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <span class="footer-sep">|</span>
+
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <span class="footer-sep">|</span>
+
+        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <span class="footer-sep">|</span>
+
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+
+    </div> -->
+
+    <div class="giii-footer-mid">
+      07-08 Meena Bazar, Bur Dubai- Al Fahidi, Dubai, United Arab Emirates
+    </div>
+
+    <div class="giii-footer-bot">
+      © 2025 Rachna General Trading LLC. All Rights Reserved.
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Your JS -->
+  <script src="../Rachna/assets/js/fo.js"></script>
+</body>
+</html>

@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Retail Store & Customer Enquiry (Dubai) | Rachna General Trading LLC</title>
+
+  <!-- Bootstrap 5.3.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <!-- Your existing site css/js (keep as you have) -->
+  <link rel="stylesheet" href="../Rachna/assets/css/navigation-bar.css"/>
+  <script src="../Rachna/assets/js/navigation-bar.js"></script>
+  <link href="../Rachna/assets/css/footer.css" rel="stylesheet"/>
+
+  <style>
+    :root{
+      --maxw: 1200px;
+      --hdrH: 92px;
+    }
+    *{ font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    body{ background:#fff; color:#111; }
+
+    /* HERO (no arrows) */
+    .ct3-hero .carousel-item img{
+      width:100%;
+      /* height: clamp(260px, 45vw, 650px); */
+      object-fit: cover;
+      display:block;
+    }
+    .ct3-hero .carousel-control-prev,
+    .ct3-hero .carousel-control-next{ display:none !important; }
+
+    /* HEAD */
+    .ct3-head{ padding:34px 0 6px; }
+    .ct3-kicker{ font-size:12px; letter-spacing:.18em; text-transform:uppercase; opacity:.72; margin-bottom:8px; }
+    .ct3-h1{ font-size:clamp(26px,2.4vw,40px); line-height:1.12; margin:0; font-weight:800; letter-spacing:-.02em; }
+    .ct3-sub{ margin-top:10px; max-width:72ch; opacity:.85; font-size:15px; line-height:1.7; }
+
+    /* IN MM SLIDER */
+    .collection.full__width{ width:100%; padding:28px 0 20px; overflow:hidden; }
+    .collection__title.title_bottom_margin{ text-align:center; margin-bottom:14px; }
+    .theme_main_heading{ letter-spacing:.18em; text-transform:uppercase; font-weight:600; font-size:12px; opacity:.8; margin-bottom:8px; }
+    .theme_main_description{ margin-top:6px; opacity:.55; line-height:1.6; font-size:12px; }
+
+    .inmm-swiper{ width:100%; overflow:visible; padding:14px 0 18px; }
+    .inmm-swiper .swiper-wrapper{ align-items:stretch; }
+    .inmm-slide{
+      opacity:.55; transform:scale(.92);
+      transition: transform .35s ease, opacity .35s ease;
+      will-change: transform;
+    }
+    .inmm-swiper .swiper-slide-active{ opacity:1; transform:scale(1.12); z-index:2; }
+    .inmm-swiper .swiper-slide-prev,
+    .inmm-swiper .swiper-slide-next{ opacity:.85; transform:scale(.98); z-index:1; }
+
+    .inmm-imgwrap{
+      border-radius:26px; overflow:hidden; background:#f3f4f6;
+      height:520px;
+    }
+    .inmm-imgwrap img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .inmm-name{
+      text-align:center; margin-top:16px; font-size:10px;
+      letter-spacing:.18em; text-transform:uppercase;
+      opacity:.75; font-weight:600;
+    }
+
+    .swiper-button-prev,.swiper-button-next,.swiper-pagination{ display:none !important; }
+
+    @media (max-width: 991.98px){
+      :root{ --hdrH: 84px; }
+      .inmm-imgwrap{ height:460px; }
+    }
+    @media (max-width: 575.98px){
+      .inmm-imgwrap{ height:380px; }
+      .inmm-swiper .swiper-slide-active{ transform: scale(1.08); }
+    }
+
+    /* TOGGLES */
+    .ct3-tog{ padding:10px 0 22px; }
+    .ct3-pillrow{ display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; }
+    .ct3-pill{
+      border:1px solid rgba(0,0,0,.18);
+      border-radius:999px;
+      padding:10px 14px;
+      background:#fff;
+      font-size:13px;
+      opacity:.92;
+      cursor:pointer;
+      transition: transform .12s ease, border-color .12s ease;
+    }
+    .ct3-pill:hover{ transform: translateY(-1px); border-color: rgba(0,0,0,.30); }
+
+    .ct3-togpanel{
+      margin-top:14px;
+      border-top:1px solid rgba(0,0,0,.12);
+      padding-top:14px;
+      max-width:90ch;
+      opacity:.9;
+      line-height:1.75;
+      font-size:14px;
+    }
+
+    /* ===== Address/Phone grid upgrade ===== */
+    .ct3-addrRow { margin-top: 10px; }
+
+    .ct3-card{
+      border:1px solid rgba(0,0,0,.12);
+      border-radius:14px;
+      padding:14px 16px;
+      background:#fff;
+    }
+    .ct3-title{
+      font-size:12px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      opacity:.7;
+      font-weight:700;
+      margin-bottom:10px;
+    }
+    .ct3-ico{
+      width:34px; height:34px;
+      border:1px solid rgba(0,0,0,.10);
+      border-radius:10px;
+      display:grid;
+      place-items:center;
+      color:#111;
+      flex:0 0 auto;
+    }
+    .ct3-card-grid{ display:grid; gap:12px; align-items:center; }
+    .ct3-card-grid--3{ grid-template-columns: 42px 1fr auto; }
+    .ct3-card-grid--2{ grid-template-columns: 1fr auto; }
+    .ct3-val{ font-size:14px; line-height:1.6; opacity:.92; }
+
+    .ct3-btnMini{
+      border:1px solid rgba(0,0,0,.25);
+      background:#fff;
+      color:#111;
+      border-radius:999px;
+      padding:10px 14px;
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-weight:700;
+      text-decoration:none;
+      white-space:nowrap;
+      transition: transform .12s ease, border-color .12s ease, background .12s ease;
+    }
+    .ct3-btnMini:hover{
+      transform: translateY(-1px);
+      border-color: rgba(0,0,0,.40);
+      background: rgba(0,0,0,.03);
+    }
+
+    .ct3-phoneLine{ display:flex; align-items:center; gap:10px; min-width: 0; }
+    .ct3-phone{
+      color:#111;
+      text-decoration:none;
+      border-bottom:1px solid rgba(0,0,0,.25);
+      font-weight:600;
+      line-height:1.2;
+    }
+    .ct3-phone:hover{ border-bottom-color: rgba(0,0,0,.55); }
+
+    .ct3-actions{
+      display:flex;
+      gap:10px;
+      justify-content:flex-end;
+      flex-wrap:wrap;
+    }
+    .ct3-actions--right{ display:flex; justify-content:flex-end; }
+
+    .ct3-chipBtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border:1px solid rgba(0,0,0,.18);
+      border-radius:999px;
+      padding:9px 12px;
+      font-size:12px;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      font-weight:700;
+      background:#fff;
+      color:#111;
+      text-decoration:none;
+      white-space:nowrap;
+      transition: transform .12s ease, border-color .12s ease;
+    }
+    .ct3-chipBtn:hover{
+      transform: translateY(-1px);
+      border-color: rgba(0,0,0,.32);
+    }
+
+    @media (max-width: 575.98px){
+      .ct3-card-grid--3{ grid-template-columns: 42px 1fr; }
+      .ct3-card-grid--3 .ct3-actions{ grid-column: 1 / -1; justify-content:flex-start; }
+      .ct3-card-grid--2{ grid-template-columns: 1fr; }
+      .ct3-card-grid--2 .ct3-actions{ justify-content:flex-start; }
+    }
+
+    /* FORM */
+    .ct3-formsec{ padding-top:10px; padding-bottom:40px; }
+    .ct3-label{ font-size:13px; font-weight:600; margin-bottom:6px; opacity:.9; }
+    .ct3-input{
+      width:100%;
+      border:1px solid rgba(0,0,0,.18);
+      border-radius:12px;
+      padding:11px 12px;
+      font-size:14px;
+      background:#fff;
+      outline:none;
+    }
+    .ct3-input:focus{ border-color: rgba(0,0,0,.38); }
+    .ct3-textarea{ resize:vertical; min-height:140px; }
+    .ct3-btn{
+      border:1px solid rgba(0,0,0,.35);
+      background:#111;
+      color:#fff;
+      border-radius:999px;
+      padding:12px 18px;
+      font-weight:800;
+      font-size:13px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      white-space:nowrap;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .ct3-note{ font-size:12px; opacity:.7; }
+
+    /* IMAGE HALF FRAME (matches your screenshot style) */
+    .ct3-halfframe{ position:relative; width:100%; max-width:520px; margin-left:auto; }
+    .ct3-halfframe__back{
+      position:absolute; inset:0;
+      transform: translate(26px, -18px);
+      border:1px solid rgba(0,0,0,.35);
+      border-radius:6px;
+      background:transparent;
+    }
+    .ct3-halfframe__front{
+      position:relative;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow: 0 10px 22px rgba(0,0,0,.20);
+      background:#f3f4f6;
+    }
+    .ct3-halfframe__front img{
+      width:100%;
+      height:520px;
+      object-fit:cover;
+      display:block;
+    }
+    @media (max-width: 991.98px){
+      .ct3-halfframe{ max-width:560px; margin:0 auto; }
+      .ct3-halfframe__front img{ height:460px; }
+    }
+    @media (max-width: 575.98px){
+      .ct3-halfframe__front img{ height:380px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="giii-header fixed-top">
+    <nav class="navbar h-100">
+      <div class="container giii-wrap position-relative h-100">
+
+        <!-- Logo block (SVG) -->
+        <a class="giii-brand" href="../Rachna/index.html">
+          <!-- Use your svg logo path -->
+          <img src="../Rachna/assets/img/rachna_llc_logo.jpeg" alt="G-III Logo">
+        </a>
+
+        <!-- Desktop center nav -->
+        <div class="giii-nav-center d-none d-lg-block">
+          <ul class="giii-nav-row m-0 p-0 list-unstyled">
+
+            <!-- WHO WE ARE (dropdown on hover) -->
+            <li class="nav-item"><a class="giii-nav-link giii-underline" href="../Rachna/index.html">HOME</a></li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <li class="nav-item dropdown giii-hover-dd">
+              <a class="giii-nav-link giii-underline" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                WHAT WE DO
+              </a>
+              <ul class="dropdown-menu giii-dd">
+                <li><a class="dropdown-item" href="../Rachna/fo.html">FO DUBAI</a></li>
+                <li><a class="dropdown-item" href="../Rachna/monkeytroopers_final.html">MONKEY TROOPERS DUBAI</a></li>
+                <li><a class="dropdown-item" href="../Rachna/rachna_store.html">RACHNA RETAIL STORE</a></li>
+              </ul>
+            </li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <li class="nav-item"><a class="giii-nav-link giii-underline" href="../Rachna/about-our-brands.html">ABOUT US</a></li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <li class="nav-item"><a class="giii-nav-link giii-underline" href="../Rachna/testimonials.html">TESTIMONIALS</a></li>
+            <li class="giii-sep" aria-hidden="true"></li>
+
+            <!-- BRANDS (dropdown on hover) -->
+            <li class="nav-item dropdown giii-hover-dd">
+              <a class="giii-nav-link giii-underline" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                CONTACT US
+              </a>
+              <ul class="dropdown-menu giii-dd">
+                <li><a class="dropdown-item" href="../Rachna/UAE-Trade.html">UAE TRADE & DISTRIBUTION ENQUIRES</a></li>
+                <li><a class="dropdown-item" href="../Rachna/FO-Dubai-International-Licensing-Enquiries.html">FO DUBAI INTERNATIONAL LICENSING</a></li>
+                <li><a class="dropdown-item" href="../Rachna/rachna-retail-store.html">RETAIL STORE & CUSTOMER ENQURIES (DUBAI)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile burger -->
+        <button class="giii-burger d-lg-none ms-auto" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#giiiMobile" aria-controls="giiiMobile"
+                aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- MOBILE OFFCANVAS -->
+  <div class="offcanvas offcanvas-end giii-offcanvas" tabindex="-1" id="giiiMobile" aria-labelledby="giiiMobileLabel">
+    <div class="giii-offcanvas-body">
+
+      <!-- <div class="giii-m-top">
+        <a class="giii-m-account" href="#">ACCOUNT</a>
+        <button type="button" class="giii-m-close" data-bs-dismiss="offcanvas" aria-label="Close menu">×</button>
+      </div> -->
+
+      <!-- Accordion style dropdowns (like desktop) -->
+      <div class="giii-m-list">
+
+        <a class="giii-m-item linklike" href="../Rachna/index.html"><span>HOME</span></a>
+        <button class="giii-m-item" type="button" data-giii-acc="who">
+          <span>WHAT WE DO</span><span class="giii-chev">›</span>
+        </button>
+        <div class="giii-m-sub" id="giii-sub-who">
+          <a class="giii-m-subitem" href="../Rachna/fo.html">FO DUBAI</a>
+          <a class="giii-m-subitem" href="../Rachna/monkeytroopers_final.html">MONKEY TROOPERS DUBAI</a>
+          <a class="giii-m-subitem" href="../Rachna/rachna_store.html">RACHNA RETAIL STORE</a>
+        </div>
+
+        <a class="giii-m-item linklike" href="../Rachna/about-our-brands.html"><span>ABOUT US</span></a>
+        <a class="giii-m-item linklike" href="../Rachna/testimonials.html"><span>TESTIMONIALS</span></a>
+
+        <button class="giii-m-item" type="button" data-giii-acc="brands">
+          <span>CONTACT US</span><span class="giii-chev">›</span>
+        </button>
+        <div class="giii-m-sub" id="giii-sub-brands">
+          <a class="giii-m-subitem" href="../Rachna/UAE-Trade.html">UAE TRADE & DISTRIBUTION ENQUIRES</a>
+          <a class="giii-m-subitem" href="../Rachna/FO-Dubai-International-Licensing-Enquiries.html">FO DUBAI INTERNATIONAL LICENSING</a>
+          <a class="giii-m-subitem" href="../Rachna/rachna-retail-store.html">RETAIL STORE & CUSTOMER ENQURIES (DUBAI)</a>
+        </div>        
+
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="ct3-hero">
+    <div id="ct3Hero" class="carousel slide"
+         data-bs-ride="carousel"
+         data-bs-interval="2600"
+         data-bs-pause="false"
+         data-bs-touch="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#ct3Hero" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#ct3Hero" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#ct3Hero" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-none d-md-block" src="../Rachna/assets/img/retail-store-img/1.png" alt="Hero Desktop 1">
+          <img class="d-md-none" src="../Rachna/assets/img/retail-store-img/1.png" alt="Hero Mobile 1">
+        </div>
+        <div class="carousel-item">
+          <img class="d-none d-md-block" src="../Rachna/assets/img/retail-store-img/2.png" alt="Hero Desktop 2">
+          <img class="d-md-none" src="../Rachna/assets/img/retail-store-img/2.png" alt="Hero Mobile 2">
+        </div>
+        <div class="carousel-item">
+          <img class="d-none d-md-block" src="../Rachna/assets/img/retail-store-img/3.png" alt="Hero Desktop 3">
+          <img class="d-md-none" src="../Rachna/assets/img/retail-store-img/3.png" alt="Hero Mobile 3">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEAD -->
+  <section class="ct3-head">
+    <div class="container" style="max-width: var(--maxw);">
+      <div class="ct3-kicker">CONTACT TYPE 3</div>
+      <h1 class="ct3-h1">Retail Store & Customer Enquiry (Dubai)</h1>
+      <p class="ct3-sub">
+        Customer-focused enquiries for our Dubai retail store: store visit support, product availability, styling guidance, and shopping assistance.
+      </p>
+    </div>
+  </section>
+
+  <!-- IN MM SLIDER -->
+  <section class="collection full__width">
+    <div class="collection__title title_bottom_margin">
+      <div class="theme_main_heading">Rachna Boutique</div>
+      <div class="theme_main_description">
+        Where fantasies flow through <br> threads of timeless design.
+        <br><br><br>
+      </div>
+    </div>
+
+    <div class="swiper inmm-swiper" id="inmmSwiper" aria-label="IN MM Carousel">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide inmm-slide">
+          <div class="inmm-imgwrap">
+            <img src="../Rachna/assets/img/retail-store-img/outfit_1.png" alt="Kriti Sanon" loading="lazy">
+          </div>
+          <!-- <div class="inmm-name">Kriti Sanon</div> -->
+        </div>
+
+        <div class="swiper-slide inmm-slide">
+          <div class="inmm-imgwrap">
+            <img src="../Rachna/assets/img/retail-store-img/outfit_2.png" alt="Kiara Advani" loading="lazy">
+          </div>
+          <!-- <div class="inmm-name">Kiara Advani</div> -->
+        </div>
+
+        <div class="swiper-slide inmm-slide">
+          <div class="inmm-imgwrap">
+            <img src="../Rachna/assets/img/retail-store-img/outfit_3.png" alt="Debbie Allen" loading="lazy">
+          </div>
+          <!-- <div class="inmm-name">Debbie Allen</div> -->
+        </div>
+
+        <div class="swiper-slide inmm-slide">
+          <div class="inmm-imgwrap">
+            <img src="../Rachna/assets/img/retail-store-img/outfit_4.png" alt="Kareena Kapoor" loading="lazy">
+          </div>
+          <!-- <div class="inmm-name">Kareena Kapoor</div> -->
+        </div>
+
+        <div class="swiper-slide inmm-slide">
+          <div class="inmm-imgwrap">
+            <img src="../Rachna/assets/img/retail-store-img/outfit_5.png" alt="Kareena Kapoor" loading="lazy">
+          </div>
+          <!-- <div class="inmm-name">Kareena Kapoor</div> -->
+        </div>
+
+        <div class="swiper-slide inmm-slide">
+          <div class="inmm-imgwrap">
+            <img src="../Rachna/assets/img/retail-store-img/outfit_1.png" alt="Kareena Kapoor" loading="lazy">
+          </div>
+          <!-- <div class="inmm-name">Kareena Kapoor</div> -->
+        </div>
+
+        <div class="swiper-slide inmm-slide">
+          <div class="inmm-imgwrap">
+            <img src="../Rachna/assets/img/retail-store-img/outfit_2.png" alt="Kareena Kapoor" loading="lazy">
+          </div>
+          <!-- <div class="inmm-name">Kareena Kapoor</div> -->
+        </div>
+
+        <div class="swiper-slide inmm-slide">
+          <div class="inmm-imgwrap">
+            <img src="../Rachna/assets/img/retail-store-img/outfit_3.png" alt="Kareena Kapoor" loading="lazy">
+          </div>
+          <!-- <div class="inmm-name">Kareena Kapoor</div> -->
+        </div>
+
+        <div class="swiper-slide inmm-slide">
+          <div class="inmm-imgwrap">
+            <img src="../Rachna/assets/img/retail-store-img/outfit_4.png" alt="Kareena Kapoor" loading="lazy">
+          </div>
+          <!-- <div class="inmm-name">Kareena Kapoor</div> -->
+        </div>
+
+        <div class="swiper-slide inmm-slide">
+          <div class="inmm-imgwrap">
+            <img src="../Rachna/assets/img/retail-store-img/outfit_5.png" alt="Kareena Kapoor" loading="lazy">
+          </div>
+          <!-- <div class="inmm-name">Kareena Kapoor</div> -->
+        </div>
+
+        <div class="swiper-slide inmm-slide">
+          <div class="inmm-imgwrap">
+            <img src="../Rachna/assets/img/retail-store-img/outfit_1.png" alt="Kareena Kapoor" loading="lazy">
+          </div>
+          <!-- <div class="inmm-name">Kareena Kapoor</div> -->
+        </div>
+
+        <div class="swiper-slide inmm-slide">
+          <div class="inmm-imgwrap">
+            <img src="../Rachna/assets/img/retail-store-img/outfit_2.png" alt="Kareena Kapoor" loading="lazy">
+          </div>
+          <!-- <div class="inmm-name">Kareena Kapoor</div> -->
+        </div>
+
+        <div class="swiper-slide inmm-slide">
+          <div class="inmm-imgwrap">
+            <img src="../Rachna/assets/img/retail-store-img/outfit_3.png" alt="Kareena Kapoor" loading="lazy">
+          </div>
+          <!-- <div class="inmm-name">Kareena Kapoor</div> -->
+        </div>
+
+        <div class="swiper-slide inmm-slide">
+          <div class="inmm-imgwrap">
+            <img src="../Rachna/assets/img/retail-store-img/outfit_4.png" alt="Kareena Kapoor" loading="lazy">
+          </div>
+          <!-- <div class="inmm-name">Kareena Kapoor</div> -->
+        </div>
+
+        <div class="swiper-slide inmm-slide">
+          <div class="inmm-imgwrap">
+            <img src="../Rachna/assets/img/retail-store-img/outfit_5.png" alt="IN MM" loading="lazy">
+          </div>
+          <!-- <div class="inmm-name">IN MM</div> -->
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TOGGLES + ADDRESS + PHONE -->
+  <section class="ct3-tog">
+    <div class="container" style="max-width: var(--maxw);">
+      <div class="ct3-kicker">ENQUIRY SUPPORT</div>
+      <h2 class="ct3-h1" style="font-size: clamp(20px, 2vw, 30px); font-weight:800;">What we can help you with</h2>
+
+      <div class="ct3-pillrow" role="tablist" aria-label="Retail support toggles">
+        <button class="ct3-pill" type="button" data-ct3-tab="visit">Store Visit</button>
+        <button class="ct3-pill" type="button" data-ct3-tab="availability">Product Availability</button>
+        <button class="ct3-pill" type="button" data-ct3-tab="styling">Styling Assistance</button>
+      </div>
+
+      <!-- This was missing in your file (JS needs it) -->
+      <div id="ct3Panel" class="ct3-togpanel"></div>
+
+      <div class="row g-3 ct3-addrRow">
+
+        <!-- ADDRESS -->
+        <div class="col-12 col-lg-6">
+          <div class="ct3-card h-100">
+            <div class="ct3-title">Address</div>
+
+            <div class="ct3-card-grid ct3-card-grid--3">
+              <div class="ct3-ico" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 22s7-5.686 7-12a7 7 0 1 0-14 0c0 6.314 7 12 7 12Z" stroke="currentColor" stroke-width="1.7"/>
+                  <path d="M12 13.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4Z" stroke="currentColor" stroke-width="1.7"/>
+                </svg>
+              </div>
+
+              <div class="ct3-val">
+                07 08 Meena Bazar - Bur Dubai - Al Fahidi<br>
+                Dubai - United Arab Emirates
+              </div>
+
+              <div class="ct3-actions ct3-actions--right">
+                <a class="ct3-btnMini" target="_blank" rel="noopener"
+                   href="https://www.google.com/maps/search/?api=1&query=07%2008%20Meena%20Bazar%20Bur%20Dubai%20Al%20Fahidi%20Dubai">
+                  Directions
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHONE -->
+        <div class="col-12 col-lg-6">
+          <div class="ct3-card h-100">
+            <div class="ct3-title">Phone</div>
+
+            <div class="ct3-card-grid ct3-card-grid--2">
+              <div class="ct3-phoneLine">
+                <span class="ct3-ico" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path d="M6.6 2.8 9.1 2.3c.6-.1 1.2.2 1.5.7l1.7 3c.3.5.2 1.2-.2 1.6l-1.4 1.4a14.2 14.2 0 0 0 6.2 6.2l1.4-1.4c.4-.4 1.1-.5 1.6-.2l3 1.7c.5.3.8.9.7 1.5l-.5 2.5c-.1.7-.8 1.2-1.5 1.1C11.2 21.1 2.9 12.8 5.5 4.4c-.1-.7.4-1.4 1.1-1.6Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+
+                <a class="ct3-phone" href="tel:+97145911622">+971 4591 1622</a>
+              </div>
+
+              <div class="ct3-actions">
+                <a class="ct3-chipBtn" href="tel:+97145911622">Call</a>
+                <a class="ct3-chipBtn" target="_blank" rel="noopener" href="https://wa.me/97145911622">WhatsApp</a>
+                <a class="ct3-chipBtn" href="sms:+97145911622">SMS</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+<!-- FORM + IMAGE (your requested half-frame style) -->
+<section class="ct3-formsec">
+  <div class="container" style="max-width: var(--maxw);">
+    <div class="row g-4 align-items-start">
+
+      <div class="col-12 col-lg-6">
+        <div class="ct3-kicker">CUSTOMER ENQUIRY</div>
+        <h2 class="ct3-h1" style="font-size: clamp(20px, 2vw, 30px); font-weight:800;">
+          Send us your request
+        </h2>
+        <p class="ct3-sub" style="margin-top:8px;">
+          Share details and our team will respond with availability, visit support, or assistance.
+        </p>
+
+        <!-- ✅ SAME PAGE SUCCESS / ERROR MESSAGES -->
+        <div id="formSuccessMsg"
+             style="display:none; margin: 12px 0; padding: 12px 14px; border-radius: 10px; background:#e9f7ef; color:#0f5132; font-weight:600;">
+          Thank you! Your enquiry has been submitted successfully. Our team will contact you shortly.
+        </div>
+
+        <div id="formErrorMsg"
+             style="display:none; margin: 12px 0; padding: 12px 14px; border-radius: 10px; background:#fdecea; color:#842029; font-weight:600;">
+          Something went wrong. Please try again.
+        </div>
+
+        <!-- ✅ UPDATED FORM (NO PHP, SENDS EMAIL VIA FORMSUBMIT) -->
+        <form id="retailEnquiryForm"
+              class="mt-3"
+              action="https://formsubmit.co/ecom.co@suvidretail.in"
+              method="POST"
+              novalidate>
+
+          <!-- FormSubmit settings -->
+          <input type="hidden" name="_subject" value="New Customer Enquiry - Retail Store">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+
+          <!-- Anti-spam honeypot (keep hidden) -->
+          <input type="text" name="_honey" style="display:none">
+
+          <!-- Redirect back to SAME page after submit -->
+          <!-- IMPORTANT: replace with your actual GoDaddy page URL -->
+          <input type="hidden" name="_next" value="https://YOUR-DOMAIN.com/your-page.html?sent=1">
+
+          <div class="row g-3">
+
+            <div class="col-12 col-md-6">
+              <label class="ct3-label" for="fullName">Full Name</label>
+              <input class="ct3-input" id="fullName" name="fullName" type="text" placeholder="Your name" required>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label class="ct3-label" for="phone">Phone</label>
+              <input class="ct3-input" id="phone" name="phone" type="tel" placeholder="+971 XXXXXXXX" required>
+            </div>
+
+            <div class="col-12">
+              <label class="ct3-label" for="email">Email</label>
+              <input class="ct3-input" id="email" name="email" type="email" placeholder="you@email.com" required>
+            </div>
+
+            <div class="col-12">
+              <label class="ct3-label" for="topic">Enquiry Type</label>
+              <select class="ct3-input" id="topic" name="topic" required>
+                <option value="" selected disabled>Select enquiry type</option>
+                <option value="Store Visit">Store Visit</option>
+                <option value="Product Availability">Product Availability</option>
+                <option value="Styling Assistance">Styling Assistance</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <label class="ct3-label" for="message">Message</label>
+              <textarea class="ct3-input ct3-textarea" id="message" name="message"
+                        placeholder="Write your requirement (product name, color, size, visit time, etc.)" required></textarea>
+              <div class="ct3-note mt-2">
+                By submitting, you agree to be contacted by our team for this enquiry.
+              </div>
+            </div>
+
+            <div class="col-12 d-flex align-items-center flex-wrap gap-2 mt-2">
+              <button type="submit" class="ct3-btn">Submit Enquiry</button>
+              <!--<a class="ct3-btnMini" href="tel:+97145911622">Call Now</a>
+              <a class="ct3-btnMini" target="_blank" rel="noopener" href="https://wa.me/97145911622">WhatsApp</a>-->
+            </div>
+
+          </div>
+        </form>
+
+        <!-- ✅ Show message on same page after redirect -->
+        <script>
+          (function () {
+            const params = new URLSearchParams(window.location.search);
+            const sent = params.get("sent");
+            const err  = params.get("err");
+
+            if (sent === "1") {
+              const el = document.getElementById("formSuccessMsg");
+              if (el) el.style.display = "block";
+              // Remove query params from URL after showing message
+              const url = new URL(window.location.href);
+              url.searchParams.delete("sent");
+              url.searchParams.delete("err");
+              window.history.replaceState({}, document.title, url.toString());
+            }
+
+            if (err === "1") {
+              const el = document.getElementById("formErrorMsg");
+              if (el) el.style.display = "block";
+              const url = new URL(window.location.href);
+              url.searchParams.delete("sent");
+              url.searchParams.delete("err");
+              window.history.replaceState({}, document.title, url.toString());
+            }
+          })();
+        </script>
+
+      </div>
+
+      <div class="col-12 col-lg-6">
+        <div class="ct3-halfframe">
+          <div class="ct3-halfframe__back" aria-hidden="true"></div>
+          <div class="ct3-halfframe__front">
+            <!-- Replace with your image -->
+            <img src="../Rachna/assets/img/retail-store-img/1.png" alt="Retail Store Visual">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- FOOTER (your existing footer.css should style these classes) -->
+  <footer class="giii-footer">
+
+    <!-- <div class="giii-footer-top">
+      <div class="giii-container">
+        <ul class="giii-social" aria-label="Social links">
+          <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li class="giii-sep">|</li>
+          <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+          <li class="giii-sep">|</li>
+          <li><a href="#" aria-label="Twitter (X)"><i class="fa-brands fa-x-twitter"></i></a></li>
+          <li class="giii-sep">|</li>
+          <li><a href="https://wa.me/97145911622" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+        </ul>
+      </div>
+    </div> -->
+
+    <div class="giii-footer-mid">
+      07–08 Meena Bazar, Bur Dubai – Al Fahidi, Dubai, United Arab Emirates
+    </div>
+
+    <div class="giii-footer-bot">
+      © 2025 Rachna General Trading LLC. All Rights Reserved.
+    </div>
+
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    // Swiper init (center big slide, no arrows/pagination)
+    document.addEventListener("DOMContentLoaded", function () {
+      new Swiper("#inmmSwiper", {
+        loop: true,
+        centeredSlides: true,
+        speed: 500,
+        spaceBetween: 60,
+        grabCursor: true,
+        autoplay: { delay: 2200, disableOnInteraction: false },
+        breakpoints: {
+          0:   { slidesPerView: 1.5, spaceBetween: 22 },
+          576: { slidesPerView: 2.2, spaceBetween: 34 },
+          992: { slidesPerView: 3.5, spaceBetween: 60 }
+        }
+      });
+    });
+
+    // Toggle pills (only changes text, address/phone stays separate)
+    (function(){
+      const panel = document.getElementById("ct3Panel");
+      if(!panel) return;
+
+      const copy = {
+        visit: "Store visit enquiries: location directions, parking info, and accessibility details for a smooth visit.",
+        availability: "Product availability: check sizes, colors, new arrivals, and reserve pieces ahead of your store visit.",
+        styling: "Styling assistance: share your occasion + preferences and we’ll suggest looks, pairings, and accessories."
+      };
+
+      function setActive(key){
+        panel.textContent = copy[key] || copy.visit;
+      }
+
+      document.querySelectorAll(".ct3-pill").forEach(btn=>{
+        btn.addEventListener("click", ()=>{
+          setActive(btn.getAttribute("data-ct3-tab"));
+        });
+      });
+
+      setActive("visit");
+    })();
+
+    // Simple submit handler (replace with your backend/EmailJS later)
+    document.addEventListener("DOMContentLoaded", ()=>{
+      const form = document.getElementById("retailEnquiryForm");
+      if(!form) return;
+
+      form.addEventListener("submit", (e)=>{
+        e.preventDefault();
+        alert("Thank you! Your enquiry has been submitted.");
+        form.reset();
+      });
+    });
+  </script>
+</body>
+</html>
